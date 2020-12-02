@@ -1,0 +1,38 @@
+.nav{
+  padding: 8rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__compName{
+
+  }
+  &__list{
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    &_Hr{
+      width: 50%;
+      margin: 0 auto;
+      color: $color-exim-blue;
+    }
+    & a{
+      padding: 0 4rem;
+      color: $color-exim-grey;
+      &:hover{
+        color: $color-exim-blue;
+        text-decoration: none;
+      }
+    }
+    &_item{
+
+    }
+  }
+
+
+}
