@@ -1,5 +1,8 @@
 import React, {Component} from "react"
 import Navigation from "./nav/nav"
+import ContactUs from "./contact_us/contact_us";
+import Blogs from "./blogs/blogs";
+
 
 class Layout extends Component{
 
@@ -8,6 +11,7 @@ class Layout extends Component{
     return (
           <div className="layout">
                <Navigation/>
+               
           </div>
     )
   }
