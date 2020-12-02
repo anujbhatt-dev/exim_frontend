@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios' 
+import { Link } from 'react-router-dom'
 
 
  class Blogs extends Component {
@@ -55,6 +56,7 @@ import axios from 'axios'
                     
                     <h1>{blog.title.rendered}</h1>
                     <td dangerouslySetInnerHTML={{__html:blog.content.rendered}} />
+                    <Link to={"/blog/"+blog.id}>read more</Link>
                     <br/>
                     <br/>
                     </>
