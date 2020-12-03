@@ -1,0 +1,28 @@
+.landing__5{
+  &_count{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 5rem;
+    &-digit{
+      margin: 1rem;
+      min-height: 10rem;
+      min-width: 6rem;
+      font-size: 5rem;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      color: $color-white;
+      font-weight: bold;
+      background-image: linear-gradient(to bottom, #0064FF 50%,#0093FF 50%, #0093FF  100%);
+      border-radius: 5px;
+      box-shadow: 0 0 2rem rgba($color-black,.2);
+    }
+  }
+  &_text{
+    font-size: 1.5rem;
+    color: $color-exim-dark-grey;
+    text-align:center;
+    margin-bottom: 2rem;
+  }
+}

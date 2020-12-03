@@ -15,7 +15,7 @@ html{
   font-size: 60.5%;
   font-family: sans-serif;
   letter-spacing: .5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   // color:$color-gig-font;
 
   // overflow-y: scroll;
@@ -39,6 +39,7 @@ body{
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 0 8rem;
 }
 a{
   text-decoration: none;
@@ -82,3 +83,21 @@ h3{
 // .layout{
 //   // width: 100vw;
 // }
+button{
+
+  &:hover{
+    cursor: pointer;
+  }
+  &:focus{
+    outline:none;
+  }
+}
+.heading-primary{
+  font-size: 4.5rem;
+  color: $color-exim-dark-grey;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+ul{
+  list-style: none;
+}

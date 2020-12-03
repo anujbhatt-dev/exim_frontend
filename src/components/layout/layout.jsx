@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Navigation from "./nav/nav"
+import Landing from "./landing/landing"
 
 class Layout extends Component{
 
@@ -8,6 +9,7 @@ class Layout extends Component{
     return (
           <div className="layout">
                <Navigation/>
+               <Landing/>
           </div>
     )
   }

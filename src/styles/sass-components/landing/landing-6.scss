@@ -1,0 +1,16 @@
+.landing__6{
+  &_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-text{
+      margin-left: 8rem;
+      & div{
+        margin-bottom: 1rem;
+        color: $color-grey;
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}

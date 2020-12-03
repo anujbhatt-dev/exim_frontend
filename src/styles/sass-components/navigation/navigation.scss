@@ -1,11 +1,19 @@
 .nav{
-  padding: 8rem 10rem;
+  padding: 3rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &__compName{
 
+  }
+  &__link{
+    color: $color-exim-grey;
+    padding: 0 4rem;
+    &:hover{
+      color: $color-exim-blue;
+      text-decoration: none;
+    }
   }
   &__list{
     font-family: 'Montserrat', sans-serif;
@@ -20,14 +28,14 @@
       width: 50%;
       margin: 0 auto;
       color: $color-exim-blue;
+      margin-top: 1rem;
+      border: none;
+      border-top: .3rem solid $color-exim-blue;
+      border-radius: 5px;
+      transition: all 1s ease-out;
     }
     & a{
-      padding: 0 4rem;
-      color: $color-exim-grey;
-      &:hover{
-        color: $color-exim-blue;
-        text-decoration: none;
-      }
+
     }
     &_item{
 

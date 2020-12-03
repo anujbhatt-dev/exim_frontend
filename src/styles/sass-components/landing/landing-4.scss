@@ -1,0 +1,50 @@
+.landing__4{
+  position: relative;
+  margin: 10rem 0;
+  &_background{
+    position: absolute;
+    // transform: translate(-50%,0%);
+    // top: 50%;
+    transform: translateX(-50%);
+    left:50%;
+    z-index: -1;
+  }
+  &_1,&_2,&_3{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    & > div,& > img{
+      margin: 8rem 8rem;
+    }
+  }
+  &_1,&_2,&_3{
+    // margin-top: 5rem;
+    &-text{
+      background: $color-white;
+      z-index: 2;
+      &--big{
+         margin-bottom: 3rem;
+      }
+      &--small{
+        font-size: 2rem;
+        color: $color-exim-dark-grey;
+        margin-bottom: 1rem;
+      }
+      &--smaller{
+        font-size: 1.5rem;
+        color: $color-grey;
+        line-height: 1.5;
+        & span{
+          color: $color-black;
+        }
+      }
+    }
+    &-image{
+      z-index: 2;
+      align-self: baseline;
+    }
+  }
+  &_1-text{
+     background: transparent;
+  }
+}

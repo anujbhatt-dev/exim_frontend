@@ -1,0 +1,107 @@
+.landing__8{
+  &_bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+    &-box{
+      min-width: 10rem;
+      box-shadow: .2rem .2rem .2rem rgba($color-black,.2);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      padding: 1.5rem;
+      border-radius: 10px;
+      & img{
+
+      }
+      & div{
+
+      }
+    }
+  }
+  &_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-images{
+      position: relative;
+
+      & > img{
+
+      }
+    }
+    &-icons{
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      padding: 4rem 2rem;
+      box-shadow: 0 0 3rem rgba($color-exim-blue,.7);
+      border-radius: 18px;
+      background: $color-white;
+      & > *{
+        margin: 2rem;
+
+      }
+      &--1{
+        color:$color-exim-blue;
+      }
+      &--2{
+
+      }
+      &--3{
+
+      }
+    }
+    &-text{
+      &--big{
+        font-size: 2rem;
+        color: $color-exim-dark-grey;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      &--small{
+        font-size: 1.5rem;
+        color: $color-grey;
+        margin-bottom: 1rem;
+      }
+    }
+    &-flex{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10rem;
+      &--text{
+        font-size: 2.5rem;
+        color: $color-exim-grey;
+        font-weight: bold;
+      }
+      &--btn{
+         border: none;
+         padding: 2rem;
+         box-shadow: .1rem .1rem .1rem rgba($color-black,.3);
+         background: $color-white;
+         &:first-child{
+           color: $color-exim-blue;
+         }
+         &:last-child{
+           color: $color-grey;
+         }
+         & img{
+
+         }
+         & div{
+
+         }
+      }
+    }
+  }
+}

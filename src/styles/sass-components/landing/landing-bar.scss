@@ -1,0 +1,24 @@
+.landing__bar{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 4rem rgba($color-black,.3);
+  border-radius: 18px;
+  margin-top: 3rem;
+  &_item{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    &-svg{
+      color: $color-exim-dark-grey;
+    }
+    &-text{
+       padding-left: 1.5rem;
+       line-height: 1.5;
+       font-size: 1.5rem;
+       color: $color-exim-grey;
+       max-width: 20rem;
+    }
+  }
+}
