@@ -20,6 +20,8 @@ class Category extends Component {
 
     componentDidMount=()=>{
 
+        console.log(this.props.match.params.id);
+
        this.setState({selectedCategory:this.props.match.params.id,loading:true})
        
     }
