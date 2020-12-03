@@ -11,15 +11,15 @@ import axios from 'axios';
     }
 
     componentDidMount=()=>{
-        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts?include="+this.props.match.params["id"]).
-        then(res=> this.setState({blog:res.data[0]})
+        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
+        then(res=> this.setState({blog:res.data})
         
         );
     }
 
 
     render() {
-        
+
         return (
             <div>
                 {this.state.blog!==null?<><h1>{this.state.blog.title.rendered}</h1>
