@@ -3,7 +3,6 @@ import Navigation from "./nav/nav"
 import Landing from "./landing/landing"
 import Blogs from "./blogs/blogs";
 import { Switch, Route } from "react-router-dom";
-import FlipNumbers from 'react-flip-numbers';
 
 class Layout extends Component{
 
