@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios' 
+import axios from 'axios'
 import { Link, Switch, Route } from 'react-router-dom'
 import Category from './category/category'
 import Blog from './blog/blog'
@@ -18,7 +18,7 @@ import Tag from './tag/tag'
         selectedCategory:null,
     }
 
- 
+
 
     render() {
         return (
@@ -33,13 +33,13 @@ import Tag from './tag/tag'
           </Route>
 
           <Route path={"/blogs/tag/:id"}>
-          <Tag/>
+           <Tag/>
           </Route>
 
           <Route exact path={"/blogs/:id"}>
-          <Blog/>
+           <Blog/>
           </Route>
-         
+
           </Switch>
           <Filter/>
 
