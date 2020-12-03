@@ -30,7 +30,7 @@ class ContactUs extends Component {
                     <input onChange={(e)=>this.onChangeHandler(e)} type="number" name="mobile" value={this.state.mobile} id=""/>
                     <input onChange={(e)=>this.onChangeHandler(e)} type="email" name="email" value={this.state.email} id=""/>
                     
-                    <select required name="preference" onChange={(e)=>this.onChangeHandler(e)} i>
+                    <select required name="preference" onChange={(e)=>this.onChangeHandler(e)}>
                         <option disabled selected value hidden>Select Your Preference</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
