@@ -11,7 +11,7 @@ import axios from 'axios';
     }
 
     componentDidMount=()=>{
-        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
+        axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
         then(res=> this.setState({blog:res.data})
         
         );

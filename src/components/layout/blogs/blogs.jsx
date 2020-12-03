@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios' 
-import { Link } from 'react-router-dom'
+import { Link, Switch, Route } from 'react-router-dom'
+import Category from './category/category'
+import Blog from './blog/blog'
+import Filter from './filter/filter'
+import Tag from './tag/tag'
 
 
  class Blogs extends Component {
 
     state={
         data:[],
-        categories:[],
         page:1,
         perPage:10,
         loading:true,
@@ -15,35 +18,37 @@ import { Link } from 'react-router-dom'
         selectedCategory:null,
     }
 
-    componentDidMount=()=>{
+    // componentDidMount=()=>{
 
-        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts?page=1&per_page=10").
-        then(res=>{
+    //     axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts?page=1&per_page=10").
+    //     then(res=>{
             
-          this.setState({data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"]});
-        });
+    //       this.setState({data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"]});
+    //     });
 
-        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/categories").
-        then(res=>{
-          this.setState({categories:res.data});
-        })
+    //     axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/categories").
+    //     then(res=>{
+    //       this.setState({categories:res.data});
+    //     })
 
-    }
+    // }
 
     componentDidUpdate=()=>{
+
+        
       
         if(this.state.loading)
        {
 
         if(this.state.selectedCategory===null)
-            axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage).
+            axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage).
         then(res=>{
            
           this.setState({data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"]});
         })
 
         else
-        axios.get("http://127.0.0.1/wordpress/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage+"&categories="+this.state.selectedCategory).
+        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage+"&categories="+this.state.selectedCategory).
     then(res=>{
        
       this.setState({data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"]});
@@ -53,61 +58,35 @@ import { Link } from 'react-router-dom'
     }
     
 
-    pageHandler=(val)=>{
-        
-        this.setState((state)=>{return {
-            page:state.page+val,
-            loading:true,
-        }})
-
-    }
-
-
-    categoryHandler=(id)=>{
-        this.setState({selectedCategory:id,loading:true,page:1});
-    }
  
+
+  
 
 
     render() {
         return (
-            <div>
+            <>
+          <Switch>
+          <Route exact path={"/blogs/category/:id"}>
+          <Category/>
+          </Route>
 
+          <Route exact path={"/blogs/category"}>
+          <Category/>
+          </Route>
 
-                {this.state.data.map(blog=>{
-                    return (
-                    <>
-                    
-                    <h1>{blog.title.rendered}</h1>
-                    <td dangerouslySetInnerHTML={{__html:blog.content.rendered}} />
-                    <Link to={"/blog/"+blog.id}>read more</Link>
-                    <br/>
-                    <br/>
-                    </>
-                )})}
+          <Route path={"/blogs/tag/:id"}>
+          <Tag/>
+          </Route>
 
-                <button onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>{"<"}</button>
-                {this.state.page}/{this.state.totalPages}
-                <button onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
-                
+          <Route exact path={"/blogs/:id"}>
+          <Blog/>
+          </Route>
+         
+          </Switch>
+          <Filter/>
 
-                <select onChange={(e)=>{
-                    this.setState({
-                             perPage:e.target.value,
-                             loading:true,
-                         })}
-                 }>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option selected value="10">10</option>
-                </select>
-
-
-
-                <p onClick={()=>this.categoryHandler(null)}>All</p>
-                {this.state.categories.map(category=><p onClick={()=>this.categoryHandler(category.id)}>{category.name}</p>)}
-                
-            </div>
+</>
         )
     }
 }

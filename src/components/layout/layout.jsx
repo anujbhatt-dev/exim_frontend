@@ -13,10 +13,10 @@ class Layout extends Component{
           <div className="layout">
                <Navigation/>
                
-               {/* <Switch>
-               <Route exact path="/"> <Blogs/></Route> 
-                <Route exact path="/blog/:id"> <Blog/></Route>
-               </Switch> */}
+               <Switch>
+               <Route  path="/blogs"> <Blogs/></Route> 
+                
+               </Switch>
           </div>
     )
   }
