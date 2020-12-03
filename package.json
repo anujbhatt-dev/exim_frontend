@@ -6,12 +6,17 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+<<<<<<< HEAD
     "aos": "^2.3.4",
     "axios": "^0.21.0",
     "jquery": "^3.5.1",
+=======
+    "axios": "^0.21.0",
+>>>>>>> bb2730dc2623bb091477a199f16130f965ef0cd4
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-flip-numbers": "^3.0.5",
     "react-ga": "^3.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
