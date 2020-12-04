@@ -1,0 +1,54 @@
+.landing__11{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  & .heading-primary{
+    flex-basis: 100%;
+  }
+  & .slide{
+    display: flex;
+    margin: 5rem 0;
+    flex-wrap: nowrap;
+    position: relative;
+    animation: slide 60s linear infinite;
+    animation-fill-mode: forwards;
+  }
+  &_review{
+    border-radius: 18px;
+    padding: 1rem;
+    margin: 1rem 5rem;
+    width: 40rem;
+    box-shadow: 0 0 10rem rgba($color-black,.5);
+    z-index: 10;
+    &-top{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      &--img{
+
+      }
+      &--name{
+        color: $color-exim-dark-grey;
+        line-height: 1.5;
+        font-size: 1.7rem;
+      }
+      &--rating{
+        background: $color-exim-blue;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        margin-right: 1rem;
+        color: $color-white;
+        width: 5rem;
+      }
+    }
+    &-bottom{
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: $color-grey;
+      padding: 1.5rem;
+    }
+  }
+}

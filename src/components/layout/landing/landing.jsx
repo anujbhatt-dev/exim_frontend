@@ -8,7 +8,7 @@ import download from "../../../assets/images/download.svg";
 import mobile from "../../../assets/images/mobile.svg";
 import section from "../../../assets/images/section.svg";
 import clock from "../../../assets/images/clock.svg";
-import zoom from "../../../assets/images/zoom.svg";  
+import zoom from "../../../assets/images/zoom.svg";
 import crown from "../../../assets/images/crown.svg";
 import video from "../../../assets/images/video.svg";
 import cell from "../../../assets/images/cell.svg";
@@ -32,10 +32,19 @@ import globe from "../../../assets/images/globe.svg";
 import eximManagement from "../../../assets/images/eximManagement.svg";
 import lapi from "../../../assets/images/lapi.svg";
 import humanChain from "../../../assets/images/humanChain.svg";
+import videoBig from "../../../assets/images/videoBig.svg";
+import crownBig from "../../../assets/images/crownBig.svg";
+import tv from "../../../assets/images/tv.svg";
+import send from "../../../assets/images/send.svg";
+import pause from "../../../assets/images/pause.svg";
+import gratuate from "../../../assets/images/gratuate.svg";
+import play from "../../../assets/images/play.svg";
+import orbits from "../../../assets/images/orbits.svg";
 
 
 
-
+import ellipse1 from "../../../assets/images/ellipse1.png";
+import video2 from "../../../assets/images/video2.png";
 import landing_main from "../../../assets/images/landing-main.svg"
 
   class Landing extends Component{
@@ -304,7 +313,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             <div className="landing__8_box-text--small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore<br/> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br/> justo duo dolores et ea rebum. Stet clita kasd gubergren, no</div>
                             <div className="landing__8_box-flex">
                                  <div className="landing__8_box-flex--text">Stock</div>
-                                 <button className="landing__8_box-flex--btn">
+                                 <button className="landing__8_box-flex--btn  landing__8_box-flex--btn-1">
                                      <img src={upArrow} alt=""/>
                                      <div>Lorem ipsum</div>
                                  </button>
@@ -316,7 +325,145 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       </div>
                   </div>
               </div>
+
+              {
+                // features
+              }
+
+              <div className="landing__9">
+                   <h1 className="heading-primary landing__3_heading">FEATURES</h1>
+                   <div className="landing__9_box">
+                        <div className="landing__9_box-1">
+                            <div className="landing__9_box-1--top">
+                                <h1><img src={videoBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                            <div className="landing__9_box-1--top">
+                                <h1><img src={pause} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                            <div className="landing__9_box-1--top">
+                                <h1><img src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                        </div>
+                        <div className="landing__9_box-1">
+                            <div className="landing__9_box-1--top">
+                                <h1><img src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                            <div className="landing__9_box-1--top">
+                                <h1><img src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                            <div className="landing__9_box-1--top">
+                                <h1 ><img src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                            </div>
+                        </div>
+                   </div>
+              </div>
+
+              {
+                // video 2
+              }
+
+              <div className="landing__10 landing__7">
+                 <img className="landing__10_img" src={video2} alt=""/>
+                 <div className="landing__10_text">
+                    <div>
+                      next<br/>
+                      <span>WEBINAR</span><br/>
+                      sunday
+                    </div>
+                    <div className="landing__3_box-btn">arrow</div>
+                 </div>
+                 <img className="landing__10_orbits" src={orbits} alt=""/>
+                 <img className="landing__10_play" src={play} alt=""/>
+              </div>
+              {
+                // review
+              }
+
+              <div className="landing__11">
+                   <h1 className="heading-primary landing__3_heading">Reviews</h1>
+                   <div className="slide">
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                              One thing is for sure that I can step in the<br/>
+                              International market without fear. Thank you<br/>
+                              Exim Education!
+                           </div>
+                       </div>
+                   </div>
+              </div>
           </div>
+
       )
     }
   }

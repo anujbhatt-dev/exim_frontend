@@ -1,0 +1,77 @@
+.footer{
+  background: #F5F5F5;
+  border-top: 1px solid rgba($color-black,.1);
+  box-shadow: 0 0 2rem rgba($color-black,.1);
+  width: 100vw;
+  position: relative;
+  left: -8rem;
+  padding: 4rem 10rem;
+  margin-top: 10rem;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    &_text{
+     &-big{
+       font-size: 11rem;
+       letter-spacing: 2rem;
+       color: $color-exim-dark-grey;
+       font-weight: bold;
+       margin-bottom: -2rem;
+     }
+     &-small{
+       font-size: 5rem;
+       letter-spacing: .5rem;
+       color: $color-exim-grey;
+       font-weight: 400;
+       margin-bottom: 1rem;
+     }
+     &-smaller{
+       font-size: 1.2rem;
+       font-weight: bold;
+       letter-spacing: .2rem;
+       margin-bottom: 1rem;
+     }
+    }
+    &_social{
+      &-heading{
+        font-size: 2rem;
+        color: $color-black;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        text-align: center;
+      }
+      &-icons{
+        display: flex;
+       & > *{
+         margin: 2rem;
+         font-size: 1.5rem;
+         text-decoration: none;
+         color: $color-exim-dark-grey;
+         font-weight: bold;
+         &:hover{
+           text-decoration: none;
+         }
+       }
+      }
+    }
+  }
+  &__middle{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $color-black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+  }
+  &__bottom{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $color-grey;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+}

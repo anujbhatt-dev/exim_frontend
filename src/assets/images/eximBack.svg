@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1371" height="1761" viewBox="0 0 1371 1761">
+  <defs>
+    <filter id="IM" x="583" y="537" width="788" height="716" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="EX" x="0" y="0" width="754" height="716" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.039"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="EX-2" x="0" y="1045" width="754" height="716" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_654" data-name="Group 654" transform="translate(-11 71)">
+    <g transform="matrix(1, 0, 0, 1, 11, -71)" filter="url(#IM)">
+      <text id="IM-2" data-name="IM" transform="translate(977 1099)" fill="#fff" font-size="493" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.2em"><tspan x="-363.323" y="0">IM</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 11, -71)" filter="url(#EX)">
+      <text id="EX-3" data-name="EX" transform="translate(377 562)" fill="#fff" font-size="493" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.2em"><tspan x="-346.954" y="0">EX</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 11, -71)" filter="url(#EX-2)">
+      <text id="EX-4" data-name="EX" transform="translate(377 1607)" fill="#fff" font-size="493" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.2em"><tspan x="-346.954" y="0">EX</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import Navigation from "./nav/nav"
 import Landing from "./landing/landing"
+import Footer from "./footer/footer"
 import Blogs from "./blogs/blogs";
 import { Switch, Route } from "react-router-dom";
 import FlipNumbers from 'react-flip-numbers';
@@ -14,14 +15,16 @@ class Layout extends Component{
                <Navigation/>
 
                <Switch>
-               <Route exact  path="/">
-                 <Landing/>
-               </Route>
-               <Route exact  path="/blogs">
+
+               <Route   path="/blogs">
                  <Blogs/>
               </Route>
-               </Switch>
 
+              <Route exact  path="/">
+                <Landing/>
+              </Route>
+               </Switch>
+               <Footer/>
           </div>
     )
   }

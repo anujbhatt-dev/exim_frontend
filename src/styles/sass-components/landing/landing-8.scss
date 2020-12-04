@@ -5,6 +5,7 @@
     align-items: center;
     margin: 2rem;
     &-box{
+      cursor: pointer;
       min-width: 10rem;
       box-shadow: .2rem .2rem .2rem rgba($color-black,.2);
       display: flex;
@@ -48,16 +49,16 @@
       background: $color-white;
       & > *{
         margin: 2rem;
-
       }
       &--1{
+        cursor: pointer;
         color:$color-exim-blue;
       }
       &--2{
 
       }
       &--3{
-
+         cursor: pointer;
       }
     }
     &-text{
@@ -98,8 +99,14 @@
          & img{
 
          }
+         &-1{
+           & div{
+             color: $color-exim-blue;
+           }
+         }
          & div{
-
+            font-weight: bold;
+            margin-top: 1rem;
          }
       }
     }

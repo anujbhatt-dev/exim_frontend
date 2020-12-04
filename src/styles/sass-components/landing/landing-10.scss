@@ -1,0 +1,38 @@
+.landing__10{
+  margin-top: 10rem;
+  position: relative;
+  height: 100vh;
+  & > *{
+    position: absolute;
+  }
+  &_text{
+     z-index: 2;
+     top:8%;
+     left:10%;
+     color: $color-white;
+     font-size: 5rem;
+     & span{
+       font-weight: bold;
+     }
+  }
+  &_img{
+    z-index: 1;
+  }
+  &_orbits{
+    z-index: 3;
+    height: 94vh;
+    width: 45vw;
+    top:-94%;
+    right:-50%;
+  }
+  &_play{
+    z-index: 4;
+    z-index: 3;
+    height: 30rem;;
+    width: 30rem;
+    top:-170%;
+    right:-80vw;
+    display: inline;
+  }
+
+}

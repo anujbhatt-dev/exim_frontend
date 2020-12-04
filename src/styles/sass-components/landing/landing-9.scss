@@ -1,0 +1,30 @@
+.landing__9{
+   &_box{
+
+     &-1{
+       display:flex;
+       justify-content: center;
+       &--top{
+         margin: 2rem;
+         & > h1{
+           display:flex;
+            align-items: center;
+         }
+         &  img{
+
+         }
+         &  span{
+           font-size: 1.2rem;
+           color: $color-exim-dark-grey;
+           margin-left: 6rem;
+           font-weight: bold;
+         }
+         & > div{
+           margin-top: 2rem;
+           font-size: 1.2rem;
+           color: $color-grey;
+         }
+       }
+     }
+   }
+}

@@ -23,6 +23,8 @@ import Tag from './tag/tag'
     render() {
         return (
             <>
+
+            
           <Switch>
           <Route exact path={"/blogs/category/:id"}>
           <Category/>
