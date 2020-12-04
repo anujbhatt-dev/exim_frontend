@@ -41,7 +41,10 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
   class Landing extends Component{
 
-    state={numbersVisible:false}
+    state={
+        numbersVisible:false,
+        numberValue:6456749,
+    }
 
     componentDidMount=()=>{
      Aos.init({
@@ -67,6 +70,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
    }
 
     render(){
+
+        console.log()
 
       return (
           <div className="landing">
@@ -237,32 +242,20 @@ import landing_main from "../../../assets/images/landing-main.svg"
               <div className="landing__5">
                    <h1 className="heading-primary landing__3_heading">EXPORT IN INDIA</h1>
                    
+                   {
+                   //countdown
+                   }
+                 <div id="numbers" className="landing__5_count">
+                        {[... this.state.numberValue+""].map(value=>
 
-                       {this.state.numbersVisible?
-                       <div id="numbers" className="landing__5_count">
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="7" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="6" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="9" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="2" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="1" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="9" /></div>
-                       <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers="3" /></div>
- 
-                    </div>
-                    :
-                    <div id="numbers" className="landing__5_count">
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
-                      <div className="landing__5_count-digit">0</div>
+                            this.state.numbersVisible?
+                            <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers={""+value} /></div>
+                            :<div className="landing__5_count-digit">0</div>
 
-                   </div>}
+                          )}
+               </div>
 
-
-                   <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
+                    <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
               </div>
 
               {

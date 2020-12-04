@@ -16,7 +16,7 @@ class Layout extends Component{
                <Route exact  path="/">
                  <Landing/>
                </Route>
-               <Route exact  path="/blogs">
+               <Route  path="/blogs">
                  <Blogs/>
               </Route>
                </Switch>
