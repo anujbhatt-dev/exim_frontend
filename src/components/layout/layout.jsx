@@ -4,7 +4,6 @@ import Landing from "./landing/landing"
 import Footer from "./footer/footer"
 import Blogs from "./blogs/blogs";
 import { Switch, Route } from "react-router-dom";
-import FlipNumbers from 'react-flip-numbers';
 
 class Layout extends Component{
 
@@ -15,8 +14,10 @@ class Layout extends Component{
                <Navigation/>
 
                <Switch>
-
-               <Route   path="/blogs">
+               <Route exact  path="/">
+                 <Landing/>
+               </Route>
+               <Route  path="/blogs">
                  <Blogs/>
               </Route>
 

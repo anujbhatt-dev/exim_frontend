@@ -79,10 +79,19 @@ class Category extends Component {
                     <>
                     
                     <h1>{blog.title.rendered}</h1>
-                    <td dangerouslySetInnerHTML={{__html:blog.content.rendered}} />
-                    <Link to={"/blogs/"+blog.id}>read more</Link>
+
+                    
+                    <img src= {blog["jetpack_featured_media_url"]}   alt=""/>    
+                    <td dangerouslySetInnerHTML={{__html:(blog.content.rendered.substring(0,200))}} />
+                    {blog.content.rendered.substring(0,200)}
+                    <Link to={"/blogs/"+blog.id}>go...</Link>
                     <br/>
                     <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <hr/>
                     </>
                 )})}
 

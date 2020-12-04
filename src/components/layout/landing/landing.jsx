@@ -32,6 +32,7 @@ import globe from "../../../assets/images/globe.svg";
 import eximManagement from "../../../assets/images/eximManagement.svg";
 import lapi from "../../../assets/images/lapi.svg";
 import humanChain from "../../../assets/images/humanChain.svg";
+
 import videoBig from "../../../assets/images/videoBig.svg";
 import crownBig from "../../../assets/images/crownBig.svg";
 import tv from "../../../assets/images/tv.svg";
@@ -40,6 +41,9 @@ import pause from "../../../assets/images/pause.svg";
 import gratuate from "../../../assets/images/gratuate.svg";
 import play from "../../../assets/images/play.svg";
 import orbits from "../../../assets/images/orbits.svg";
+
+import FlipNumbers from 'react-flip-numbers';
+
 
 
 
@@ -50,7 +54,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
   class Landing extends Component{
 
     state={
-
+        numbersVisible:false,
+        numberValue:6456749,
     }
 
     componentDidMount=()=>{
@@ -58,9 +63,27 @@ import landing_main from "../../../assets/images/landing-main.svg"
         duration: 1500,
         delay: 100,
       });
+
+      //number flip
+      window.addEventListener('scroll',()=>{
+
+        let rect= document.getElementById("numbers").getBoundingClientRect();
+
+       if( rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+        this.setState({numbersVisible:true})
+       else if(this.state.numbersVisible)
+       this.setState({numbersVisible:false})
+
+
+    });
    }
 
     render(){
+
+        console.log()
 
       return (
           <div className="landing">
@@ -128,10 +151,6 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   </div>
                   <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
               </div>
-
-              {
-                // course details
-              }
 
               <div className="landing__3">
                   <h1 className="heading-primary landing__3_heading">course details</h1>
@@ -234,17 +253,21 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__5">
                    <h1 className="heading-primary landing__3_heading">EXPORT IN INDIA</h1>
-                   <div className="landing__5_count">
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                      <div className="landing__5_count-digit">4</div>
-                   </div>
-                   <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
+
+                   {
+                   //countdown
+                   }
+                 <div id="numbers" className="landing__5_count">
+                        {[... this.state.numberValue+""].map(value=>
+
+                            this.state.numbersVisible?
+                            <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers={""+value} /></div>
+                            :<div className="landing__5_count-digit">0</div>
+
+                          )}
+               </div>
+
+                    <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
               </div>
 
               {
