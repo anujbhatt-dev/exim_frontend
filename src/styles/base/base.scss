@@ -99,6 +99,27 @@ button{
   font-weight: bolder;
   text-transform: uppercase;
 }
+.heading-secondary{
+  font-size: 3.5rem;
+  color: $color-exim-grey;
+  font-weight: bolder;
+  margin-left: 25rem;
+}
 ul{
   list-style: none;
+}
+.btn__buy{
+  padding: 1rem 3rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: $color-exim-blue;
+  margin: 2rem auto;
+  border: none;
+  color: $color-white;
+  display:flex;
+  border-radius: 18px;
+  align-items: center;
+  & img{
+    margin-left: 1rem;
+  }
 }

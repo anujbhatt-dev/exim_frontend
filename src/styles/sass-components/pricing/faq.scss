@@ -1,0 +1,21 @@
+.faq{
+  margin: 0 8rem;
+  &__box{
+
+    border-bottom: 2px dashed $color-exim-grey;
+    &_ques{
+      display:flex;
+      justify-content:space-between;
+      align-items: center;
+      padding: 3rem;
+      font-size: 2rem;
+      color: $color-exim-dark-grey;
+      font-weight: bold;
+    }
+    &_answer{
+      font-size: 1.8rem;
+      color: $color-exim-dark-grey;
+      padding: 2rem 3rem;
+    }
+  }
+}
