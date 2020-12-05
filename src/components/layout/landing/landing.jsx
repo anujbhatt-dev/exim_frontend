@@ -67,8 +67,13 @@ import landing_main from "../../../assets/images/landing-main.svg"
       //number flip
       window.addEventListener('scroll',()=>{
 
+
+        if(!document.getElementById("numbers"))
+         return ;
+
         let rect= document.getElementById("numbers").getBoundingClientRect();
 
+       
        if( rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
