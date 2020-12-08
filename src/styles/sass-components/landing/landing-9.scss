@@ -5,26 +5,45 @@
        display:flex;
        justify-content: center;
        &--top{
-         margin: 2rem;
+         margin: 5rem;
          & > h1{
            display:flex;
             align-items: center;
          }
          &  img{
-
+           animation : hinge 5s ease-out infinite;
+           animation-delay: 3s;
          }
          &  span{
-           font-size: 1.2rem;
+           font-size: 1rem;
            color: $color-exim-dark-grey;
            margin-left: 6rem;
            font-weight: bold;
          }
          & > div{
-           margin-top: 2rem;
-           font-size: 1.2rem;
+           margin-top: 3rem;
+           font-size: 1rem;
            color: $color-grey;
          }
        }
      }
    }
 }
+@include respond(tab-port){
+  .landing__9{
+    &_box-1{
+      flex-wrap: wrap;
+      &--top > div{
+        font-size: 1.2rem;
+      }
+      &--top > h1 > img{
+        box-shadow: 1rem 1rem 1rem $color-black;
+        border: 1px solid $color-black;
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        padding: 1.5rem;
+      }
+    }
+  }
+};

@@ -8,14 +8,28 @@
       justify-content:space-between;
       align-items: center;
       padding: 3rem;
-      font-size: 2rem;
+      font-size: 3.6rem;
       color: $color-exim-dark-grey;
       font-weight: bold;
+      margin-right: 1rem;
     }
     &_answer{
-      font-size: 1.8rem;
+      font-size: 2.6rem;
       color: $color-exim-dark-grey;
       padding: 2rem 3rem;
     }
   }
 }
+@include respond(tab-land){
+  .faq{
+    margin: 0 2rem;
+    &__box{
+      &_ques{
+         font-size: 1.8rem;
+      }
+      &_answer{
+         font-size: 1.4rem;
+      }
+    }
+  }
+};

@@ -26,25 +26,60 @@
          margin-bottom: 3rem;
       }
       &--small{
-        font-size: 2rem;
+        font-size: 3rem;
+        font-style: italic;
         color: $color-exim-dark-grey;
         margin-bottom: 1rem;
       }
       &--smaller{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: $color-grey;
         line-height: 1.5;
         & span{
           color: $color-black;
+          font-style: italic;
         }
       }
     }
     &-image{
+      display: flex;
+      justify-content: center;
       z-index: 2;
       align-self: baseline;
+      align-items: center;
     }
   }
   &_1-text{
      background: transparent;
   }
 }
+@include respond(tab-port){
+  .landing__4{
+    &_1,&_3{
+      flex-direction: column;
+    }
+    &_2{
+      flex-direction: column-reverse;
+    }
+    &_1,&_3,&_2{
+      & > div,& > img{
+        margin: 5rem auto;
+      }
+      & > img{
+        width: 95%;
+      }
+      &-text{
+        text-align: center;
+        &--big{
+
+        }
+        &--small{
+           font-size: 1.8rem;
+        }
+        &--smaller{
+           font-size: 1.4rem;
+        }
+      }
+    }
+  }
+};

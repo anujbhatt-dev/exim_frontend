@@ -12,8 +12,9 @@
     justify-content: space-between;
     &_text{
      &-big{
+       margin-left: -.5rem;
        font-size: 11rem;
-       letter-spacing: 2rem;
+       letter-spacing: 2.3rem;
        color: $color-exim-dark-grey;
        font-weight: bold;
        margin-bottom: -2rem;
@@ -21,20 +22,22 @@
      &-small{
        font-size: 5rem;
        letter-spacing: .5rem;
-       color: $color-exim-grey;
-       font-weight: 400;
+       color: $color-exim-dark-grey;
+       font-weight: lighter;
        margin-bottom: 1rem;
      }
      &-smaller{
-       font-size: 1.2rem;
+       font-size: 1.4rem;
        font-weight: bold;
        letter-spacing: .2rem;
        margin-bottom: 1rem;
+       line-height: 1.3;
+       margin-left: .5rem;
      }
     }
     &_social{
       &-heading{
-        font-size: 2rem;
+        font-size: 2.2rem;
         color: $color-black;
         font-weight: bold;
         margin-bottom: 1rem;
@@ -57,7 +60,7 @@
     }
   }
   &__middle{
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-decoration: none;
     color: $color-black;
     font-weight: bold;
@@ -67,7 +70,7 @@
     margin-bottom: 5rem;
   }
   &__bottom{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-decoration: none;
     color: $color-grey;
     font-weight: bold;
@@ -75,3 +78,18 @@
     justify-content: space-between;
   }
 }
+@include respond(tab-port){
+  .footer{
+    // text-align: center;
+    &__top{
+      margin: auto;
+      flex-wrap: wrap;
+    }
+    &__middle{
+      flex-wrap: wrap;
+    }
+    &__bottom{
+      flex-wrap: wrap;
+    }
+  }
+};

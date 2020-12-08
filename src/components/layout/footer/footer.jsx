@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import download from "../../../assets/images/download.svg";
 import facebook from "../../../assets/images/facebook.svg";
 import whatsapp from "../../../assets/images/whatsapp.svg";
 import insta from "../../../assets/images/insta.svg";
@@ -31,6 +32,7 @@ import call from "../../../assets/images/call.svg";
                                <a href=""><img src={call} alt=""/></a>
                                <a href=""><img src={insta} alt=""/></a>
                             </div>
+                            <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                         </div>
                         <div className="footer__top_social">
                             <div className="footer__top_social-heading">About Us</div>

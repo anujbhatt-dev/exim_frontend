@@ -8,9 +8,20 @@
       & div{
         margin-bottom: 1rem;
         color: $color-grey;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 1.5;
       }
     }
   }
 }
+@include respond(tab-land){
+   .landing__6{
+      &_box{
+        flex-direction: column;
+        text-align: center;
+        &-text{
+          margin: 2rem;
+        }
+      }
+   }
+};

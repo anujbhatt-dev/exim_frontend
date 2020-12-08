@@ -26,3 +26,11 @@
     margin-bottom: 2rem;
   }
 }
+@include respond(tab-land){
+   .landing__5{
+     &_count-digit{
+        font-size: 4;
+        margin: .5rem;
+     }
+   }
+};

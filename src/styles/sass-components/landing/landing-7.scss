@@ -5,3 +5,12 @@
     left: -8rem;
   }
 }
+@include respond(tab-land){
+  .landing__7{
+    & img{
+      width: 100vw;
+      position: relative;
+      left: -4rem;
+    }
+  }
+};

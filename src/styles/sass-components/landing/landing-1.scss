@@ -7,41 +7,45 @@
     width: 50%;
     transition: all 1s;
     &-biggest{
-       font-family: 'PT Serif', serif;
-       font-size: 15rem;
-       letter-spacing: 3.4rem;
+       // font-family: 'PT Serif', serif;
+       font-size: 13.6rem;
+       letter-spacing: 1.9rem;
        color: $color-exim-dark-grey;
        font-weight: bold;
+       margin-bottom: -2.5rem;
+       margin-left: -1rem;
     }
     &-bigger{
-      font-family: 'PT Serif', serif;
-      font-size: 5rem;
-      letter-spacing: 2.6rem;
+      // font-family: 'PT Serif', serif;
+      font-size: 4.5rem;
+      letter-spacing: 1.5rem;
       color: $color-exim-dark-grey;
       font-weight: 400;
       margin-bottom: 1rem;
     }
     &-smaller{
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: $color-exim-dark-grey;
       font-style: italic;
-      letter-spacing: .2rem;
       margin-bottom: 1rem;
     }
     &-smallest{
-      font-size: 1.5rem;
-      letter-spacing: .2rem;
+      font-size: 1.4rem;
+      line-height: 1.5;
       color: $color-exim-grey;
+      font-weight: bold;
       font-style: italic;
     }
     &-btns{
+      display: flex;
       & button{
-        font-size: 2rem;
+        font-size: 1.6rem;
         // font-weight: bold;
         min-width: 20rem;
         border: none;
         padding:1.2rem 4rem;
         margin: 2rem 0rem;
+        margin-bottom: 3rem;
         margin-right: 5rem;
         border-radius: 5px;
         box-shadow: 1rem 1rem 2rem rgba($color-exim-dark-grey,.5);
@@ -49,6 +53,34 @@
       &--join{
          background: $color-exim-blue;
          color: $color-white;
+         position: relative;
+         display: flex;
+         align-items: center;
+         flex-wrap: nowrap;
+
+         & span{
+           position: relative;
+           left: 3rem;
+           z-index: 5;
+           width: 2.5rem;
+           background: $color-exim-blue;
+           color: transparent;
+         }
+
+         & i{
+           font-weight: lighter;
+           font-size: 4.5rem;
+           margin-left: 1rem;
+           transition: all .3s;
+
+           // line-height: 3;
+         }
+         &:hover > i{
+            margin-left: 3.5rem;
+         }
+         // display: flex;
+         // justify-content: center;
+         // align-items: center;
       }
       &--trial{
         background: $color-white;
@@ -58,6 +90,33 @@
     }
   }
   &_image{
-
+     display: flex;
+     justify-content: center;
+     align-items: center;
   }
 }
+
+
+
+@include respond(tab-land){
+  .landing__1{
+    flex-direction: column-reverse;
+    &_text{
+       width: 100%;
+       text-align: center;
+       &-btns{
+         justify-content: center;
+         & button{
+            min-width: 15rem;
+            margin-right: 1rem;
+         }
+       }
+    }
+    &_image{
+      height: 60vh;
+      // object-fit: cover;
+      object-position:center;
+    }
+  }
+};
+//

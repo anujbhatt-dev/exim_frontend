@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Aos from "aos"
+import $ from "jquery"
 import "aos/dist/aos.css"
 import book from "../../../assets/images/book.svg";
 import laptop from "../../../assets/images/laptop.svg";
@@ -15,11 +16,13 @@ import cell from "../../../assets/images/cell.svg";
 import pdf from "../../../assets/images/pdf.svg";
 import offline from "../../../assets/images/offline.svg";
 import s from "../../../assets/images/s.svg";
+import sMob from "../../../assets/images/sMob.svg";
 import s1 from "../../../assets/images/s-1.svg";
 import s2 from "../../../assets/images/s-2.svg";
 import s3 from "../../../assets/images/s-3.svg";
 import certificate from "../../../assets/images/certificate.svg";
 import colab from "../../../assets/images/colab.svg";
+import colabMob from "../../../assets/images/colabMob.svg";
 import videoAfterColab from "../../../assets/images/videoAfterColab.svg";
 import bubble from "../../../assets/images/bubble.svg";
 import upArrow from "../../../assets/images/upArrow.svg";
@@ -41,6 +44,7 @@ import pause from "../../../assets/images/pause.svg";
 import gratuate from "../../../assets/images/gratuate.svg";
 import play from "../../../assets/images/play.svg";
 import orbits from "../../../assets/images/orbits.svg";
+import arrow from "../../../assets/images/arrow.svg";
 
 import FlipNumbers from 'react-flip-numbers';
 
@@ -56,9 +60,16 @@ import landing_main from "../../../assets/images/landing-main.svg"
     state={
         numbersVisible:false,
         numberValue:6456749,
+        mob:false
     }
 
     componentDidMount=()=>{
+
+      if($(window).width()<=800){
+         this.setState({
+           mob:true
+         })
+      }
      Aos.init({
         duration: 1500,
         delay: 100,
@@ -73,7 +84,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
         let rect= document.getElementById("numbers").getBoundingClientRect();
 
-       
+
        if( rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
@@ -108,11 +119,11 @@ import landing_main from "../../../assets/images/landing-main.svg"
                        "Export Import Education"
                     </div>
                     <div className="landing__1_text-smallest">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus deserunt odio ipsum fuga, cumque voluptatibus veniam laboriosam eius alias laborum odit ut harum iste quam, ad rerum voluptates quae atque.
+                       Study India in the global business perspective and build  an International<br/>business by educating and brushing the export-import skills of the working<br/>class.
                     </div>
 
                     <div className="landing__1_text-btns">
-                        <button className="landing__1_text-btns--join">Join Free</button>
+                        <button className="landing__1_text-btns--join">Join Free <span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                         <button className="landing__1_text-btns--trial">Trail</button>
                     </div>
                 </div>
@@ -156,6 +167,10 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   </div>
                   <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
               </div>
+
+              {
+                // 3
+              }
 
               <div className="landing__3">
                   <h1 className="heading-primary landing__3_heading">course details</h1>
@@ -215,7 +230,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </li>
                           </ul>
                       </div>
-                      <div className="landing__3_box-btn">arrow</div>
+                      <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                   </div>
               </div>
               {
@@ -223,7 +238,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
               }
 
               <div className="landing__4">
-                  <img className="landing__4_background" src={s} alt=""/>
+                  {this.state.mob?<img className="landing__4_background" src={sMob} alt=""/>:<img className="landing__4_background" src={s} alt=""/>}
                   <div className="landing__4_1">
                       <div className="landing__4_1-text">
                            <div className="landing__4_1-text--big heading-primary">SIGN UP</div>
@@ -285,7 +300,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                      <img className="landing__6_box-certificate" src={certificate} alt=""/>
                      <div className="landing__6_box-text">
                          <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor invidunt ut labore<br/> et dolore magna aliquyam erat, sed diam </div>
-                         <div>Lorem ipsum dolor sit.</div>
+                         <div style={{color:"black"}} >Lorem ipsum dolor sit.</div>
                      </div>
                  </div>
               </div>
@@ -295,7 +310,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
               }
 
               <div className="landing__7">
-                  <img src={colab} alt=""/>
+                  {this.state.mob?<img src={colabMob} alt=""/>:<img src={colab} alt=""/>}
                   <img src={videoAfterColab} alt=""/>
               </div>
 
@@ -329,7 +344,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   </div>
                   <div className="landing__8_box">
                       <div className="landing__8_box-images">
-                              <img src={bubble} alt=""/>
+                              <img className="bubble" src={bubble} alt=""/>
                               <div className="landing__8_box-icons">
                                   <img className="landing__8_box-icons--1" src={blueDownload} alt=""/>
                                   <img className="landing__8_box-icons--2" src={longDash} alt=""/>
