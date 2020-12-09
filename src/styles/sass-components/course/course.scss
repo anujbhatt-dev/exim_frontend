@@ -3,13 +3,31 @@
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6rem;
-    margin: 5rem;
+    margin: 15rem;
     &_box{
       height: 20rem;
-      background: #FFEBEB;
-      // box-shadow: 0 1rem rem rgba($color-black,.5);
+      overflow: hidden;
       position: relative;
       border-radius: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 100;
+      &-img{
+         position: absolute;
+         bottom: 0;
+         animation: wave 1s linear infinite;
+         z-index: -1;
+      }
+      &-title{
+        color:$color-exim-dark-grey;
+        text-align:center;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        font-weight: bold;
+        padding: 0 3rem;
+      }
       &-count{
         position: absolute;
         top: 0;
@@ -23,7 +41,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translate(-50%,-50%);
+//        transform: translate(-50%,-50%);
       }
     }
   }

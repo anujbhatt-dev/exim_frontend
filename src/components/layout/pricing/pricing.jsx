@@ -121,7 +121,7 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
                 return  <div className="faq__box">
                                 <div className="faq__box_ques">
                                     <div>{faq.ques}</div>
-                                    {faq.toggle?<img onClick={()=>this.faqToggleHandler(i)} src={circleTimes} alt=""/>:<img onClick={()=>this.faqToggleHandler(i)} src={circleDownArrow} alt=""/>}
+                                    {faq.toggle?<img className="faq__box_ques-times" onClick={()=>this.faqToggleHandler(i)} src={circleTimes} alt=""/>:<img onClick={()=>this.faqToggleHandler(i)} src={circleDownArrow}  className="faq__box_ques-downArrow" alt=""/>}
                                 </div>
                                 {faq.toggle?<div className="faq__box_answer">{faq.answer}</div>:null}
                          </div>

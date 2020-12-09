@@ -39,7 +39,7 @@
     &-btns{
       display: flex;
       & button{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         // font-weight: bold;
         min-width: 20rem;
         border: none;
@@ -48,9 +48,19 @@
         margin-bottom: 3rem;
         margin-right: 5rem;
         border-radius: 5px;
-        box-shadow: 1rem 1rem 2rem rgba($color-exim-dark-grey,.5);
+        box-shadow: 0rem 0rem 2rem rgba($color-exim-dark-grey,.5);
+        transition: all .3rem;
+        &:hover{
+          transform: translateY(-3px);
+          box-shadow: 0rem 1rem 3rem rgba($color-exim-dark-grey,.5);
+        }
+        &:active{
+          transform: translateY(0px);
+          box-shadow: 0rem 1rem 2rem rgba($color-exim-dark-grey,.5);
+        }
       }
       &--join{
+         animation: scale .5s linear 3;
          background: $color-exim-blue;
          color: $color-white;
          position: relative;
@@ -69,7 +79,7 @@
 
          & i{
            font-weight: lighter;
-           font-size: 4.5rem;
+           font-size: 5.5rem;
            margin-left: 1rem;
            transition: all .3s;
 
@@ -96,7 +106,9 @@
   }
 }
 
-
+.spin{
+  animation: rotate2 1s linear 2;
+}
 
 @include respond(tab-land){
   .landing__1{

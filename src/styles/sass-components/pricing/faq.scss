@@ -12,6 +12,12 @@
       color: $color-exim-dark-grey;
       font-weight: bold;
       margin-right: 1rem;
+      &-times{
+        animation: rotate .5s ease-out;
+      }
+      &-downArrow{
+        animation: rotate2 .5s ease-out;
+      }
     }
     &_answer{
       font-size: 2.6rem;

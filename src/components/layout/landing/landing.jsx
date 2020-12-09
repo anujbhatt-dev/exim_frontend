@@ -107,7 +107,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                {
                  // screen 1
                }
-                <div className="landing__1">
+                <div data-aos="zoom-out" data-aos-once="true" className="landing__1">
                 <div className="landing__1_text">
                     <div className="landing__1_text-biggest">
                        EXIM
@@ -136,15 +136,15 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__bar">
                    <div className="landing__bar_item">
-                       <img className="landing__bar_item-svg" src={book} alt=""/>
+                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={book} alt=""/>
                        <div className="landing__bar_item-text">simple video courses to ease global trade</div>
                    </div>
                    <div className="landing__bar_item">
-                       <img className="landing__bar_item-svg" src={laptop} alt=""/>
+                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={laptop} alt=""/>
                        <div className="landing__bar_item-text">Live student-teacher interactive session</div>
                    </div>
                    <div className="landing__bar_item">
-                      <img className="landing__bar_item-svg" src={reload} alt=""/>
+                      <div className="spin"><img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={reload} alt=""/></div>
                       <div className="landing__bar_item-text">Get ready for career</div>
                    </div>
               </div>
@@ -163,7 +163,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                           Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy<br/>
                           veldt fox. Bright.
                         </div>
-                       <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
+                       <button data-aos="fade-right" className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                   </div>
                   <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
               </div>
@@ -172,7 +172,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                 // 3
               }
 
-              <div className="landing__3">
+              <div data-aos="slide-right" data-aos-duration="500" className="landing__3">
                   <h1 className="heading-primary landing__3_heading">course details</h1>
                   <div className="landing__3_box">
                       <div className="landing__3_box-text">
@@ -238,20 +238,20 @@ import landing_main from "../../../assets/images/landing-main.svg"
               }
 
               <div className="landing__4">
-                  {this.state.mob?<img className="landing__4_background" src={sMob} alt=""/>:<img className="landing__4_background" src={s} alt=""/>}
+                  {this.state.mob?<img className="landing__4_background" src={sMob} alt=""/>:<img  className="landing__4_background" src={s} alt=""/>}
                   <div className="landing__4_1">
                       <div className="landing__4_1-text">
-                           <div className="landing__4_1-text--big heading-primary">SIGN UP</div>
+                           <div  data-aos="flip-down" className="landing__4_1-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_1-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_1-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
-                      <img className="landing__4_1-image" src={s1} alt=""/>
+                      <img data-aos="fade-left" className="landing__4_1-image" src={s1} alt=""/>
                   </div>
 
                   <div className="landing__4_2">
-                      <img className="landing__4_2-image" src={s2} alt=""/>
+                      <img data-aos="fade-right" className="landing__4_2-image" src={s2} alt=""/>
                       <div className="landing__4_2-text">
-                           <div className="landing__4_2-text--big heading-primary">SIGN UP</div>
+                           <div  data-aos="flip-down" className="landing__4_2-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_2-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_2-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
@@ -259,11 +259,11 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
                   <div className="landing__4_3">
                       <div className="landing__4_3-text">
-                           <div className="landing__4_3-text--big heading-primary">SIGN UP</div>
+                           <div  data-aos="flip-down" className="landing__4_3-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_3-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_3-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
-                      <img className="landing__4_3-image" src={s3} alt=""/>
+                      <img data-aos="fade-left" className="landing__4_3-image" src={s3} alt=""/>
                   </div>
               </div>
 

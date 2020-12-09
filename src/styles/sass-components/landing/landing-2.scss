@@ -35,6 +35,15 @@
      font-weight: bolder;
      margin-top: 3rem;
      text-transform: lowercase;
+     transition: all .3s ;
+     &:hover{
+       transform: translateY(-3px);
+       box-shadow: 0rem 3rem 3rem -1rem rgba($color-exim-blue,.7);
+     }
+     &:active{
+       transform: translateY(0px);
+       box-shadow: 0rem 1rem 3rem -1rem rgba($color-exim-blue,.7);
+     }
      &--icon{
 
      }

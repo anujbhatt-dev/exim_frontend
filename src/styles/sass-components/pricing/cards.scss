@@ -13,6 +13,11 @@
   padding: 2rem;
   box-shadow: 0 1rem 2rem rgba($color-black,.3);
   border-radius: 12px;
+  transition: all .3s ;
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0rem 3rem 3rem  rgba($color-exim-dark-grey,.7);
+  }
   & h3{
     font-size: 1.4rem;
     color: #77D65B;
