@@ -6,6 +6,7 @@
   box-shadow: 0 0 4rem rgba($color-black,.3);
   border-radius: 18px;
   margin-top: 3rem;
+  background: $color-white;
   &_item{
     display: flex;
     justify-content:space-between;
@@ -14,11 +15,24 @@
       color: $color-exim-dark-grey;
     }
     &-text{
-       padding-left: 1.5rem;
-       line-height: 1.5;
-       font-size: 1.5rem;
-       color: $color-exim-grey;
-       max-width: 20rem;
+       padding-left: 3rem;
+       line-height: 1.3;
+       font-size: 1.8rem;
+       color: $color-black;
+       max-width: 30rem;
     }
   }
 }
+@include respond(tab-port){
+  .landing__bar{
+    &_item{
+      &-svg{
+        height: 2.5rem;
+      }
+      &-text{
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+};

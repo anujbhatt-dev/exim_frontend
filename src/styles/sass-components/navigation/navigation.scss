@@ -41,6 +41,24 @@
 
     }
   }
-
-
 }
+@include respond(tab-land){
+  .nav{
+    padding: 1rem 2rem;
+    flex-direction:column;
+    position: relative;
+    position:sticky;
+    background: $color-white;
+    top: 0;
+    z-index: 100;
+    & ul{
+    }
+    &__link{
+      padding: 0 1rem;
+    }
+    &__list{
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    }
+  }
+};

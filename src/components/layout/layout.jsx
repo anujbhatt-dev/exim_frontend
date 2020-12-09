@@ -3,6 +3,7 @@ import Navigation from "./nav/nav"
 import Landing from "./landing/landing"
 import Pricing from "./pricing/pricing"
 import AboutUs from "./aboutUs/aboutUs"
+import Course from "./course/course"
 import Footer from "./footer/footer"
 import Blogs from "./blogs/blogs";
 import { Switch, Route } from "react-router-dom";
@@ -33,6 +34,10 @@ class Layout extends Component{
 
               <Route exact  path="/about">
                   <AboutUs/>
+              </Route>
+
+              <Route exact  path="/course">
+                  <Course/>
               </Route>
                </Switch>
                <Footer/>

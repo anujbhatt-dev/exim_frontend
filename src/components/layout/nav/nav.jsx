@@ -57,7 +57,7 @@ import $ from "jquery"
               <img className="nav__compName" src={exim} alt="EXIM"/>
               <ul className="nav__list">
                 <NavLink onClick={()=>this.selectedNav(1)} className="nav__link" to="/"><li className="nav__list_item nav__list_item-1">Home</li><hr className="nav__list_Hr nav__list_Hr-1"/></NavLink>
-                <NavLink onClick={()=>this.selectedNav(3)} className="nav__link" to="/"><li className="nav__list_item nav__list_item-3">Courses</li><hr className="nav__list_Hr nav__list_Hr-3"/></NavLink>
+                <NavLink onClick={()=>this.selectedNav(3)} className="nav__link" to="/course"><li className="nav__list_item nav__list_item-3">Courses</li><hr className="nav__list_Hr nav__list_Hr-3"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(2)} className="nav__link" to="/pricing"><li className="nav__list_item nav__list_item-2">Pricing</li><hr className="nav__list_Hr nav__list_Hr-2"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(4)} className="nav__link" to="/"><li className="nav__list_item nav__list_item-4">blogs</li><hr className="nav__list_Hr nav__list_Hr-4"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(5)} className="nav__link" to="/about"><li className="nav__list_item nav__list_item-5">About Us</li><hr className="nav__list_Hr nav__list_Hr-5"/></NavLink>

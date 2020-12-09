@@ -30,7 +30,7 @@
       &--name{
         color: $color-exim-dark-grey;
         line-height: 1.5;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
       &--rating{
         background: $color-exim-blue;
@@ -46,9 +46,10 @@
     }
     &-bottom{
       margin-top: 1.5rem;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: $color-grey;
       padding: 1.5rem;
+      margin-bottom: 3rem;
     }
   }
 }

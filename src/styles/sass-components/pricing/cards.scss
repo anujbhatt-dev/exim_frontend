@@ -7,16 +7,17 @@
   }
 }
 .card{
-  margin: 0 5rem;
+  margin: 0 1rem;
   background:$color-white;
   color: $color-black;
   padding: 2rem;
-  box-shadow: 0 0 5rem rgba($color-black,.5);
+  box-shadow: 0 1rem 2rem rgba($color-black,.3);
   border-radius: 12px;
   & h3{
+    font-size: 1.4rem;
     color: #77D65B;
     text-transform: uppercase;
-    margin-right: 2rem;
+    margin-right: 4rem;
     text-align: right;
     margin-bottom: 2rem;
   }
@@ -26,12 +27,12 @@
   }
   &__name{
     text-align:center;
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-weight: bold;
   }
   &__price{
     text-align:center;
-    font-size: 2.5rem;
+    font-size: 4.2rem;
     font-weight: bold;
     margin: 2rem 0;
   }
@@ -39,8 +40,8 @@
     & li{
       display: flex;
       align-items: center;
-      font-size: 1.3rem;
-      margin: 1.5rem 0;
+      font-size: 1.8rem;
+      margin: 2rem 0;
       & strong{
         margin-right: .5rem;
       }
@@ -54,3 +55,11 @@
   color:$color-white;
   background: $color-black;
 }
+@include respond(tab-land){
+  .pricing__cards{
+    flex-direction: column;
+    & > div{
+      margin-top: 1.5rem
+    }
+  }
+};
