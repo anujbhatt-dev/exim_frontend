@@ -11,6 +11,7 @@
     margin: 5rem;
     display: flex;
     justify-content: space-between;
+    background: $color-white;
     &-btn{
       position: absolute;
       bottom: 0;
@@ -54,6 +55,7 @@
           margin-bottom: 1rem;
           & img{
             padding-right: 1rem;
+            width: 3rem;
           }
         }
       }

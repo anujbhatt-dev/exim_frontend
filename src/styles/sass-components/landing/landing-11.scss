@@ -10,8 +10,8 @@
     margin: 5rem 0;
     flex-wrap: nowrap;
     position: relative;
-    animation: slide 60s linear infinite;
-    animation-fill-mode: forwards;
+    animation: slide 50s linear infinite;
+    animation-fill-mode: both;
   }
   &_review{
     border-radius: 18px;

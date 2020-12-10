@@ -69,7 +69,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});     
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'x'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
@@ -134,7 +134,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
         delay: 100,
       });
 
-      
+
 
       //number flip
       window.addEventListener('scroll',()=>{
@@ -156,6 +156,27 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
 
     });
+
+     $(window).scroll(()=>{
+       console.log($(window).scrollTop());
+
+       if($(window).scrollTop()>=1700){
+         $(".blank__1").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
+         setTimeout(()=>{
+           $(".blank__1").css({"opacity":"0"})
+           $(".blank__2").css({"animation":"slide-reverse 1s linear","animation-fill-mode":"forward"});
+           setTimeout(()=>{
+             $(".blank__2").css({"opacity":"0"})
+             $(".blank__3").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
+             setTimeout(()=>{
+               $(".blank__3").css({"opacity":"0"})
+             },1000)
+           },1000)
+         },1000)
+       }
+
+     })
+
    }
 
     render(){
@@ -197,15 +218,15 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__bar">
                    <div className="landing__bar_item">
-                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={book} alt=""/>
+                       <img className="landing__bar_item-svg" src={book} alt=""/>
                        <div className="landing__bar_item-text">simple video courses to ease global trade</div>
                    </div>
                    <div className="landing__bar_item">
-                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={laptop} alt=""/>
+                       <img className="landing__bar_item-svg" src={laptop} alt=""/>
                        <div className="landing__bar_item-text">Live student-teacher interactive session</div>
                    </div>
                    <div className="landing__bar_item">
-                      <div className="spin"><img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={reload} alt=""/></div>
+                      <div className="spin"><img className="landing__bar_item-svg" src={reload} alt=""/></div>
                       <div className="landing__bar_item-text">Get ready for career</div>
                    </div>
               </div>
@@ -233,7 +254,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                 // 3
               }
 
-              <div data-aos="slide-right" data-aos-duration="500" className="landing__3">
+              <div className="landing__3">
                   <h1 className="heading-primary landing__3_heading">course details</h1>
                   <div className="landing__3_box">
                       <div className="landing__3_box-text">
@@ -252,19 +273,19 @@ import landing_main from "../../../assets/images/landing-main.svg"
                           <div className="landing__3_box-text--big">ADAPTIVE LEARNING</div>
                           <ul>
                             <li>
-                                 <img src={section} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={section} alt=""/>
                                  <span>Modules 14</span>
                             </li>
                             <li>
-                                 <img src={clock} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={clock} alt=""/>
                                  <span>Duration 1 month</span>
                             </li>
                             <li>
-                                 <img src={zoom} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={zoom} alt=""/>
                                  <span>Zoom call every sunday</span>
                             </li>
                             <li>
-                                 <img src={crown} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={crown} alt=""/>
                                  <span>Premium helpdesk expert</span>
                             </li>
                           </ul>
@@ -274,19 +295,19 @@ import landing_main from "../../../assets/images/landing-main.svg"
                           <div className="landing__3_box-text--big">COURSE FEATURES</div>
                           <ul>
                             <li>
-                                 <img src={video} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={video} alt=""/>
                                  <span>Video tutorials</span>
                             </li>
                             <li>
-                                 <img src={cell} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={cell} alt=""/>
                                  <span>Mobile application</span>
                             </li>
                             <li>
-                                 <img src={pdf} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={pdf} alt=""/>
                                  <span>Powerpoint and PDF</span>
                             </li>
                             <li>
-                                 <img src={offline} alt=""/>
+                                 <img data-aos-once="true" data-aos="fade-right" data-aos-duration="1500" src={offline} alt=""/>
                                  <span>Offine mode</span>
                             </li>
                           </ul>
@@ -300,31 +321,34 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__4">
                   {this.state.mob?<img className="landing__4_background" src={sMob} alt=""/>:<img  className="landing__4_background" src={s} alt=""/>}
+                  <div className="blank blank__1">0</div>
+                  <div className="blank blank__2">0</div>
+                  <div className="blank blank__3">0</div>
                   <div className="landing__4_1">
-                      <div className="landing__4_1-text">
-                           <div  data-aos="flip-down" className="landing__4_1-text--big heading-primary">SIGN UP</div>
+                      <div data-aos="fade-down" data-aos-delay="1000" className="landing__4_1-text">
+                           <div className="landing__4_1-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_1-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_1-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
-                      <img data-aos="fade-left" className="landing__4_1-image" src={s1} alt=""/>
+                      <img  className="landing__4_1-image" src={s1} alt=""/>
                   </div>
 
                   <div className="landing__4_2">
-                      <img data-aos="fade-right" className="landing__4_2-image" src={s2} alt=""/>
-                      <div className="landing__4_2-text">
-                           <div  data-aos="flip-down" className="landing__4_2-text--big heading-primary">SIGN UP</div>
+                      <img className="landing__4_2-image" src={s2} alt=""/>
+                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_2-text">
+                           <div className="landing__4_2-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_2-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_2-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
                   </div>
 
                   <div className="landing__4_3">
-                      <div className="landing__4_3-text">
-                           <div  data-aos="flip-down" className="landing__4_3-text--big heading-primary">SIGN UP</div>
+                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_3-text">
+                           <div className="landing__4_3-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_3-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_3-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
-                      <img data-aos="fade-left" className="landing__4_3-image" src={s3} alt=""/>
+                      <img  className="landing__4_3-image" src={s3} alt=""/>
                   </div>
               </div>
 

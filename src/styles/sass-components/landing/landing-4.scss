@@ -9,11 +9,38 @@
     left:50%;
     z-index: -1;
   }
+  & > .blank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: calc(100%/3);
+    color: transparent;
+    width: 100%;
+    background: $color-white;
+    &__1{
+      // animation: slide 3s linear 2;
+      animation-fill-mode: forwards;
+    }
+    &__2{
+      top: calc((100%/3));
+      // animation: slide-reverse 3s linear 2;
+      animation-fill-mode: forwards;
+    }
+    &__3{
+      top: calc((100%/3)*2);
+      // animation: slide 3s linear 2;
+      animation-fill-mode: forwards;
+    }
+  }
   &_1,&_2,&_3{
     display: flex;
     justify-content: center;
     align-items:center;
+    position: relative;
+
     & > div,& > img{
+      opacity: 1;
       margin: 8rem 8rem;
     }
   }
