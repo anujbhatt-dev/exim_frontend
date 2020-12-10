@@ -69,7 +69,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});     
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'x'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
@@ -134,7 +134,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
         delay: 100,
       });
 
-      
+
 
       //number flip
       window.addEventListener('scroll',()=>{
@@ -197,15 +197,15 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__bar">
                    <div className="landing__bar_item">
-                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={book} alt=""/>
+                       <img className="landing__bar_item-svg" src={book} alt=""/>
                        <div className="landing__bar_item-text">simple video courses to ease global trade</div>
                    </div>
                    <div className="landing__bar_item">
-                       <img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={laptop} alt=""/>
+                       <img className="landing__bar_item-svg" src={laptop} alt=""/>
                        <div className="landing__bar_item-text">Live student-teacher interactive session</div>
                    </div>
                    <div className="landing__bar_item">
-                      <div className="spin"><img data-aos="fade-right" data-aos-duration="1000" className="landing__bar_item-svg" src={reload} alt=""/></div>
+                      <div className="spin"><img className="landing__bar_item-svg" src={reload} alt=""/></div>
                       <div className="landing__bar_item-text">Get ready for career</div>
                    </div>
               </div>
