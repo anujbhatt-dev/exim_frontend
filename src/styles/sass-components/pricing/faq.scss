@@ -20,7 +20,9 @@
       }
     }
     &_answer{
-      font-size: 2.6rem;
+      animation: height 1s ease-out;
+      font-size: 2.6rem  ;
+      overflow: hidden;
       color: $color-exim-dark-grey;
       padding: 2rem 3rem;
     }
@@ -29,6 +31,7 @@
 @include respond(tab-land){
   .faq{
     margin: 0 2rem;
+
     &__box{
       &_ques{
          font-size: 1.8rem;

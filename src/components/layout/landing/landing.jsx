@@ -60,10 +60,69 @@ import landing_main from "../../../assets/images/landing-main.svg"
     state={
         numbersVisible:false,
         numberValue:6456749,
+        value:"",
         mob:false
     }
 
+    //"Export Import Education"
+
+    repeat =()=>{
+        setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});     
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'x'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' I'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'m'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'u'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'c'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'n'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'"'}});
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},50);
+
+
+
+}
+
     componentDidMount=()=>{
+
+        this.repeat();
 
       if($(window).width()<=800){
          this.setState({
@@ -74,6 +133,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
         duration: 1500,
         delay: 100,
       });
+
+      
 
       //number flip
       window.addEventListener('scroll',()=>{
@@ -116,7 +177,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                        EDUCATION
                     </div>
                     <div className="landing__1_text-smaller">
-                       "Export Import Education"
+                      {this.state.value}
                     </div>
                     <div className="landing__1_text-smallest">
                        Study India in the global business perspective and build  an International<br/>business by educating and brushing the export-import skills of the working<br/>class.
