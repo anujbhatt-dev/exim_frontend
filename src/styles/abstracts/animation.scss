@@ -10,6 +10,24 @@
     }
 }
 
+@keyframes slide {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+@keyframes slide-reverse {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
 @keyframes height {
     0%{
       height: 0;
