@@ -1,0 +1,124 @@
+.mainBlogs{
+  &__1{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 5rem;
+     margin-top: 0;
+     &_text{
+       padding-left: 5rem;
+       &-title{
+         font-size: 4.2rem;
+         font-weight: bolder;
+         text-transform:uppercase;
+         margin-bottom: 5rem;
+         text-align: center;
+         color: $color-exim-dark-grey;
+       }
+       &-detail{
+         display: flex;
+         justify-content: space-between;
+         font-size: 2.2rem;
+         color: $color-exim-grey;
+         &--date{
+
+         }
+         &--by{
+           & strong{
+             color: $color-black;
+           }
+         }
+       }
+     }
+  }
+  &__2{
+    margin: 5rem;
+    & h1{
+      margin-bottom: 2rem;
+    }
+    &_flex{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-box{
+        box-shadow: 0 0 5rem rgba($color-exim-dark-grey,.5);
+        flex-basis: 25%;
+        padding: 4rem;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: column;
+        background: $color-white;
+        & img{
+           margin-bottom: 1rem;
+        }
+        &--title{
+          font-size: 2.6rem;
+          font-weight: bold;
+          color: $color-exim-dark-grey;
+          margin-bottom: .5rem;
+        }
+        &--content{
+          font-size: 1.4rem;
+          color: $color-exim-grey;
+          margin-bottom: 1rem;
+        }
+        &--date{
+          font-size: 1.4rem;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+
+  &__3{
+    display: flex;
+    margin: 5rem 0;
+
+    & h1{
+      margin-left: 4rem;
+      margin-bottom: 5rem;
+    }
+    &_arrow{
+      font-size: 3rem;
+      text-align: center;
+      color: $color-exim-dark-grey;
+      animation: bubble .5s linear 3;
+      &:hover{
+        text-shadow: 0 0rem 1rem rgba($color-exim-blue,1);
+        color: $color-exim-blue;
+      }
+    }
+    &_slide{
+      margin: 4rem;
+      &-box{
+        display: flex;
+
+        padding: 2rem 0;
+        &:not(:last-child){
+          border-bottom: 1px solid $color-exim-dark-grey;
+        }
+        & > div{
+          margin-right: 2rem;
+        }
+        &--title{
+          font-weight: bold;
+          font-size: 2.1rem;
+          margin-bottom: .5rem;
+          color: $color-exim-dark-grey;
+        }
+        &--content{
+          font-size: 1.1rem;
+          margin-bottom: .5rem;
+          color: $color-exim-grey;
+        }
+        &--date{
+          font-size: 2.1rem;
+          margin-bottom: .5rem;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}
