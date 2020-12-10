@@ -333,17 +333,17 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <img  className="landing__4_1-image" src={s1} alt=""/>
                   </div>
 
-                  <div data-aos="fade-down" data-aos-delay="1000" className="landing__4_2">
+                  <div className="landing__4_2">
                       <img className="landing__4_2-image" src={s2} alt=""/>
-                      <div className="landing__4_2-text">
+                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_2-text">
                            <div className="landing__4_2-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_2-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_2-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
                   </div>
 
-                  <div data-aos="fade-down" data-aos-delay="1000" className="landing__4_3">
-                      <div className="landing__4_3-text">
+                  <div className="landing__4_3">
+                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_3-text">
                            <div className="landing__4_3-text--big heading-primary">SIGN UP</div>
                            <div className="landing__4_3-text--small">Quick sign up with 2 steps</div>
                            <div className="landing__4_3-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
