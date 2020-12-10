@@ -111,7 +111,7 @@ import "aos/dist/aos.css"
      }
    }
 
-   // <Link to="/blogs">more..</Link>
+   //
     render() {
         return (
           <div className="mainBlogs">
@@ -232,6 +232,8 @@ import "aos/dist/aos.css"
                     </div>
                 </div>
             </div>
+
+            <Link to="/blogs">more..</Link>
         </div>
         )
     }
