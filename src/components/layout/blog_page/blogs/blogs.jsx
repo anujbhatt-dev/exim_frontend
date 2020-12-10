@@ -3,17 +3,17 @@ import axios from 'axios'
 import { Link, withRouter } from 'react-router-dom'
 
 
-class Category extends Component {
+class Blogs extends Component {
 
 
     state={
         data:[],
-        categories:[],
+       // categories:[],
         page:1,
         perPage:10,
         loading:true,
         totalPages:1,
-        tags:[],
+     //  tags:[],
         total:0,
     }
 
@@ -35,19 +35,19 @@ class Category extends Component {
         if(this.state.loading)
        {
 
-        if(this.state.selectedCategory===undefined)
+      //  if(this.state.selectedCategory===undefined)
             axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage).
         then(res=>{
            
           this.setState({selectedCategory:this.props.match.params.id,data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"],total:+res.headers["x-wp-total"]});
         })
 
-        else
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage+"&categories="+this.props.match.params.id).
-    then(res=>{
+    //     else
+    //     axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+this.state.page+"&per_page="+this.state.perPage+"&categories="+this.props.match.params.id).
+    // then(res=>{
        
-      this.setState({selectedCategory:this.props.match.params.id,data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"],total:+res.headers["x-wp-total"]});
-    })
+    //   this.setState({selectedCategory:this.props.match.params.id,data:res.data,loading:false,totalPages:+res.headers["x-wp-totalpages"],total:+res.headers["x-wp-total"]});
+    // })
 
     }
     }
@@ -61,12 +61,6 @@ class Category extends Component {
 
     }
 
-
-
-    // categoryHandler=(id)=>{
-    //     this.setState({selectedCategory:id,loading:true,page:1});
-    // }
- 
 
     render() {
         return (
@@ -116,4 +110,4 @@ class Category extends Component {
 }
 
 
-export default  withRouter(Category);
+export default  withRouter(Blogs);

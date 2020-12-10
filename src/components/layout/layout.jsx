@@ -5,8 +5,8 @@ import Pricing from "./pricing/pricing"
 import AboutUs from "./aboutUs/aboutUs"
 import Course from "./course/course"
 import Footer from "./footer/footer"
-import Blogs from "./blogs/blogs";
 import { Switch, Route } from "react-router-dom";
+import BlogsPage from "./blog_page/blog_page"
 
 class Layout extends Component{
 
@@ -20,8 +20,8 @@ class Layout extends Component{
                <Route exact  path="/">
                  <Landing/>
                </Route>
-               <Route  path="/blogs">
-                 <Blogs/>
+               <Route   path="/blogs">
+                 <BlogsPage/>
               </Route>
 
               <Route exact  path="/">

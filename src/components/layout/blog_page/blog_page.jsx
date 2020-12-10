@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link, Switch, Route } from 'react-router-dom'
-import Category from './category/category'
+import Blogs from './blogs/blogs'
 import Blog from './blog/blog'
-import Filter from './filter/filter'
-import Tag from './tag/tag'
+import BlogMain from './blog_main/blog_main'
 
 
- class Blogs extends Component {
+ class BlogPage extends Component {
 
     state={
         data:[],
@@ -26,16 +25,13 @@ import Tag from './tag/tag'
 
             
           <Switch>
-          <Route exact path={"/blogs/category/:id"}>
-          <Category/>
+
+          <Route exact path={"/blogs/main"}>
+          <BlogMain/>
           </Route>
 
-          <Route exact path={"/blogs/category"}>
-          <Category/>
-          </Route>
-
-          <Route path={"/blogs/tag/:id"}>
-           <Tag/>
+          <Route exact path={"/blogs"}>
+          <Blogs/>
           </Route>
 
           <Route exact path={"/blogs/:id"}>
@@ -43,7 +39,6 @@ import Tag from './tag/tag'
           </Route>
 
           </Switch>
-          <Filter/>
 
            </>
         )
@@ -51,4 +46,4 @@ import Tag from './tag/tag'
 }
 
 
-export default Blogs;
+export default BlogPage;
