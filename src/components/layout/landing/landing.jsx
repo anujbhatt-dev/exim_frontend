@@ -161,13 +161,13 @@ import landing_main from "../../../assets/images/landing-main.svg"
        console.log($(window).scrollTop());
 
        if($(window).scrollTop()>=1700){
-         $(".blank__1").css({"animation":"slide 1s linear","animation-fill-mode":"forward"});
+         $(".blank__1").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
          setTimeout(()=>{
            $(".blank__1").css({"opacity":"0"})
            $(".blank__2").css({"animation":"slide-reverse 1s linear","animation-fill-mode":"forward"});
            setTimeout(()=>{
              $(".blank__2").css({"opacity":"0"})
-             $(".blank__3").css({"animation":"slide 1s linear","animation-fill-mode":"forward"});
+             $(".blank__3").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
              setTimeout(()=>{
                $(".blank__3").css({"opacity":"0"})
              },1000)
