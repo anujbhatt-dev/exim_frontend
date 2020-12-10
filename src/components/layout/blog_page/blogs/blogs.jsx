@@ -70,7 +70,7 @@ class Blogs extends Component {
                       return (
                         <div  className="blogs__flex_box">
                             <img  className="blogs__flex_box-img" src= {blog["jetpack_featured_media_url"]}   alt=""/>
-                            <div  className="blogs__flex_box--title">{blog.title.rendered}</div>
+                            <h1  className="blogs__flex_box--title">{blog.title.rendered}</h1>
                             <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,200))}} />
                             {
                               // {blog.content.rendered.substring(0,200)}
