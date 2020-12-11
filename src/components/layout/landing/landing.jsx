@@ -122,6 +122,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     componentDidMount=()=>{
 
+      window.scrollTo({top:0,behavior:"smooth"});
+
         this.repeat();
 
       if($(window).width()<=800){

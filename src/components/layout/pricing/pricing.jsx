@@ -44,6 +44,10 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
       })
     }
 
+    componentDidMount=()=>{
+      window.scrollTo({top:0,behavior:"smooth"});
+    }
+
 
     render(){
 

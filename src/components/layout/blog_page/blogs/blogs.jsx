@@ -22,7 +22,7 @@ class Blogs extends Component {
 
 
     componentDidMount=()=>{
-
+window.scrollTo({top:0,behavior:"smooth"});
         console.log(this.props.match.params.id);
 
        this.setState({selectedCategory:this.props.match.params.id,loading:true})
