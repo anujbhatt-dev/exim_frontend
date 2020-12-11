@@ -69,6 +69,7 @@ class Blogs extends Component {
         if(this.state.data.length===0 || this.state.loading){
           return <Spinner/>
         }
+        console.log(this.state.data);
         return <div className="blogs">
                  <div className="blogs__big">
                      <img src={l} alt=""/>

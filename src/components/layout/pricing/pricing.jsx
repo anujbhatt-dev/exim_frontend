@@ -111,6 +111,7 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
                      <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
                   </div>
                </div>
+               <div className="customHr">...</div>
 
                {
                  // faq
