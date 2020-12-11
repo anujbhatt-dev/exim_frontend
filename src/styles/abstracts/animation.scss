@@ -12,19 +12,19 @@
 
 @keyframes slides {
   0%{
-    left: 0;
+    left: 20%;
   }
   100%{
-    left: 100%;
+    left: 80%;
   }
 }
 
 @keyframes slide-reverse {
   0%{
-    left: 0;
+    left: -21%;
   }
   100%{
-    left: -100%;
+    left: -75%;
   }
 }
 
@@ -104,39 +104,34 @@
 }
 
 
-@keyframes hinge {
+@keyframes color {
    0% {
-      transform: rotate(0);
-      transform-origin: top left;
-      animation-timing-function: ease-in-out;
+      border: .5rem solid $color-exim-blue;
+      border-radius: 50%;
    }
    12%, 24% {
-      transform: rotate(80deg);
-      transform-origin: top left;
-      animation-timing-function: ease-in-out;
+      border: .5rem solid $color-white;
+      border-radius: 50%;
    }
    30% {
-      transform: rotate(60deg);
-      transform-origin: top left;
-      animation-timing-function: ease-in-out;
+     border: .5rem solid $color-exim-green;
+     border-radius: 50%;
    }
    48% {
-      transform: rotate(60deg) translateY(0);
-      opacity: 1;
-      transform-origin: top left;
-      animation-timing-function: ease-in-out;
+      border: .5rem solid $color-lightblue;
+      border-radius: 50%;
    }
    60% {
-      transform: translateY(700px);
-      opacity: 0;
+      border: .5rem solid $color-secondary-blue;
+      border-radius: 50%;
    }
    61%{
-     transform: rotate(0);
-     opacity: 1
+     border: .5rem solid $color-cyan;
+     border-radius: 50%;
    }
    100%{
-     transform: rotate(0);
-     opacity: 1
+     border: .5rem solid tomato;
+     border-radius: 50%;
    }
 }
 

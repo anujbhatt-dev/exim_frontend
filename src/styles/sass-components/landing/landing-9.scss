@@ -10,9 +10,14 @@
            display:flex;
             align-items: center;
          }
-         &  img{
-           animation : hinge 5s ease-out infinite;
-           animation-delay: 3s;
+         &  .img__1,.img__2{
+           animation: color 20s linear infinite;
+           padding: 1rem;
+           height: 5rem;
+           width: 5rem;
+         }
+         &  .img__1{
+            animation-delay: 5s;
          }
          &  span{
            font-size: 1rem;

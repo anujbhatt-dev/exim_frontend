@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, withRouter } from 'react-router-dom'
 import Spinner from "../../../../UI/spinner/spinner"
 import m from "../../../../assets/images/blog-m.svg";
+import l from "../../../../assets/images/blog-l.svg";
 
 
 class Blogs extends Component {
@@ -69,7 +70,11 @@ class Blogs extends Component {
           return <Spinner/>
         }
         return <div className="blogs">
-                <h1 className="heading-primary">Total : {this.state.total}</h1>
+                 <div className="blogs__big">
+                     <img src={l} alt=""/>
+                     <div><strong>Exim</strong>Blogs</div>
+                 </div>
+                <h1 className="heading-primary">blogs : <span>{this.state.total}</span></h1>
                 <div className="blogs__flex">
                   {this.state.data.map(blog=>{
                       console.log(blog["jetpack_featured_media_url"]);

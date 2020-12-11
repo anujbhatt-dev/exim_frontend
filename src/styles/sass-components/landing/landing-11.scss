@@ -16,9 +16,9 @@
   &_review{
     border-radius: 18px;
     padding: 1rem;
-    margin: 1rem 5rem;
+    margin: 1rem 2rem;
     width: 40rem;
-    box-shadow: 0 0 10rem rgba($color-black,.5);
+    box-shadow: 0 1rem 2rem -.5rem rgba($color-black,.5);
     z-index: 10;
     &-top{
       display: flex;

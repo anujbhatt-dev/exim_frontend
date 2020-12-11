@@ -1,20 +1,62 @@
 .blogs{
+  &__big{
+    position: relative;
+    height: 60vh;
+    & img{
+      position: relative;
+      top: 0;
+      left: -8rem;
+      width: 100vw;
+      height: 60vh;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+    & div{
+      font-size: 15rem;
+      letter-spacing: 1.5px;
+      color: $color-white;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: lighter;
+      & strong{
+        text-transform:uppercase;
+        margin-right: 1rem;
+      }
+    }
+  }
   & > h1{
-    text-align: center;
+    margin: 4rem 8rem;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: normal;
+    & span{
+      font-weight: bold;
+    }
   }
   &__flex{
     display: flex;
     justify-content: space-between;
-    margin: 8rem;
+    margin: 2rem 8rem;
     flex-wrap: wrap;
     &_box{
+      position: relative;
       flex-basis: 30%;
       padding: 2rem;
       border-radius: 18px;
       background: $color-white;
-      box-shadow: 0 0 5rem rgba($color-exim-dark-grey,.5);
+      box-shadow: 0 1rem 2rem rgba($color-exim-dark-grey,.5);
       margin-bottom: 3rem;
-
+      &:hover{
+        box-shadow: 0 2rem 3rem rgba($color-exim-dark-grey,.5);
+        transform: translateY(-4px);
+      }
+      &:active{
+        box-shadow: 0 1rem 3rem rgba($color-exim-dark-grey,.5);
+        transform: translateY(-1px);
+      }
       &-title{
         font-size: 2rem;
         font-weight: bold;
@@ -34,11 +76,16 @@
         margin-bottom: 1rem;
       }
       & a{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
         display: block;
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: bold;
-        color: $color-exim-green;
+        color: transparent;
       }
     }
   }
