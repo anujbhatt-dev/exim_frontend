@@ -235,6 +235,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                    </div>
               </div>
 
+              <div className="customHr">...</div>
+
               {
                 // mobile screen
               }
@@ -253,6 +255,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   </div>
                   <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
               </div>
+              <div className="customHr">...</div>
 
               {
                 // 3
@@ -319,6 +322,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                   </div>
               </div>
+              <div className="customHr">...</div>
               {
                 // s
               }
@@ -355,6 +359,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <img  className="landing__4_3-image" src={s3} alt=""/>
                   </div>
               </div>
+              <div className="customHr">...</div>
 
               {
                 //exports
@@ -378,6 +383,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
                     <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
               </div>
+              <div className="customHr">...</div>
 
               {
                 //Earn
@@ -393,6 +399,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                      </div>
                  </div>
               </div>
+              <div className="customHr">...</div>
 
               {
                 //colab
@@ -402,7 +409,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   {this.state.mob?<img src={colabMob} alt=""/>:<img src={colab} alt=""/>}
                   <img src={videoAfterColab} alt=""/>
               </div>
-
+              <div className="customHr">...</div>
               {
                 //cousre to success
               }
@@ -457,6 +464,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       </div>
                   </div>
               </div>
+              <div className="customHr">...</div>
 
               {
                 // features
@@ -495,7 +503,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                         </div>
                    </div>
               </div>
-
+              <div className="customHr">...</div>
               {
                 // video 2
               }
@@ -513,6 +521,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                  <img className="landing__10_orbits" src={orbits} alt=""/>
                  <img className="landing__10_play" src={play} alt=""/>
               </div>
+
+              <div className="customHr">...</div>
               {
                 // review
               }
