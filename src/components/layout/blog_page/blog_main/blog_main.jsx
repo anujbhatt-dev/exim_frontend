@@ -8,18 +8,20 @@ import $ from "jquery"
 import "aos/dist/aos.css"
 import axios from 'axios';
 import blogs from '../blogs/blogs';
+import Spinner from "../../../../UI/spinner/spinner"
+
  class BlogMain extends Component {
 
    state={
-     exportCount:0,
-     importCount:0,
+     exportCount:1,
+     importCount:1,
      slide:"down",
      blogs1:[],
      blogs2:[],
      mainBlog:undefined,
      category1:[ ],
      category2:[],
-     
+
    }
 
     componentDidMount=()=>{
@@ -36,14 +38,14 @@ import blogs from '../blogs/blogs';
           // alert(this.state.mainBlog);
         })
 
-        
+
        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+3).
        then(res=>{
 
          this.setState({blogs1:res.data});
        })
 
-       
+
        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+3).
         then(res=>{
 
@@ -55,25 +57,25 @@ import blogs from '../blogs/blogs';
         then(res=>{
           this.setState({category1:res.data});
         })
-        
+
 
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38).
         then(res=>{
           this.setState({category2:res.data});
         })
-    
-    
+
+
       }
 
    downArrow=(category)=>{
      if(category==="export"){
        this.setState({
-         exportCount:this.state.exportCount===this.state.export.length-1?0:this.state.exportCount+1,
+         exportCount:this.state.exportCount===(Math.floor(this.state.category2.length/3))-1?0:this.state.exportCount+1,
          slide:"up"
        })
      }else{
        this.setState({
-         importCount:this.state.importCount===this.state.export.length-1?0:this.state.importCount+1,
+         importCount:this.state.importCount===(Math.floor(this.state.category1.length/3))-1?0:this.state.importCount+1,
        })
      }
    }
@@ -81,12 +83,11 @@ import blogs from '../blogs/blogs';
    upArrow=(category)=>{
      if(category==="export"){
        this.setState({
-         exportCount:this.state.exportCount===0?this.state.export.length-1:this.state.exportCount-1,
-         slide:"up"
+         exportCount:this.state.exportCount===0?(Math.floor(this.state.category2.length/3))-1:this.state.exportCount-1
        })
      }else{
        this.setState({
-         importCount:this.state.importCount===0?this.state.export.length-1:this.state.importCount-1,
+         importCount:this.state.importCount===0?(Math.floor(this.state.category1.length/3))-1:this.state.importCount-1,
        })
      }
    }
@@ -94,14 +95,16 @@ import blogs from '../blogs/blogs';
    //
     render() {
 
-      console.log(this.state.mainBlog)
+        if(this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
+          return <Spinner/>
+        }
 
         return (
           <div className="mainBlogs">
             {
               // latest
             }
-           
+
            {this.state.mainBlog?
            <div  className="mainBlogs__1">
                <img src={l} alt=""/>
@@ -158,42 +161,52 @@ import blogs from '../blogs/blogs';
             <div className="mainBlogs__3">
                <div className="mainBlogs__3_1">
                   <h1 className="heading-primary">Exports</h1>
-                  <div  className="mainBlogs__3_arrow"  onClick={()=>this.upArrow("export")}><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                  <div  className="mainBlogs__3_arrow mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("export")}>{">"}</div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category2.map((blog,i)=>{
-                    return <div className="mainBlogs__3_slide-box" >
-                              <div>
-                                   <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
-                                   <div className="mainBlogs__3_slide-box--content">{123123}</div>
-                                   <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
-                               </div>
-                               <img src={s} alt=""/>
-                           </div>
-                  })}
+                    if(i<=(3*this.state.exportCount) && i>=(3*this.state.exportCount-2)){
+                      return <div className="mainBlogs__3_slide-box" >
+                                <div>
+                                     <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
+                                     <div className="mainBlogs__3_slide-box--content">{123123}</div>
+                                     <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
+                                 </div>
+                                 <img src={s} alt=""/>
+                             </div>
+                        }else{
+                          return null;
+                        }
+                })}
+
 
                   </div>
-                  <div  className="mainBlogs__3_arrow"  onClick={()=>this.downArrow("export")}><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("export")}>{">"}</div>
                </div>
 
                <div className="mainBlogs__3_1">
                   <h1 className="heading-primary">Exports</h1>
-                  <div  className="mainBlogs__3_arrow"  onClick={()=>this.upArrow("import")}><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("import")}>{">"}</div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category1.map((blog,i)=>{
-                    return <div className="mainBlogs__3_slide-box">
-                               <div>
-                                   <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
-                                   <div className="mainBlogs__3_slide-box--content">{123123}</div>
-                                   <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
-                               </div>
-                               <img src={s} alt=""/>
-                           </div>
+                   if(i<=(3*this.state.importCount) && i>=(3*this.state.importCount-2)){
+                     return <div className="mainBlogs__3_slide-box">
+                                <div>
+                                    <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
+                                    <div className="mainBlogs__3_slide-box--content">{123123}</div>
+                                    <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
+                                </div>
+                                <img src={s} alt=""/>
+                            </div>
+                   }else{
+                     return null;
+                   }
+
                   })}
 
                   </div>
-                  <div  className="mainBlogs__3_arrow"  onClick={()=>this.downArrow("import")}><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("import")}>{">"}</div>
                </div>
             </div>
 
@@ -216,7 +229,7 @@ import blogs from '../blogs/blogs';
                 </div>
             </div>
 
-            <Link to="/blogs">more..</Link>
+            <Link className="more" to="/blogs">more..</Link>
         </div>
         )
     }

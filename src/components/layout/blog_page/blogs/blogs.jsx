@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link, withRouter } from 'react-router-dom'
+import Spinner from "../../../../UI/spinner/spinner"
+import m from "../../../../assets/images/blog-m.svg";
 
 
 class Blogs extends Component {
@@ -63,13 +65,17 @@ class Blogs extends Component {
 
 
     render() {
+        if(this.state.data.length===0 || this.state.loading){
+          return <Spinner/>
+        }
         return <div className="blogs">
                 <h1 className="heading-primary">Total : {this.state.total}</h1>
                 <div className="blogs__flex">
                   {this.state.data.map(blog=>{
+                      console.log(blog["jetpack_featured_media_url"]);
                       return (
                         <div  className="blogs__flex_box">
-                            <img  className="blogs__flex_box-img" src= {blog["jetpack_featured_media_url"]}   alt=""/>
+                            {blog["jetpack_featured_media_url"]===""?<img  className="blogs__flex_box-img" src= {m}   alt=""/>:<img  className="blogs__flex_box-img" src= {blog["jetpack_featured_media_url"]}   alt=""/>}
                             <h1  className="blogs__flex_box--title">{blog.title.rendered}</h1>
                             <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,200))}} />
                             {
@@ -80,21 +86,23 @@ class Blogs extends Component {
                   )})}
                 </div>
 
-                <button onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>{"<"}</button>
-                {this.state.page}/{this.state.totalPages}
-                <button onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
+                <div className="pagination">
+                    <button  className="pagination__btn pagination__btn--back" onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>{"<"}</button>
+                    <span>{this.state.page}/{this.state.totalPages}</span>
+                    <button className="pagination__btn pagination__btn--forw" onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
 
 
-                <select onChange={(e)=>{
-                    this.setState({
-                             perPage:e.target.value,
-                             loading:true,
-                         })}
-                 }>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option selected value="10">10</option>
-                </select>
+                    <select className="pagination__select" onChange={(e)=>{
+                        this.setState({
+                                 perPage:e.target.value,
+                                 loading:true,
+                             })}
+                     }>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option selected value="10">10</option>
+                    </select>
+                </div>
               </div>
 
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
+import Spinner from "../../../../UI/spinner/spinner"
 import axios from 'axios';
 
 
@@ -11,6 +12,7 @@ import axios from 'axios';
     }
 
     componentDidMount=()=>{
+        
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
         then(res=> this.setState({blog:res.data})
 
@@ -20,7 +22,9 @@ import axios from 'axios';
 
     render() {
        console.log(this.state.blog);
-
+        if(this.state.blog===null){
+          return <Spinner/>
+        }
         return (
             <div className="blog">
                 {this.state.blog!==null?

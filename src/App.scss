@@ -5,12 +5,15 @@
 
 // base
 @import "styles/base/base";
+@import "styles/base/utils";
 
 //sass-components
 
 // nav
-
 @import "styles/sass-components/navigation/navigation";
+
+// Spinner
+@import "styles/sass-components/spinner/spinner";
 
 //landing
 @import "styles/sass-components/landing/landing-1";
