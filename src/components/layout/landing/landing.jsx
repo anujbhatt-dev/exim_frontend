@@ -59,7 +59,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     state={
         numbersVisible:false,
-        numberValue:6456749,
+        numberValue:64567435359,
         value:"",
         mob:false
     }
