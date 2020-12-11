@@ -81,14 +81,22 @@
       margin-bottom: 5rem;
     }
     &_arrow{
-      font-size: 3rem;
+      font-size: 5rem;
+      font-weight: bolder;
       text-align: center;
       color: $color-exim-dark-grey;
       animation: bubble .5s linear 3;
+      &-up{
+        transform: rotate(-90deg);
+      }
+      &-down{
+         transform: rotate(90deg);
+      }
       &:hover{
         text-shadow: 0 0rem 1rem rgba($color-exim-blue,1);
         color: $color-exim-blue;
       }
+
     }
     &_slide{
       margin: 4rem;

@@ -1,0 +1,55 @@
+.more{
+  font-size: 3rem;
+  padding: 2rem 4rem;
+  color: $color-white;
+  display: block;
+  margin: 2rem auto;
+  background: $color-exim-blue;
+  font-weight: bold;
+  max-width: 30rem;
+  border-radius: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  &:hover{
+    box-shadow: 0 0 3rem rgba($color-exim-blue,.3);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+  &:active{
+    box-shadow: 0 1rem 3rem rgba($color-exim-blue,.3);
+    transform: translateY(0px);
+  }
+}
+
+.pagination{
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & span{
+     font-size: 3rem;
+     padding: 1rem 3rem;
+     letter-spacing: 2px;
+     font-weight: bold;
+  }
+  &__btn{
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $color-exim-dark-grey;
+    padding: 1rem 2rem;
+    // background: $color-exim-dark-grey;
+    &--back{
+
+    }
+    &--forw{
+
+    }
+  }
+  &__select{
+    padding: 1.5rem 3rem;
+    margin-left: 2rem;
+
+  }
+}
+//
