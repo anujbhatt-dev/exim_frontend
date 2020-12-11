@@ -131,7 +131,7 @@ import Spinner from "../../../../UI/spinner/spinner"
 
                 {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
                         <img src={m} alt=""/>
-                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,100)}..</div>
+                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />..
                         </div>
@@ -220,7 +220,7 @@ import Spinner from "../../../../UI/spinner/spinner"
 
                 {this.state.blogs2.length>1?this.state.blogs2.map(blog=> <div className="mainBlogs__2_flex-box">
                         <img src={m} alt=""/>
-                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,100)}..</div>
+                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                         </div>

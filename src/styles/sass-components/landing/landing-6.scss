@@ -3,6 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 60rem;
+    perspective: 1000px;
+    & img{
+      border-radius: 18px;
+      outline: 1.5rem solid $color-exim-dark-grey;
+      outline-offset: 1.5rem;
+
+    }
     &-text{
       margin-left: 8rem;
       & div{

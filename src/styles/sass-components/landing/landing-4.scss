@@ -12,22 +12,25 @@
   & > .blank{
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 0;
     height: calc(100%/3);
     color: transparent;
     width: 100%;
     background: $color-white;
+    // opacity: .5;
     &__1{
+      left:20%;
       // animation: slide 3s linear 2;
       animation-fill-mode: forwards;
     }
     &__2{
+      left:-21%;
       top: calc((100%/3));
       // animation: slide-reverse 3s linear 2;
       animation-fill-mode: forwards;
     }
     &__3{
+      left:20%;
       top: calc((100%/3)*2);
       // animation: slide 3s linear 2;
       animation-fill-mode: forwards;

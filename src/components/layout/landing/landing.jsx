@@ -175,6 +175,10 @@ import landing_main from "../../../assets/images/landing-main.svg"
          },1000)
        }
 
+       if($(window).scrollTop()>=3100){
+         $(".landing__6_box-certificate").css({"animation":"scale .6s linear 2","animation-fill-mode":"forward"});
+       }
+
      })
 
    }
@@ -463,29 +467,29 @@ import landing_main from "../../../assets/images/landing-main.svg"
                    <div className="landing__9_box">
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img src={videoBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__1" src={videoBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img src={pause} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__2" src={pause} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__1" src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                         </div>
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__2" src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__2" src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1 ><img src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1 ><img className="img__1" src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                         </div>
