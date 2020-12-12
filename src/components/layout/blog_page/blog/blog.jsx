@@ -13,6 +13,7 @@ import axios from 'axios';
     }
 
     componentDidMount=()=>{
+      window.scrollTo({top:0,behavior:"smooth"});
 
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
         then(res=> this.setState({blog:res.data})

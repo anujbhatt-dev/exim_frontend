@@ -25,7 +25,7 @@ import Spinner from "../../../../UI/spinner/spinner"
    }
 
     componentDidMount=()=>{
-
+window.scrollTo({top:0,behavior:"smooth"});
       Aos.init({
          duration: 1500,
          delay: 100,
