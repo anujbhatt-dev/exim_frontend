@@ -61,7 +61,31 @@ import landing_main from "../../../assets/images/landing-main.svg"
         numbersVisible:false,
         numberValue:64567435359,
         value:"",
-        mob:false
+        mob:false,
+        cos:[
+          {
+            title:"Exim management",
+            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+          },
+          {
+            title:"Freight Forwarder",
+            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+          },
+          {
+            title:"Merchant export/importer",
+            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+          },
+          {
+            title:"Logistic manager",
+            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+          },
+          {
+            title:"In CHA",
+            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+          },
+        ],
+        cosTitle:"Exim management",
+        cosContent:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
     }
 
     //"Export Import Education"
@@ -115,9 +139,6 @@ import landing_main from "../../../assets/images/landing-main.svg"
 },50);
 },50);
 },50);
-
-
-
 }
 
     componentDidMount=()=>{
@@ -184,6 +205,16 @@ import landing_main from "../../../assets/images/landing-main.svg"
      })
 
    }
+
+   coureseToSuccess=(num)=>{
+      let newState = this.state
+      newState.cosTitle = newState.cos[num].title;
+      newState.cosContent = newState.cos[num].content;
+      this.setState({
+        ...newState
+      })
+   }
+
 
     render(){
 
@@ -419,23 +450,23 @@ import landing_main from "../../../assets/images/landing-main.svg"
               <div className="landing__8">
                   <h1 className="heading-primary landing__3_heading">cousre to success</h1>
                   <div className="landing__8_bar">
-                      <div className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(0)} className="landing__8_bar-box">
                           <img src={eximManagement} alt=""/>
                           <div>Exim<br/>management</div>
                       </div>
-                      <div className="landing__8_bar-box">
+                      <div  onClick={()=>this.coureseToSuccess(1)} className="landing__8_bar-box">
                           <img src={humanChain} alt=""/>
                           <div>Freight Forwarder</div>
                       </div>
-                      <div className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(2)} className="landing__8_bar-box">
                           <img src={lapi} alt=""/>
                           <div>Merchant<br/>export/importer</div>
                       </div>
-                      <div className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(3)} className="landing__8_bar-box">
                           <img src={setting} alt=""/>
                           <div>Logistic manager</div>
                       </div>
-                      <div className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(4)} className="landing__8_bar-box">
                           <img src={globe} alt=""/>
                           <div>in CHA</div>
                       </div>
@@ -450,8 +481,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               </div>
                       </div>
                       <div className="landing__8_box-text">
-                            <div className="landing__8_box-text--big">Exim Management</div>
-                            <div className="landing__8_box-text--small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore<br/> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br/> justo duo dolores et ea rebum. Stet clita kasd gubergren, no</div>
+                            <div className="landing__8_box-text--big">{this.state.cosTitle}</div>
+                            <div className="landing__8_box-text--small">{this.state.cosContent}</div>
                             <div className="landing__8_box-flex">
                                  <div className="landing__8_box-flex--text">Stock</div>
                                  <button className="landing__8_box-flex--btn  landing__8_box-flex--btn-1">
