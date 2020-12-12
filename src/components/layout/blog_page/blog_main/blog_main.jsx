@@ -95,7 +95,7 @@ window.scrollTo({top:0,behavior:"smooth"});
    //
     render() {
 
-        if(this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
+        if(this.state.category1.length===0 || this.state.category2.length===0 || this.state.blogs2.length===0 || this.state.blogs1.length===0){
           return <Spinner/>
         }
 
@@ -107,12 +107,13 @@ window.scrollTo({top:0,behavior:"smooth"});
 
            {this.state.mainBlog?
            <div  className="mainBlogs__1">
-               <img src={l} alt=""/>
+               <Link className="link" to={"/blogs/"+this.state.mainBlog[0].id}>go...</Link>
+               {this.state.mainBlog[0]["jetpack_featured_media_url"]===""?<img src={l} alt=""/>:<img src={this.state.mainBlog[0]["jetpack_featured_media_url"]} alt=""/>}
                <div  className="mainBlogs__1_text">
           <div className="mainBlogs__1_text-title">
           <div className="mainBlogs__2_flex-box--title">{this.state.mainBlog[0].title.rendered}</div>
 
-          <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog[0].excerpt.rendered.substring(0,100))}} />....
+          <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog[0].excerpt.rendered)}} />
             </div>
                    <div  className="mainBlogs__1_text-detail">
                        <div  className="mainBlogs__1_text-detail--date">12 Dec 2020</div>
@@ -130,7 +131,8 @@ window.scrollTo({top:0,behavior:"smooth"});
 
 
                 {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
-                        <img src={m} alt=""/>
+                        <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
+                        {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                         <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />..
@@ -167,12 +169,13 @@ window.scrollTo({top:0,behavior:"smooth"});
                   {this.state.category2.map((blog,i)=>{
                     if(i<=(3*this.state.exportCount) && i>=(3*this.state.exportCount-2)){
                       return <div className="mainBlogs__3_slide-box" >
+                                <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
                                      <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
                                      <div className="mainBlogs__3_slide-box--content">{123123}</div>
                                      <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
                                  </div>
-                                 <img src={s} alt=""/>
+                                 {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                              </div>
                         }else{
                           return null;
@@ -192,12 +195,13 @@ window.scrollTo({top:0,behavior:"smooth"});
                   {this.state.category1.map((blog,i)=>{
                    if(i<=(3*this.state.importCount) && i>=(3*this.state.importCount-2)){
                      return <div className="mainBlogs__3_slide-box">
+                                <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
                                     <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
                                     <div className="mainBlogs__3_slide-box--content">{123123}</div>
-                                    <div className="mainBlogs__3_slide-bo--date">{"date"}</div>
+                                    <div className="mainBlogs__3_slide-box--date">{"date"}</div>
                                 </div>
-                                <img src={s} alt=""/>
+                                {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                             </div>
                    }else{
                      return null;
@@ -219,7 +223,8 @@ window.scrollTo({top:0,behavior:"smooth"});
 
 
                 {this.state.blogs2.length>1?this.state.blogs2.map(blog=> <div className="mainBlogs__2_flex-box">
-                        <img src={m} alt=""/>
+                        <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
+                        {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                         <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
@@ -229,7 +234,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                 </div>
             </div>
 
-            <Link className="more" to="/blogs">more..</Link>
+            <Link className="more" to="/blogs">more</Link>
         </div>
         )
     }

@@ -198,7 +198,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
          },1000)
        }
 
-       if($(window).scrollTop()>=3100){
+       if($(window).scrollTop()>=3761){
          $(".landing__6_box-certificate").css({"animation":"scale .6s linear 2","animation-fill-mode":"forward"});
        }
 
@@ -268,7 +268,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                    </div>
               </div>
 
-              <div className="customHr">...</div>
+
 
               {
                 // mobile screen
@@ -355,7 +355,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                   </div>
               </div>
-              <div className="customHr">...</div>
+
               {
                 // s
               }
@@ -392,7 +392,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <img  className="landing__4_3-image" src={s3} alt=""/>
                   </div>
               </div>
-              <div className="customHr">...</div>
+
 
               {
                 //exports
@@ -416,7 +416,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
                     <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
               </div>
-              <div className="customHr">...</div>
+
 
               {
                 //Earn
@@ -432,7 +432,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                      </div>
                  </div>
               </div>
-              <div className="customHr">...</div>
+
 
               {
                 //colab
@@ -442,7 +442,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   {this.state.mob?<img src={colabMob} alt=""/>:<img src={colab} alt=""/>}
                   <img src={videoAfterColab} alt=""/>
               </div>
-              <div className="customHr">...</div>
+
               {
                 //cousre to success
               }
@@ -496,8 +496,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </div>
                       </div>
                   </div>
+                  <div className="customHr">...</div>
               </div>
-              <div className="customHr">...</div>
+
 
               {
                 // features
@@ -516,27 +517,27 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__1" src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__3" src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                         </div>
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__2" src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__4" src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__2" src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__5" src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1 ><img className="img__1" src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1 ><img className="img__6" src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
                                 <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
                             </div>
                         </div>
                    </div>
               </div>
-              <div className="customHr">...</div>
+
               {
                 // video 2
               }
@@ -555,7 +556,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                  <img className="landing__10_play" src={play} alt=""/>
               </div>
 
-              <div className="customHr">...</div>
+
               {
                 // review
               }

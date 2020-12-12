@@ -10,14 +10,26 @@
            display:flex;
             align-items: center;
          }
-         &  .img__1,.img__2{
+         &  .img__1,.img__2,.img__3,.img__4,.img__5,.img__6{
            animation: color 20s linear infinite;
            padding: 1rem;
            height: 5rem;
            width: 5rem;
          }
-         &  .img__1{
-            animation-delay: 5s;
+         &  .img__2{
+            animation-delay: 2s;
+         }
+         &  .img__3{
+            animation-delay: 4s;
+         }
+         &  .img__4{
+            animation-delay: 6s;
+         }
+         &  .img__5{
+            animation-delay: 8s;
+         }
+         &  .img__6{
+            animation-delay: 10s;
          }
          &  span{
            font-size: 1rem;
