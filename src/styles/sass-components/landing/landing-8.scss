@@ -70,6 +70,7 @@
     }
 
     &-text{
+      max-width: 50rem;
       &--big{
         font-size: 1.8rem;
         color: $color-exim-dark-grey;
