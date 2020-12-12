@@ -43,8 +43,10 @@ import tv from "../../../assets/images/tv.svg";
 import send from "../../../assets/images/send.svg";
 import pause from "../../../assets/images/pause.svg";
 import gratuate from "../../../assets/images/gratuate.svg";
-import play from "../../../assets/images/play.png";
+import play from "../../../assets/images/play.svg";
 import orbits from "../../../assets/images/orbits.svg";
+import plays from "../../../assets/images/play-s.svg";
+import orbitss from "../../../assets/images/orbits-s.svg";
 import arrow from "../../../assets/images/arrow.svg";
 
 import FlipNumbers from 'react-flip-numbers';
@@ -60,33 +62,29 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     state={
         numbersVisible:false,
-        numberValue:6456749,
+        numberValue:6456744,
         value:"",
         mob:false,
         cos:[
           {
             title:"Exim management",
-            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
-          },
-          {
+            content:"being an exim manager one manages export/import process, foreseeing movement of goods and being in touch with freight forwarder, logistics, retailers and manufaturer. Exim manager also handles documents, primary responsibilities and many more."
+          },{
             title:"Freight Forwarder",
-            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
-          },
-          {
+            content:":  freight forwarders are master of trade. Giving recommendation to the exporter, performing freight operation, looking over documentation. Any business that is in import-export does require freight forwarder for their unique versatility."
+          },{
             title:"Merchant export/importer",
-            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
-          },
-          {
+            content:"export-import is the most effective money-making career. Know the global market and earn foreign exchange, develop country’s economy, tax concession, improve in sales and profit, increase in foreign sale and many more benefits one can get if stepped in exim world"
+           }, {
             title:"Logistic manager",
-            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
-          },
+            content:" as logistics manager you can organize the storage and distribution of goods. Also, to ensure that orders are carried out correctly. A logistics manager must wear a variety of hats throughout the workday."
+             },
           {
             title:"In CHA",
-            content:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
-          },
-        ],
+            content:": after getting certified by exim education one can work under Custom House Agent, and with a good experience can tuen as CHA. work in shipping line, NVOCC , export sales manager and step in real organized and easy money making world ."
+          }],
         cosTitle:"Exim management",
-        cosContent:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo ",
+        cosContent:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo "
     }
 
     //"Export Import Education"
@@ -94,27 +92,33 @@ import landing_main from "../../../assets/images/landing-main.svg"
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'x'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' I'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'m'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'p'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' E'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'u'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'c'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' M'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'k'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'n'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'g'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' I'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'n'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' T'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'h'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'e'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' W'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'l'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+"'s"}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' F'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'c'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'y'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'"'}});
 },50);
 },50);
@@ -140,6 +144,12 @@ import landing_main from "../../../assets/images/landing-main.svg"
 },50);
 },50);
 },50);
+},50);
+},50);
+},50);
+},50);
+},50);
+},150);
 }
 
     componentDidMount=()=>{
@@ -279,11 +289,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   <div className="landing__2_text">
                        <div className="heading-primary">exim education app</div>
                        <div className="landing__2_text-small">
-                          The quick, brown fox jumps over a lazy dog. DJs flock by when<br/>
-                          MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds<br/>
-                          jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!<br/>
-                          Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy<br/>
-                          veldt fox. Bright.
+                             Click on the “Download” button and be part of exim world. Enjoy 2 export-import videos for free,
+                              and get a peek on new terms and ways to export and import. Congratulations in advance for
+                              taking the first step towards your dream :)
                         </div>
                        <button data-aos="fade-right" className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                   </div>
@@ -543,7 +551,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                 // video 2
               }
 
-              <div className="landing__10 landing__7">
+              <div className="landing__10">
                  <img className="landing__10_img" src={video2} alt=""/>
                  <div className="landing__10_text">
                     <div>
@@ -551,10 +559,10 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <span>WEBINAR</span><br/>
                       sunday
                     </div>
-                    <div className="landing__3_box-btn">arrow</div>
+                    <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                  </div>
-                 <img className="landing__10_orbits" src={orbits} alt=""/>
-                 <img className="landing__10_play" src={play} alt=""/>
+                 {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
+                 {this.state.mob?<img className="landing__10_play" src={plays} alt=""/>:<img className="landing__10_play" src={play} alt=""/>}
               </div>
 
 

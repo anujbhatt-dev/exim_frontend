@@ -144,8 +144,8 @@ import logs from "../../../assets/images/logs.svg";
               }
 
               <div className="about__4">
-                 <img src={logs} alt=""/>
-                 <div><strong>EXIM</strong> LOGISTICS</div>
+                 <img className="about__4_img" src={logs} alt=""/>
+                 <div><strong>EXIM</strong> logistics</div>
               </div>
 
               {

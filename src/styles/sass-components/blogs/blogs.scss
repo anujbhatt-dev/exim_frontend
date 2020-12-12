@@ -76,6 +76,11 @@
         color: $color-exim-grey;
         margin-bottom: 1rem;
       }
+      &-date{
+        margin-top: 1rem;
+        color: $color-exim-dark-grey;
+        text-align: right;
+      }
       &-img{
         height: 20rem;
         width: 100%;

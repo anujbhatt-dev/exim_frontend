@@ -81,6 +81,7 @@
 @include respond(tab-port){
   .footer{
     // text-align: center;
+    left: 0;
     &__top{
       margin: auto;
       flex-wrap: wrap;

@@ -41,6 +41,8 @@ body{
   overflow-x: hidden;
   padding: 0 8rem;
   background-image: url(../../assets/images/eximBack.svg);
+  width: 100vw;
+  overflow-x: hidden;
   @include respond(tab-land){
     padding: 0 1rem;
   }

@@ -107,7 +107,8 @@
           margin-bottom: 1rem;
         }
         &--date{
-          font-size: 1.4rem;
+          font-size: 1rem;
+          text-align: right;
           color: $color-grey;
         }
       }
@@ -161,6 +162,7 @@
     &_slide{
       min-height: 55rem;
       margin: 4rem;
+      padding: 1rem;
       &-box{
         display: flex;
         position: relative;
@@ -177,6 +179,7 @@
           transform: translateY(-1px);
         }
         & > div{
+
           margin-right: 2rem;
         }
         & img{
@@ -197,9 +200,10 @@
           color: $color-exim-grey;
         }
         &--date{
-          font-size: 2.1rem;
+          font-size: 1rem;
           margin-bottom: .5rem;
-          color: $color-grey;
+          color: $color-exim-dark-grey;
+          text-align: right;
         }
       }
     }

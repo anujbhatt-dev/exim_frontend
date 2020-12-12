@@ -96,7 +96,7 @@ import half from "../../../assets/images/half.svg";
                                         {course.title}
                                     </div>
                                     <div className="course__wrapper_box-lock">
-                                         {course.locked?<img src={lock} alt=""/>:null}
+                                         {course.locked?<img className="small-lock" src={lock} alt=""/>:null}
                                          <div style={course.locked?{color:"grey",display:"block"}:null}>{course.lessons}</div>
                                     </div>
                                  </div>

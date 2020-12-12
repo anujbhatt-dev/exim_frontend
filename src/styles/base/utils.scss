@@ -54,11 +54,12 @@
 }
 
 .customHr{
-  margin: 2rem auto;
+  margin: 5rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10rem;
+  font-size: 0rem;
+
   color: transparent;
   text-shadow: 1.5rem 1.5rem 1.5rem $color-grey;
   border-bottom: 1px solid $color-grey;

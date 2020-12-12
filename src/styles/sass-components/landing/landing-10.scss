@@ -1,1 +1,63 @@
+.landing__10{
+  position:relative;
+  width: 100vw;
+  left: -8rem;
+  overflow: visible;
+  height: 100vh;
 
+  &_img{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &_play{
+    position:absolute;
+    right: 50%;
+    top: 23%;
+    z-index: 0;
+    height: 25rem;
+  }
+  &_orbits{
+    position:absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+  &_text{
+    font-size: 6.5rem;
+    position:absolute;
+    left: 10%;
+    top: 23%;
+    z-index: 1;
+    color: $color-white;
+    & button{
+      bottom: -5rem;
+      left: 0;
+    }
+  }
+  @include respond(tab-land){
+    left: -2rem;
+    height: 50vh;
+    overflow: hidden;
+    &_img{
+      object-fit: fill;
+      object-position: center;
+      height: 100%;
+    }
+    &_play{
+      position:absolute;
+      right: 30%;
+      top: 73%;
+      z-index: 0;
+      height: 10rem;
+      display: none;
+    }
+  }
+  &_text{
+    font-size: 4.5rem;
+  }
+}
