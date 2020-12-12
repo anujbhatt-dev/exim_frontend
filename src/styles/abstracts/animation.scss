@@ -10,6 +10,8 @@
     }
 }
 
+
+
 @keyframes slides {
   0%{
     left: 20%;
@@ -100,6 +102,22 @@
     }
     100%{
       transform: rotate(360deg)  scale(1);
+    }
+}
+
+@keyframes shake {
+    0%{
+      transform: rotate(0deg);
+
+    }
+    50%{
+      transform: rotate(10deg);
+    }
+    75%{
+      transform: rotate(-10deg);
+    }
+    100%{
+      transform: rotate(0deg);
     }
 }
 

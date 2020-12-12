@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6rem;
     margin: 15rem;
+    z-index: 0;
     &_box{
       &-lock{
         display: flex;
@@ -19,7 +20,7 @@
         }
       }
       &:hover  img{
-        animation : scale 1s linear infinite;
+        animation : shake .5s linear infinite;
       }
       height: 20rem;
       overflow: hidden;
@@ -58,6 +59,17 @@
         justify-content: center;
         align-items: center;
 //        transform: translate(-50%,-50%);
+      }
+    }
+  }
+  @include respond(tab-land){
+    &__wrapper{
+      margin: 2rem;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      &_box{
+        max-width: 40rem;
+        margin: auto;
       }
     }
   }

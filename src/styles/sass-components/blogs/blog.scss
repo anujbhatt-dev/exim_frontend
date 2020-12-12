@@ -1,5 +1,6 @@
 .blog{
   margin: 2rem 25rem ;
+
   &__box{
     &_title{
       font-size: 3rem;
@@ -28,5 +29,8 @@
       object-fit: cover;
       object-position: center;
     }
+  }
+  @include respond(tab-land){
+     margin: 2rem 2rem;
   }
 }

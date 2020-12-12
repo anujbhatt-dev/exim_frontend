@@ -13,7 +13,7 @@ class Blogs extends Component {
         data:[],
        // categories:[],
         page:1,
-        perPage:10,
+        perPage:9,
         loading:true,
         totalPages:1,
      //  tags:[],
@@ -67,9 +67,44 @@ window.scrollTo({top:0,behavior:"smooth"});
 
     render() {
         if(this.state.data.length===0 || this.state.loading){
-          return <Spinner/>
+          return <>
+                    <div className="blogs__big">
+                        <img src={l} alt=""/>
+                        <div><strong>Exim</strong>Blogs</div>
+                    </div>
+                   <Spinner/>
+                   <div className="pagination">
+                   {this.state.page===1?
+                     <p  className="pagination__btn pagination__btn--back">-</p>:
+                 <button  className="pagination__btn pagination__btn--back" onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>{"<"}</button>
+               }
+                       <span>{this.state.page}/{this.state.totalPages}</span>
+
+                       {this.state.totalPages===this.state.page?
+                         <p  className="pagination__btn pagination__btn--back">-</p>:
+                         <button className="pagination__btn pagination__btn--forw" onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
+                       }
+
+
+                       <select className="pagination__select" onChange={(e)=>{
+                           this.setState({
+                                    perPage:e.target.value,
+                                    loading:true,
+                                })}}
+                                value={this.state.perPage}
+                         >
+                           <option selected value="9">9</option>
+                           <option value="12">12</option>
+                           <option  value="15">15</option>
+                       </select>
+                   </div>
+                 </>
         }
-        console.log(this.state.data);
+
+
+
+
+
         return <div className="blogs">
                  <div className="blogs__big">
                      <img src={l} alt=""/>
@@ -86,27 +121,36 @@ window.scrollTo({top:0,behavior:"smooth"});
                             <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,200))}} />
                             {
                               // {blog.content.rendered.substring(0,200)}
-                            }
+                            }  {blog.date.substring(0,blog.date.indexOf("T"))}
+
                             <Link to={"/blogs/"+blog.id}>go...</Link>
                         </div>
                   )})}
                 </div>
 
                 <div className="pagination">
-                    <button  className="pagination__btn pagination__btn--back" onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>{"<"}</button>
+                {this.state.page===1?
+                  <p  className="pagination__btn pagination__btn--back">-</p>:
+                  <button
+                     className="pagination__btn pagination__btn--back" onClick={()=>this.pageHandler(-1)} disabled={this.state.page===1}>
+                     {"<"}
+                     </button>}
                     <span>{this.state.page}/{this.state.totalPages}</span>
-                    <button className="pagination__btn pagination__btn--forw" onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
-
+                    {this.state.totalPages===this.state.page?
+                      <p  className="pagination__btn pagination__btn--back">-</p>:
+                      <button className="pagination__btn pagination__btn--forw" onClick={()=>this.pageHandler(1)} disabled={this.state.totalPages===this.state.page} >{">"}</button>
+                    }
 
                     <select className="pagination__select" onChange={(e)=>{
                         this.setState({
                                  perPage:e.target.value,
                                  loading:true,
-                             })}
-                     }>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option selected value="10">10</option>
+                             })}}
+                         value={this.state.perPage}
+                     >
+                        <option selected value="9">9</option>
+                        <option value="12">12</option>
+                        <option  value="15">15</option>
                     </select>
                 </div>
               </div>
