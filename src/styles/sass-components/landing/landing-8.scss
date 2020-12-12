@@ -17,11 +17,20 @@
       flex-direction: column;
       padding: 1.5rem;
       border-radius: 10px;
+      &:hover{
+        box-shadow: 0 2rem 3rem rgba($color-exim-dark-grey,.2);
+        transform: translateY(-4px);
+      }
+      &:active{
+        box-shadow: 0 1rem 3rem rgba($color-exim-dark-grey,.2);
+        transform: translateY(-1px);
+      }
       & img{
 
       }
       & div{
-
+        font-size: 1rem;
+        text-align: center;
       }
     }
   }
@@ -77,6 +86,9 @@
         margin-bottom: 1rem;
         text-transform: uppercase;
         font-weight: bold;
+        @include respond(tab-land){
+          margin-top: 5rem;
+        }
       }
       &--small{
         font-size: 1.4rem;
@@ -100,6 +112,14 @@
          padding: 2rem;
          box-shadow: .1rem .1rem .1rem rgba($color-black,.3);
          background: $color-white;
+         &:hover{
+           box-shadow: 0 2rem 3rem rgba($color-exim-dark-grey,.2);
+           transform: translateY(-4px);
+         }
+         &:active{
+           box-shadow: 0 1rem 3rem rgba($color-exim-dark-grey,.2);
+           transform: translateY(-1px);
+         }
          &:first-child{
            color: $color-exim-blue;
          }
@@ -127,6 +147,7 @@
 .bubble{
   animation: bubble 50s linear infinite;
   animation-fill-mode: forwards;
+
 }
 
 @include respond(tab-port){

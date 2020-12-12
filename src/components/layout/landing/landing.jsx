@@ -1,3 +1,4 @@
+
 import React, {Component} from "react"
 import Aos from "aos"
 import $ from "jquery"
@@ -42,7 +43,7 @@ import tv from "../../../assets/images/tv.svg";
 import send from "../../../assets/images/send.svg";
 import pause from "../../../assets/images/pause.svg";
 import gratuate from "../../../assets/images/gratuate.svg";
-import play from "../../../assets/images/play.svg";
+import play from "../../../assets/images/play.png";
 import orbits from "../../../assets/images/orbits.svg";
 import arrow from "../../../assets/images/arrow.svg";
 

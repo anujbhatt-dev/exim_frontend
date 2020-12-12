@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReactWhatsapp from 'react-whatsapp';
 import download from "../../../assets/images/download.svg";
 import facebook from "../../../assets/images/facebook.svg";
 import whatsapp from "../../../assets/images/whatsapp.svg";
@@ -28,7 +29,9 @@ import call from "../../../assets/images/call.svg";
                             <div  className="footer__top_social-icons">
                                <a href=""><img src={facebook} alt=""/></a>
                                <a href=""><img src={twitter} alt=""/></a>
-                               <a href=""><img src={whatsapp} alt=""/></a>
+                               <ReactWhatsapp element="a" number="+918517885555" message="message" >
+                                   <a href=""><img src={whatsapp} alt=""/></a>
+                               </ReactWhatsapp>
                                <a href=""><img src={call} alt=""/></a>
                                <a href=""><img src={insta} alt=""/></a>
                             </div>
