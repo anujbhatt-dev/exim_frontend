@@ -46,7 +46,7 @@ import half from "../../../assets/images/half.svg";
         {
           title:"Parties and places involved in import/ export",
           lessons:"14 Lesson /50 mins",
-          locked:false
+          locked:true
         },
         {
           title:"Parties and places involved in import/ export",
@@ -92,12 +92,12 @@ import half from "../../../assets/images/half.svg";
                          return <div  className="course__wrapper_box">
                                     <img className="course__wrapper_box-img" src={course.locked?full:half} alt=""/>
                                     <div  className="course__wrapper_box-count">{i+1}</div>
-                                    <div className="course__wrapper_box-title">
+                                    <div style={!course.locked?{color:"#0062FF"}:null} className="course__wrapper_box-title">
                                         {course.title}
                                     </div>
                                     <div className="course__wrapper_box-lock">
                                          {course.locked?<img src={lock} alt=""/>:null}
-                                         <div>{course.lessons}</div>
+                                         <div style={course.locked?{color:"grey",display:"block"}:null}>{course.lessons}</div>
                                     </div>
                                  </div>
                        })
