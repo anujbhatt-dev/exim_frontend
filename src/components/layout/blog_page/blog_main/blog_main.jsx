@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import s from "../../../../assets/images/blog-s.svg";
 import m from "../../../../assets/images/blog-m.svg";
 import l from "../../../../assets/images/blog-l.svg";
+import sarrow from "../../../../assets/images/slide-arrow.svg";
 import Aos from "aos"
 import $ from "jquery"
 import "aos/dist/aos.css"
@@ -110,10 +111,9 @@ window.scrollTo({top:0,behavior:"smooth"});
                <Link className="link" to={"/blogs/"+this.state.mainBlog[0].id}>go...</Link>
                {this.state.mainBlog[0]["jetpack_featured_media_url"]===""?<img src={l} alt=""/>:<img src={this.state.mainBlog[0]["jetpack_featured_media_url"]} alt=""/>}
                <div  className="mainBlogs__1_text">
-          <div className="mainBlogs__1_text-title">
-          <div className="mainBlogs__2_flex-box--title">{this.state.mainBlog[0].title.rendered}</div>
-
-          <td className="blogs__flex_box-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog[0].excerpt.rendered)}} />
+          <div>
+                <div className="mainBlogs__1_text-title">{this.state.mainBlog[0].title.rendered}</div>
+                <td className="mainBlogs__1_text-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog[0].excerpt.rendered)}} />
             </div>
                    <div  className="mainBlogs__1_text-detail">
                        <div  className="mainBlogs__1_text-detail--date">{this.state.mainBlog[0].date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
@@ -163,7 +163,7 @@ window.scrollTo({top:0,behavior:"smooth"});
             <div className="mainBlogs__3">
                <div className="mainBlogs__3_1">
                   <h1 className="heading-primary">Exports</h1>
-                  <div  className="mainBlogs__3_arrow mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("export")}>{">"}</div>
+                  <div  className="mainBlogs__3_arrow mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("export")}><img src={sarrow} alt=""/></div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category2.map((blog,i)=>{
@@ -172,7 +172,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                                 <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
                                      <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
-                                     <div className="mainBlogs__3_slide-box--content"> 
+                                     <div className="mainBlogs__3_slide-box--content">
                                      <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                      </div>
                                      <div className="mainBlogs__3_slide-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
@@ -186,12 +186,12 @@ window.scrollTo({top:0,behavior:"smooth"});
 
 
                   </div>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("export")}>{">"}</div>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("export")}><img src={sarrow} alt=""/></div>
                </div>
 
                <div className="mainBlogs__3_1">
-                  <h1 className="heading-primary">Exports</h1>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("import")}>{">"}</div>
+                  <h1 className="heading-primary">Imports</h1>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("import")}> <img src={sarrow} alt=""/></div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category1.map((blog,i)=>{
@@ -214,7 +214,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                   })}
 
                   </div>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("import")}>{">"}</div>
+                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("import")}><img src={sarrow} alt=""/></div>
                </div>
             </div>
 

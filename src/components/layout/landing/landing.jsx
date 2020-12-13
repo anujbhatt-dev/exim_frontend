@@ -1,8 +1,8 @@
 
 import React, {Component} from "react"
 import Aos from "aos"
-import $ from "jquery"
 import "aos/dist/aos.css"
+import $ from "jquery"
 import book from "../../../assets/images/book.svg";
 import laptop from "../../../assets/images/laptop.svg";
 import reload from "../../../assets/images/reload.svg";
