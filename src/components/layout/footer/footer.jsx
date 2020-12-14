@@ -32,8 +32,9 @@ import call from "../../../assets/images/call.svg";
                                <ReactWhatsapp element="a" number="+918517885555" message="message" >
                                    <a href=""><img src={whatsapp} alt=""/></a>
                                </ReactWhatsapp>
-                               <a href=""><img src={call} alt=""/></a>
-                               <a href=""><img src={insta} alt=""/></a>
+                               <a href="tel://+918517885555"><img src={call} alt=""/></a>
+                               <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                               <a href="https://instagram.com/eximeducation.com_"><img src={insta} alt=""/></a>
                             </div>
                             <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                         </div>

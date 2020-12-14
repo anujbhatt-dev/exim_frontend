@@ -44,8 +44,17 @@
         margin-top: 3rem;
         text-align: center;
       }
+      & button{
+        margin: auto;
+        margin-top: 2rem;
+      }
       &-icons{
         display: flex;
+        align-items: center;
+        & > a >i{
+          font-size: 4rem;
+          color: $color-exim-dark-grey;
+        }
        & > *{
          margin: 2rem;
          font-size: 1.5rem;
@@ -53,6 +62,7 @@
          color: $color-exim-dark-grey;
          font-weight: bold;
          &:hover{
+           animation: shake .3s linear infinite;
            text-decoration: none;
          }
        }

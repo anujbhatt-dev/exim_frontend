@@ -1,8 +1,8 @@
 
 import React, {Component} from "react"
 import Aos from "aos"
-import $ from "jquery"
 import "aos/dist/aos.css"
+import $ from "jquery"
 import book from "../../../assets/images/book.svg";
 import laptop from "../../../assets/images/laptop.svg";
 import reload from "../../../assets/images/reload.svg";
@@ -47,7 +47,6 @@ import play from "../../../assets/images/play.svg";
 import orbits from "../../../assets/images/orbits.svg";
 import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
-import arrow from "../../../assets/images/arrow.svg";
 
 import FlipNumbers from 'react-flip-numbers';
 

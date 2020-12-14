@@ -16,20 +16,25 @@
        padding-left: 5rem;
        line-height: 1.5;
        &-title{
-         font-size: 4.2rem;
+         font-size: 2rem;
          font-weight: bolder;
          text-transform:uppercase;
-         margin-bottom: 5rem;
+         margin-bottom: 2rem;
          text-align: center;
          color: $color-exim-dark-grey;
+       }
+       &-content{
+         font-size: 1.5rem;
+         margin-bottom: 1rem;
        }
        &-detail{
          display: flex;
          justify-content: space-between;
+         align-items: baseline;
          font-size: 2.2rem;
          color: $color-exim-grey;
          &--date{
-
+            font-size: 1.4rem;
          }
          &--by{
            & strong{
@@ -37,6 +42,13 @@
            }
          }
        }
+     }
+     transition: all .3s;
+     padding: 2rem;
+     &:hover{
+       transform: scale(1.05);
+       box-shadow: 0 0rem 2rem rgba($color-exim-grey,.5);
+       padding: 2rem;
      }
   }
 
@@ -133,7 +145,9 @@
   &__3{
     display: flex;
     margin: 5rem 0;
-
+    &_1{
+       flex-basis: 50%;
+    }
     & h1{
       margin-left: 4rem;
       margin-bottom: 5rem;
@@ -144,29 +158,38 @@
       text-align: center;
       color: $color-exim-dark-grey;
       animation: bubble .5s linear 3;
-      max-width: 10rem;
-      margin: 1ren auto;
+      max-width: 1rem;
+      // margin: 1rem auto;
       display: block;
+      position: relative;
+      left: 50%;
+      // transform: translateX(-50%);
+      & img{
+        cursor: pointer;
+        height: 3rem;
+        &:hover{
+          animation: scale .3s linear infinite;
+        }
+      }
       &-up{
         transform: rotate(-90deg);
       }
       &-down{
          transform: rotate(90deg);
       }
-      &:hover{
-        text-shadow: 0 0rem 1rem rgba($color-exim-blue,1);
-        color: $color-exim-blue;
-      }
+
 
     }
     &_slide{
-      min-height: 55rem;
-      margin: 4rem;
+      min-height: 50rem;
+      margin: 0rem 4rem;
       padding: 1rem;
+      border: 1px solid rgba($color-black,.1);
       &-box{
         display: flex;
         position: relative;
         padding: 2rem 0;
+        padding-top: 1rem;
         &:not(:last-child){
           border-bottom: 1px solid $color-exim-dark-grey;
         }
@@ -215,6 +238,9 @@
       justify-content: center;
       align-items: center;
       margin: 0;
+      &_1{
+         flex-basis: 100%;
+      }
       & h1{
         margin-left: 0rem;
         margin-bottom: 1rem;

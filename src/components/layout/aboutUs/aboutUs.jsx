@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import Aos from "aos"
+import "aos/dist/aos.css"
 import greenCall from "../../../assets/images/greenCall.svg";
 import vBar from "../../../assets/images/vBar.svg";
 import aboutMain from "../../../assets/images/aboutMain.svg";
@@ -31,10 +33,17 @@ import logs from "../../../assets/images/logs.svg";
       })
     }
 
+     componentDidMount=()=>{
+       Aos.init({
+          duration: 1500,
+          delay: 100,
+        });
+     }
+
     render(){
 
       return (
-           <div className="about">
+           <div data-aos="zoom-out" className="about">
               <h1 className="heading-primary landing__3_heading">Reach us</h1>
               <h4>Choose a plan that works best for you<br/>or your team</h4>
               <div className="about__1">
@@ -49,7 +58,7 @@ import logs from "../../../assets/images/logs.svg";
                   <div className="about__1_text">
                       <div className="about__1_text-big">Talk to our <span>Experts</span></div>
                       <div className="about__1_text-small">We need a few details to reach you.<br/><span>or</span><br/>Simply call us</div>
-                      <div className="about__1_text-call"><img src={greenCall} alt=""/><img src={vBar} alt=""/>+91  8517885555</div>
+                      <a href="tel://+918517885555" className="about__1_text-call"><img className="about__1_text-call--img1" src={greenCall} alt=""/><img src={vBar} alt=""/>+91  8517885555</a>
                   </div>
               </div>
 

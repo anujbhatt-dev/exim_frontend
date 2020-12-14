@@ -19,6 +19,7 @@
     top: 23%;
     z-index: 0;
     height: 25rem;
+    animation: rotate 15s linear infinite;
   }
   &_orbits{
     position:absolute;
@@ -26,6 +27,7 @@
     right: 0;
     top: 0;
     z-index: 0;
+    animation: scaleY 10s linear infinite;
   }
   &_text{
     font-size: 6.5rem;
