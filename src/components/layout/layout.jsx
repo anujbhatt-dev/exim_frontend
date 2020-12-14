@@ -5,6 +5,7 @@ import Pricing from "./pricing/pricing"
 import AboutUs from "./aboutUs/aboutUs"
 import Course from "./course/course"
 import Footer from "./footer/footer"
+import GoToTop from "./goToTop/goToTop"
 import { Switch, Route } from "react-router-dom";
 import BlogsPage from "./blog_page/blog_page"
 
@@ -15,7 +16,7 @@ class Layout extends Component{
     return (
           <div className="layout">
                <Navigation/>
-
+               <GoToTop/>
                <Switch>
                <Route exact  path="/">
                  <Landing/>

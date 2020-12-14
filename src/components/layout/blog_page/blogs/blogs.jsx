@@ -56,7 +56,7 @@ window.scrollTo({top:0,behavior:"smooth"});
     }
 
     pageHandler=(val)=>{
-
+        window.scrollTo({top:100,behavior:"smooth"})
         this.setState((state)=>{return {
             page:state.page+val,
             loading:true,
