@@ -2,7 +2,7 @@
   & img{
     width: 100vw;
     position: relative;
-    left: -8rem;
+    left: -12rem;
   }
 }
 @include respond(tab-land){
@@ -10,7 +10,7 @@
     & img{
       width: 100vw;
       position: relative;
-      left: -4rem;
+      left: -2rem;
     }
   }
 };

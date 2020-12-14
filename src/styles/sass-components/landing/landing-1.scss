@@ -41,7 +41,7 @@
       & button{
         font-size: 1.8rem;
         // font-weight: bold;
-        min-width: 20rem;
+        // width: 25rem;
         border: none;
         padding:1.2rem 4rem;
         margin: 2rem 0rem;
@@ -72,15 +72,15 @@
            position: relative;
            left: 3rem;
            z-index: 5;
-           width: 2.5rem;
+           width: 3.5rem;
            background: $color-exim-blue;
            color: transparent;
          }
 
          & i{
            font-weight: lighter;
-           font-size: 5.5rem;
-           margin-left: 1rem;
+           font-size: 3.5rem;
+           margin-left: 0.5rem;
            transition: all .3s;
 
            // line-height: 3;

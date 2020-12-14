@@ -254,7 +254,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
                     <div className="landing__1_text-btns">
                         <button className="landing__1_text-btns--join">Join Free <span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                        <button className="landing__1_text-btns--trial">Trail</button>
+                        {
+                          // <button className="landing__1_text-btns--trial">Trail</button>
+                        }
                     </div>
                 </div>
                 <img className="landing__1_image" src={landing_main} alt="landing_main"/>

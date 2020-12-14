@@ -18,11 +18,11 @@
       padding: 1.5rem;
       border-radius: 10px;
       &:hover{
-        box-shadow: 0 2rem 3rem rgba($color-exim-dark-grey,.2);
+        box-shadow: 0 2rem 3rem rgba($color-exim-blue,.5);
         transform: translateY(-4px);
       }
       &:active{
-        box-shadow: 0 1rem 3rem rgba($color-exim-dark-grey,.2);
+        box-shadow: 0 1rem 3rem rgba($color-exim-blue,.5);
         transform: translateY(-1px);
       }
       & img{

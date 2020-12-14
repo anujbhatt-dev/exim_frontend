@@ -79,7 +79,7 @@
     }
     &_flex{
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       &-box{
         position: relative;
@@ -92,6 +92,7 @@
         // align-items: center;
         flex-direction: column;
         background: $color-white;
+        margin: 1rem;
         &:hover{
           box-shadow: 0 2rem 3rem rgba($color-exim-dark-grey,.2);
           transform: translateY(-4px);

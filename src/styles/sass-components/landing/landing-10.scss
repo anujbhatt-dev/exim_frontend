@@ -1,9 +1,9 @@
 .landing__10{
   position:relative;
   width: 100vw;
-  left: -8rem;
+  left: -12rem;
   overflow: visible;
-  height: 100vh;
+  height: 80vh;
 
   &_img{
     position:absolute;
@@ -19,7 +19,6 @@
     top: 23%;
     z-index: 0;
     height: 25rem;
-    animation: rotate 15s linear infinite;
   }
   &_orbits{
     position:absolute;
