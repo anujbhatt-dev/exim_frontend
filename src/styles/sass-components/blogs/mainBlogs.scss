@@ -3,9 +3,10 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     margin: 5rem;
+     margin: 10rem 5rem;
      margin-top: 0;
      position: relative;
+     // margin-top: ;
      & > img{
        height: 40rem;
        width: 60rem;
@@ -73,7 +74,7 @@
   }
 
   &__2{
-    margin: 5rem;
+    margin: 10rem 5rem;
     & h1{
       margin-bottom: 2rem;
     }
@@ -146,6 +147,7 @@
   &__3{
     display: flex;
     margin: 5rem 0;
+    margin: 10rem 5rem;
     &_1{
        flex-basis: 50%;
     }
