@@ -54,7 +54,7 @@ import blogs from '../blogs/blogs';
                       </div>
                       <h1 className="blog__box_title">{this.state.blog.title.rendered}</h1>
                       <td dangerouslySetInnerHTML={{__html:this.state.blog.content.rendered}} />
-                      <Link to={"/blogs"}>Exim Blogs</Link>
+                      <div className="blog__box_flex" ><Link to={"/blogs"}>Exim Blogs</Link></div>
                       <div  className="blog__box_social">
                          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
