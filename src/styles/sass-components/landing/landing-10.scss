@@ -41,7 +41,7 @@
     }
   }
   @include respond(tab-land){
-    left: -2rem;
+    left: -1rem;
     height: 50vh;
     overflow: hidden;
     &_img{

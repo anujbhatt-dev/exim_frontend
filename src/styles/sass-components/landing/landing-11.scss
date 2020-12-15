@@ -52,4 +52,7 @@
       margin-bottom: 3rem;
     }
   }
+  @include respond(tab-land){
+    overflow: hidden;
+  }
 }

@@ -91,10 +91,14 @@
 @include respond(tab-port){
   .footer{
     // text-align: center;
+    overflow: hidden;
+    padding: 4rem 0rem;
+    line-height: 1.5;
     left: 0;
     &__top{
       margin: auto;
       flex-wrap: wrap;
+      justify-content: center;
     }
     &__middle{
       flex-wrap: wrap;
