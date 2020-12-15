@@ -20,7 +20,7 @@ import blogs from '../blogs/blogs';
 
     state={
         blog:null,
-        blogs1:[]
+        blogs1:undefined
     }
 
     componentDidMount=()=>{
@@ -29,9 +29,12 @@ import blogs from '../blogs/blogs';
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
         then(res=>{
            this.setState({blog:res.data});
+
+          if(res.data.categories.length)
            axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
            then(res1=>this.setState({blogs1:res1.data}))
-
+          else
+          this.setState({blogs1:[]})
           }
 
         );
@@ -39,7 +42,6 @@ import blogs from '../blogs/blogs';
 
 
     render() {
-       console.log(this.state.blog);
         if(this.state.blog===null){
           return <Spinner/>
         }
@@ -54,7 +56,7 @@ import blogs from '../blogs/blogs';
                       </div>
                       <h1 className="blog__box_title">{this.state.blog.title.rendered}</h1>
                       <td dangerouslySetInnerHTML={{__html:this.state.blog.content.rendered}} />
-                      <div className="blog__box_flex" ><Link to={"/blogs"}>Exim Blogs</Link></div>
+                      <Link to={"/blogs"}>Exim Blogs</Link>
                       <div  className="blog__box_social">
                          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -65,11 +67,12 @@ import blogs from '../blogs/blogs';
                          <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                          <a href="https://instagram.com/eximeducation.com_"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                       </div>
-                      {this.state.blogs1.length===0?<Spinner/>:<div className="mainBlogs__2">
-                          <div className="mainBlogs__2_flex blog__box_row">
+
+                     {!this.state.blogs1?<Spinner/>:<div className="mainBlogs__2">
+                              <div className="mainBlogs__2_flex blog__box_row">
 
 
-                          {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
+                          {this.state.blogs1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
                                   <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                   {blog["jetpack_featured_media_url"]===""?<img id="blog__img" className="blog__box_row-img" src={m} alt=""/>:<img  id="blog__img" className="blog__box_row-img" src={blog["jetpack_featured_media_url"]} alt=""/>}
                                   <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>

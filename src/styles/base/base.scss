@@ -42,7 +42,6 @@ body{
   padding: 0 12rem;
   background-image: url(../../assets/images/eximBack.svg);
   width: 100vw;
-  overflow-x: hidden;
   @include respond(tab-land){
     padding: 0 1rem;
   }
@@ -138,5 +137,11 @@ ul{
   &:active{
     transform: translateY(0px);
     box-shadow: 0rem 1rem 3rem -1rem rgba($color-exim-blue,.7);
+  }
+}
+.landing{
+  // overflow-x: hidden;
+  @include respond(tab-land){
+    overflow-x: hidden;
   }
 }
