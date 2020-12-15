@@ -19,18 +19,18 @@
     background: $color-white;
     // opacity: .5;
     &__1{
-      left:20%;
+      left:32%;
       // animation: slide 3s linear 2;
       animation-fill-mode: forwards;
     }
     &__2{
-      left:-21%;
+      left:-19.5%;
       top: calc((100%/3));
       // animation: slide-reverse 3s linear 2;
       animation-fill-mode: forwards;
     }
     &__3{
-      left:20%;
+      left:18%;
       top: calc((100%/3)*2);
       // animation: slide 3s linear 2;
       animation-fill-mode: forwards;
@@ -85,11 +85,23 @@
 }
 @include respond(tab-port){
   .landing__4{
+
+    &_background{
+      transform: scale(0.9);
+      left: 0;
+      width: 100vw;
+    }
+    &_1-text{
+       background: $color-white;
+    }
     &_1,&_3{
       flex-direction: column;
     }
     &_2{
       flex-direction: column-reverse;
+    }
+    & > .blank{
+      opacity: 0;
     }
     &_1,&_3,&_2{
       & > div,& > img{

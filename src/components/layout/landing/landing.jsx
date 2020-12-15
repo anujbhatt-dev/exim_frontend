@@ -165,6 +165,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
      Aos.init({
         duration: 1500,
         delay: 100,
+        disable: 'mobile'
       });
 
 
@@ -193,7 +194,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
      $(window).scroll(()=>{
        console.log($(window).scrollTop());
 
-       if($(window).scrollTop()>=1700){
+       if($(window).scrollTop()>=1700 && !this.state.mob){
          $(".blank__1").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
          setTimeout(()=>{
            $(".blank__1").css({"opacity":"0"})
@@ -294,9 +295,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
+                       <button  data-aos="fade-right" className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                   </div>
-                  <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
+                  <img className="landing__2_image" src={mobile} alt=""/>
               </div>
               <div className="customHr">...</div>
 
@@ -362,7 +363,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </li>
                           </ul>
                       </div>
-                      <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                      <button style={{width:"15rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                   </div>
               </div>
 
@@ -561,7 +562,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <span>WEBINAR</span><br/>
                       sunday
                     </div>
-                    <button className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <button  style={{width:"15rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                  </div>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
                  {this.state.mob?<img className="landing__10_play" src={plays} alt=""/>:<img className="landing__10_play" src={play} alt=""/>}

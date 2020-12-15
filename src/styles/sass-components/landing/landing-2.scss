@@ -19,6 +19,7 @@
       font-weight: 300;
       line-height: 2;
       margin:2rem 0;
+      margin-right: 15rem;
       // text-transform: uppercase;
     }
     &-btn{
@@ -59,11 +60,13 @@
     text-align: center;
     flex-direction: column;
     padding: 1rem;
+    overflow: hidden;
     &_text{
       &-small{
         font-size: 1.2rem;
         font-weight: normal;
         color: $color-black;
+        margin-right: 0rem;
       }
       &-btn{
         margin: 2rem auto;
