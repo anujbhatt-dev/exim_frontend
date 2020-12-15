@@ -43,8 +43,10 @@
 @include respond(tab-land){
    .landing__5{
      &_count-digit{
-        font-size: 4;
+        font-size: 4rem;
         margin: .5rem;
+        min-height: 9rem;
+        min-width: 5rem;
      }
    }
 };

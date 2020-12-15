@@ -25,11 +25,14 @@
 }
 @include respond(tab-port){
   .landing__bar{
+    padding: 2rem 1rem;
     &_item{
+
       &-svg{
         height: 2.5rem;
       }
       &-text{
+        width: 10rem;
         padding-left: 1rem;
         font-size: 1rem;
       }
