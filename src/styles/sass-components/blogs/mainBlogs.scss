@@ -150,6 +150,9 @@
     margin: 10rem 5rem;
     &_1{
        flex-basis: 50%;
+       & h1{
+         text-decoration: underline;
+       }
     }
     & h1{
       margin-left: 4rem;
@@ -187,7 +190,7 @@
       min-height: 50rem;
       margin: 0rem 4rem;
       padding: 1rem;
-      border: 1px solid rgba($color-black,.1);
+      // border: 1px solid rgba($color-black,.1);
       &-box{
         display: flex;
         position: relative;
