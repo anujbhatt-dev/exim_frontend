@@ -40,14 +40,14 @@ window.scrollTo({top:0,behavior:"smooth"});
         })
 
 
-       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+3).
+       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+4).
        then(res=>{
 
          this.setState({blogs1:res.data});
        })
 
 
-       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+3).
+       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+2+"&per_page="+4).
         then(res=>{
 
           this.setState({blogs2:res.data});
@@ -60,7 +60,7 @@ window.scrollTo({top:0,behavior:"smooth"});
         })
 
 
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"&per_page=3&page=1").
+        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+40+"&per_page=3&page=1").
         then(res=>{
           this.setState({category2:res.data});
         })
@@ -96,7 +96,7 @@ window.scrollTo({top:0,behavior:"smooth"});
    //
     render() {
 
-        if(this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
+        if(!this.state.mainBlog && this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
           return <Spinner/>
         }
 
@@ -130,7 +130,15 @@ window.scrollTo({top:0,behavior:"smooth"});
                 <div className="mainBlogs__2_flex">
 
 
-                {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
+                {this.state.blogs1.length>1?this.state.blogs1.map((blog,i)=>
+
+
+                  {
+                    
+                    if(i===0)
+                    return ;
+                    else
+                    return( <div className="mainBlogs__2_flex-box">
                         <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                         {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                         <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
@@ -138,7 +146,10 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                         </div>
                         <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
-                    </div>):null}
+                    </div>)}
+                    
+                    
+                    ):null}
 
                     {/* <div className="mainBlogs__2_flex-box">
                         <img src={m} alt=""/>
@@ -169,7 +180,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                       return <div className="mainBlogs__3_slide-box" >
                                 <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
-                                     <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
+                                     <div className="mainBlogs__3_slide-box--title">{blog.title.rendered.substring(0,50)}..</div>
                                      <div className="mainBlogs__3_slide-box--content">
                                      <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                      </div>
@@ -193,7 +204,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                      return <div className="mainBlogs__3_slide-box">
                                 <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
-                                    <div className="mainBlogs__3_slide-box--title">{blog.title.rendered}</div>
+                                    <div className="mainBlogs__3_slide-box--title">{blog.title.rendered.substring(0,50)}..</div>
                                     <div className="mainBlogs__3_slide-box--content">
                                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                     </div>
@@ -213,11 +224,20 @@ window.scrollTo({top:0,behavior:"smooth"});
               //last flex
             }
 
-            {this.state.blogs2.length===0?<Spinner/>:<div className="mainBlogs__2">
+            {this.state.blogs2.length===0?
+            
+            <Spinner/>:
+            
+            <div className="mainBlogs__2">
                 <div className="mainBlogs__2_flex">
-
-
-                {this.state.blogs2.length>1?this.state.blogs2.map(blog=> <div className="mainBlogs__2_flex-box">
+                 { this.state.blogs2.map((blog,i)=> 
+                  
+                  
+                  
+                { 
+                  if(i===this.state.blogs2.length-1)
+                  return;
+                  return( <div className="mainBlogs__2_flex-box">
                         <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                         {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                         <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
@@ -225,9 +245,17 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                         </div>
                         <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
-                    </div>):null}
+                    </div>)
+                    
+                  }
+                    
+                    )}
+                    
                 </div>
-            </div>}
+            </div>
+            
+            
+            }
 
             <Link className="more" to="/blogs">more</Link>
         </div>
