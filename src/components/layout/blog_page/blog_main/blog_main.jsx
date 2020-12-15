@@ -96,7 +96,7 @@ window.scrollTo({top:0,behavior:"smooth"});
    //
     render() {
 
-        if(this.state.category1.length===0 || this.state.category2.length===0 || this.state.blogs2.length===0 || this.state.blogs1.length===0){
+        if(this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
           return <Spinner/>
         }
 
