@@ -45,7 +45,7 @@ import logs from "../../../assets/images/logs.svg";
       return (
            <div data-aos="zoom-out" className="about">
               <h1 className="heading-primary landing__3_heading">Reach us</h1>
-              <h4>Choose a plan that works best for you<br/>or your team</h4>
+              
               <div className="about__1">
                   <form className="about__1_form" onSubmit={this.onSubmitHandler}>
                       <input name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>

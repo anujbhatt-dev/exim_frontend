@@ -8,7 +8,7 @@
       justify-content:space-between;
       align-items: center;
       padding: 3rem;
-      font-size: 3.6rem;
+      font-size: 2rem;
       color: $color-exim-dark-grey;
       font-weight: bold;
       margin-right: 1rem;
@@ -20,11 +20,12 @@
       }
     }
     &_answer{
-      animation: height 1s ease-out;
-      font-size: 2.6rem  ;
-      overflow: hidden;
+      font-size: 1.6rem  ;
+      left: 0;
       color: $color-exim-dark-grey;
       padding: 2rem 3rem;
+      overflow: hidden;
+      animation: faq .5s ease-out;
     }
   }
 }
