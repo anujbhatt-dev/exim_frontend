@@ -137,7 +137,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                         </div>
-                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
+                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
                     </div>):null}
 
                     {/* <div className="mainBlogs__2_flex-box">
