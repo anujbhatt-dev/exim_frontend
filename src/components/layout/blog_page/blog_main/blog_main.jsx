@@ -126,7 +126,7 @@ window.scrollTo({top:0,behavior:"smooth"});
               // first flex
             }
 
-            <div className="mainBlogs__2">
+            {this.state.blogs1.length===0?<Spinner/>:<div className="mainBlogs__2">
                 <div className="mainBlogs__2_flex">
 
 
@@ -154,20 +154,18 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <div className="mainBlogs__2_flex-box--date">10 Dec 2020</div>
                     </div> */}
                 </div>
-            </div>
+            </div>}
 
             {
               //carousel
             }
 
             <div className="mainBlogs__3">
-               <div className="mainBlogs__3_1">
+               {this.state.category1.length===0?<Spinner/>:<div className="mainBlogs__3_1">
                   <h1 className="heading-primary">Exports</h1>
-                  <div  className="mainBlogs__3_arrow mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("export")}><img src={sarrow} alt=""/></div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category2.map((blog,i)=>{
-                    if(i<=(3*this.state.exportCount) && i>=(3*this.state.exportCount-2)){
                       return <div className="mainBlogs__3_slide-box" >
                                 <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
@@ -179,23 +177,19 @@ window.scrollTo({top:0,behavior:"smooth"});
                                  </div>
                                  {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                              </div>
-                        }else{
-                          return null;
-                        }
+
                 })}
 
 
                   </div>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("export")}><img src={sarrow} alt=""/></div>
-               </div>
+               </div>}
 
-               <div className="mainBlogs__3_1">
+
+               {this.state.category2.length===0?<Spinner/>:<div className="mainBlogs__3_1">
                   <h1 className="heading-primary">Imports</h1>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-up"  onClick={()=>this.upArrow("import")}> <img src={sarrow} alt=""/></div>
                   <div className="mainBlogs__3_slide">
 
                   {this.state.category1.map((blog,i)=>{
-                   if(i<=(3*this.state.importCount) && i>=(3*this.state.importCount-2)){
                      return <div className="mainBlogs__3_slide-box">
                                 <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                 <div>
@@ -207,22 +201,19 @@ window.scrollTo({top:0,behavior:"smooth"});
                                 </div>
                                 {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                             </div>
-                   }else{
-                     return null;
-                   }
 
                   })}
 
                   </div>
-                  <div  className="mainBlogs__3_arrow  mainBlogs__3_arrow-down"  onClick={()=>this.downArrow("import")}><img src={sarrow} alt=""/></div>
-               </div>
+               </div>}
+
             </div>
 
             {
               //last flex
             }
 
-            <div className="mainBlogs__2">
+            {this.state.blogs2.length===0?<Spinner/>:<div className="mainBlogs__2">
                 <div className="mainBlogs__2_flex">
 
 
@@ -236,7 +227,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
                     </div>):null}
                 </div>
-            </div>
+            </div>}
 
             <Link className="more" to="/blogs">more</Link>
         </div>

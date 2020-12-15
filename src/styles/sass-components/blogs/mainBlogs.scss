@@ -35,6 +35,7 @@
          font-size: 2.2rem;
          color: $color-exim-grey;
          &--date{
+            margin-top: 2.5rem;
             font-size: 1.4rem;
          }
          &--by{
@@ -146,7 +147,6 @@
 
   &__3{
     display: flex;
-    margin: 5rem 0;
     margin: 10rem 5rem;
     &_1{
        flex-basis: 50%;
