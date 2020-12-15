@@ -77,7 +77,7 @@ import emailjs from 'emailjs-com';
                       <input required name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
 
 
-                    <select required value={this.state.preference} onChange={(e)=>this.onChangeHandler(e)} name="" id="">
+                    <select required value={this.state.preference} onChange={(e)=>this.onChangeHandler(e)} name="preference" id="">
                        <option disabled value="select"  selected>select your plan</option>
                        <option value="Class Training">Class Training</option>
                        <option value="Online Training">Online Training</option>
