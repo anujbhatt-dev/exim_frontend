@@ -2,7 +2,18 @@
   margin: 2rem 25rem ;
 
   &__box{
-
+     &_row{
+        width: 100vw;
+        position: relative;
+        left: -43rem;
+        // background: $color-purple;
+        & .link{
+          color: transparent;
+        }
+        & > img{
+          height: 15rem;
+        }
+     }
     &_flex{
       display: flex;
       justify-content: space-between;

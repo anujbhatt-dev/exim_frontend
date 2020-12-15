@@ -67,13 +67,14 @@ import blogs from '../blogs/blogs';
                          <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                          <a href="https://instagram.com/eximeducation.com_"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                       </div>
-                      {!this.state.blogs1?<Spinner/>:<div className="mainBlogs__2">
-                          <div className="mainBlogs__2_flex">
+
+                     {!this.state.blogs1?<Spinner/>:<div className="mainBlogs__2">
+                              <div className="mainBlogs__2_flex blog__box_row">
 
 
                           {this.state.blogs1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
                                   <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
-                                  {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
+                                  {blog["jetpack_featured_media_url"]===""?<img className="blog__box_row-img" src={m} alt=""/>:<img  className="blog__box_row-img" src={blog["jetpack_featured_media_url"]} alt=""/>}
                                   <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                                   <div className="mainBlogs__2_flex-box--content">
                                   <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
