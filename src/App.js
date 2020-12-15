@@ -10,7 +10,7 @@ class App extends React.Component {
 
   componentDidMount=()=>{
 
-    ReactGa.initialize('UA-184332335-1');
+    ReactGa.initialize('UA-185613548-1');
     ReactGa.pageview(window.location.pathname + window.location.search);
   
   }
