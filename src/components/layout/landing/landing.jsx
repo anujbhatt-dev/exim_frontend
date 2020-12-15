@@ -47,7 +47,6 @@ import play from "../../../assets/images/play.svg";
 import orbits from "../../../assets/images/orbits.svg";
 import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
-import arrow from "../../../assets/images/arrow.svg";
 
 import FlipNumbers from 'react-flip-numbers';
 

@@ -31,6 +31,9 @@ window.scrollTo({top:0,behavior:"smooth"});
 
     componentDidUpdate=()=>{
 
+      window.scrollTo({top:100,behavior:"smooth"})
+
+
         if(this.state.selectedCategory!== this.props.match.params.id)
         this.setState({selectedCategory:this.props.match.params.id,page:1,loading:true})
 
@@ -56,7 +59,6 @@ window.scrollTo({top:0,behavior:"smooth"});
     }
 
     pageHandler=(val)=>{
-        window.scrollTo({top:100,behavior:"smooth"})
         this.setState((state)=>{return {
             page:state.page+val,
             loading:true,
