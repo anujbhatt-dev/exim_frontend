@@ -57,6 +57,7 @@ import emailjs from 'emailjs-com';
      }
 
      componentDidMount=()=>{
+  
        window.scrollTo({top:0,behavior:"smooth"});
        Aos.init({
           duration: 1500,
