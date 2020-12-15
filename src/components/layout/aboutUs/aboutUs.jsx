@@ -14,7 +14,8 @@ import emailjs from 'emailjs-com';
       name:"",
       email:"",
       phone:"",
-      preference:""
+      preference:"",
+      submitted:1,
     }
 
     onChangeHandler=(e)=>{
@@ -31,18 +32,31 @@ import emailjs from 'emailjs-com';
         name:"",
         email:"",
         phone:"",
-        preference:""
-      })
+        preference:"",
+        submitted:4,
+      });
 
-    //  console.log(e.target)
+      
 
       emailjs.sendForm('default_service', 'template_jnpyiqx', e.target, 'user_oT3lPNtArYtDElxArBQ2V')
       .then((result) => {
-          console.log(result.text);
+         this.setState({
+            name:"",
+            email:"",
+            phone:"",
+            preference:"",
+            submitted:2,
+          });
+         setTimeout(()=>{this.setState({submitted:1})},5000);
       }, (error) => {
-          console.log(error.text);
+         this.setState({
+             submitted:3,
+          });
+         setTimeout(()=>{this.setState({submitted:1})},2000);
       });
-    }
+
+
+     }
 
      componentDidMount=()=>{
        Aos.init({
@@ -59,11 +73,19 @@ import emailjs from 'emailjs-com';
               <h4>Choose a plan that works best for you<br/>or your team</h4>
               <div className="about__1">
                   <form className="about__1_form" onSubmit={this.onSubmitHandler}>
-                      <input name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
-                      <input name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
-                      <input name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
-                      <input name="pref" value={this.state.preference} onChange={this.onChangeHandler} placeholder="plan preference" type="text"/>
-                      <input className="btn__buy" placeholder="SUBMIT" type="submit"/>
+                      <input required name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
+                      <input required name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
+                      <input required name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
+                      <input required name="preference" value={this.state.preference} onChange={this.onChangeHandler} placeholder="plan preference" type="text"/>
+                      {this.state.submitted===1?
+                      <input className="btn__buy" value="SUBMIT" type="submit"/>
+                      :this.state.submitted===2?
+                      <input className="btn__buy" style={{backgroundColor:"green"}} type="submit" disabled value="We'll connect with you soon.." />
+                      :this.state.submitted===3?
+                      <input className="btn__buy" style={{backgroundColor:"red"}} type="submit" disabled value="OOPS! Something went wrong.a1" />
+                      :
+                      <input className="btn__buy" type="submit" disabled value="..." />
+                      }
                   </form>
 
                   <div className="about__1_text">
