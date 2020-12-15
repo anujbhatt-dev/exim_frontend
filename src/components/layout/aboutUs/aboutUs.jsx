@@ -33,8 +33,10 @@ import emailjs from 'emailjs-com';
       });
 
 
+      let template="template_ep26v59";
 
-      emailjs.sendForm('default_service', 'template_jnpyiqx', e.target, 'user_oT3lPNtArYtDElxArBQ2V')
+
+      emailjs.sendForm('service_9wrddem', template, e.target, 'user_3C6n5XsLh20WgqpTa3412')
       .then((result) => {
          this.setState({
             name:"",
