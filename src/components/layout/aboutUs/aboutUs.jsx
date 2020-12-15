@@ -29,10 +29,6 @@ import emailjs from 'emailjs-com';
       e.preventDefault();
        //console.log(this.state);
       this.setState({
-        name:"",
-        email:"",
-        phone:"",
-        preference:"",
         submitted:4,
       });
 
