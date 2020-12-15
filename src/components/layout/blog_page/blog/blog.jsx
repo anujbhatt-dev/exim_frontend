@@ -12,6 +12,7 @@ import m from "../../../../assets/images/blog-m.svg";
 import Spinner from "../../../../UI/spinner/spinner"
 import l from "../../../../assets/images/blog-l.svg";
 import axios from 'axios';
+import blogs from '../blogs/blogs';
 
 
  class Blog extends Component {
@@ -26,7 +27,12 @@ import axios from 'axios';
       window.scrollTo({top:0,behavior:"smooth"});
 
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
-        then(res=> this.setState({blog:res.data})
+        then(res=>{
+           this.setState({blog:res.data});
+           axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
+           then(res1=>this.setState({blogs1:res1.data}))
+
+          }
 
         );
     }
@@ -63,14 +69,14 @@ import axios from 'axios';
                           <div className="mainBlogs__2_flex">
 
 
-                          {this.state.blogs1.length>1?this.state.blogs2.map(blog=> <div className="mainBlogs__2_flex-box">
+                          {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
                                   <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                   {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                                   <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                                   <div className="mainBlogs__2_flex-box--content">
                                   <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                   </div>
-                                  <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
+                                  <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
                               </div>):null}
                           </div>
                       </div>}

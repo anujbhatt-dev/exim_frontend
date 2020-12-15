@@ -197,7 +197,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                                     <div className="mainBlogs__3_slide-box--content">
                                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                     </div>
-                                    <div className="mainBlogs__3_slide-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
+                                    <div className="mainBlogs__3_slide-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
                                 </div>
                                 {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
                             </div>
@@ -224,7 +224,7 @@ window.scrollTo({top:0,behavior:"smooth"});
                         <div className="mainBlogs__2_flex-box--content">
                         <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                         </div>
-                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
+                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
                     </div>):null}
                 </div>
             </div>}
