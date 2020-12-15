@@ -6,7 +6,29 @@ import $ from "jquery"
   class Navigation extends Component{
 
     componentDidMount=()=>{
-      this.selectedNav(1);
+
+
+      
+
+      let path=window.location.pathname+"";
+
+      console.log(path)
+
+         if(path.indexOf("course")!==-1)
+         this.selectedNav(3);
+
+        else if(path.indexOf("pricing")!==-1)
+         this.selectedNav(2);
+      
+         else  if(path.indexOf("blog")!==-1)
+         this.selectedNav(4);
+        
+         else if(path.indexOf("about")!==-1)
+         this.selectedNav(5);
+
+         else 
+         this.selectedNav(1);
+
     }
 
     selectedNav=(nav)=>{
@@ -51,6 +73,8 @@ import $ from "jquery"
     }
 
     render(){
+      
+;
 
       return (
           <div className="nav">
