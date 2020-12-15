@@ -54,13 +54,13 @@ window.scrollTo({top:0,behavior:"smooth"});
         })
 
 
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"page_size=3&page=1").
+        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"&page_size=3&page=1").
         then(res=>{
           this.setState({category1:res.data});
         })
 
 
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"page_size=3&page=1").
+        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"&page_size=3&page=1").
         then(res=>{
           this.setState({category2:res.data});
         })
