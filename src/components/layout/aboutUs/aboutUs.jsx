@@ -14,7 +14,7 @@ import emailjs from 'emailjs-com';
       name:"",
       email:"",
       phone:"",
-      preference:"",
+      preference:"select",
       submitted:1,
     }
 
@@ -44,7 +44,7 @@ import emailjs from 'emailjs-com';
             name:"",
             email:"",
             phone:"",
-            preference:"",
+            preference:"select",
             submitted:2,
           });
          setTimeout(()=>{this.setState({submitted:1})},5000);
@@ -76,7 +76,17 @@ import emailjs from 'emailjs-com';
                       <input required name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
                       <input required name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
                       <input required name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
-                      <input required name="preference" value={this.state.preference} onChange={this.onChangeHandler} placeholder="plan preference" type="text"/>
+                    
+
+                    <select required value={this.state.preference} onChange={(e)=>this.onChangeHandler(e)} name="" id="">
+                       <option disabled value="select"  selected>select your plan</option>
+                       <option value="Class Training">Class Training</option>
+                       <option value="Online Training">Online Training</option>
+                       <option value="Enterprises & School Training">Enterprises & School Training</option>
+
+                    </select>
+                                         
+                     
                       {this.state.submitted===1?
                       <input className="btn__buy" value="SUBMIT" type="submit"/>
                       :this.state.submitted===2?
