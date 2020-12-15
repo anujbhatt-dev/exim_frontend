@@ -71,7 +71,7 @@ import blogs from '../blogs/blogs';
 
                           {this.state.blogs1.length>1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
                                   <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
-                                  {blog["jetpack_featured_media_url"]===""?<img className="blog__box_row-img" src={m} alt=""/>:<img  className="blog__box_row-img" src={blog["jetpack_featured_media_url"]} alt=""/>}
+                                  {blog["jetpack_featured_media_url"]===""?<img id="blog__img" className="blog__box_row-img" src={m} alt=""/>:<img  id="blog__img" className="blog__box_row-img" src={blog["jetpack_featured_media_url"]} alt=""/>}
                                   <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
                                   <div className="mainBlogs__2_flex-box--content">
                                   <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
