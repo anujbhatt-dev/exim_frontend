@@ -57,7 +57,7 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
                  // head
                }
                <h1 className="heading-primary landing__3_heading">FLEXIBLE plans</h1>
-               <h2 className="heading-secondary">choose your plan……</h2>
+               <h4>Choose a plan that works best for you<br/>or your team</h4>
                {
                  // cards
                }
@@ -128,7 +128,7 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
                                     <div>{faq.ques}</div>
                                     {faq.toggle?<img className="faq__box_ques-times" onClick={()=>this.faqToggleHandler(i)} src={circleTimes} alt=""/>:<img onClick={()=>this.faqToggleHandler(i)} src={circleDownArrow}  className="faq__box_ques-downArrow" alt=""/>}
                                 </div>
-                                {faq.toggle?<div className="faq__box_answer">{faq.answer}</div>:null}
+                                <div style={{display:faq.toggle?"block":"none"}} className="faq__box_answer">{faq.answer}</div>
                          </div>
                 })}
                </div>

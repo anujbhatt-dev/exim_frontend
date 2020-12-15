@@ -1,4 +1,12 @@
 .pricing{
+  & h4{
+    text-align: center;
+    margin-top: -4rem ;
+    margin-bottom: 8rem;
+    color: $color-exim-grey;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
   &__cards{
     margin: 5rem 0;
     display: flex;

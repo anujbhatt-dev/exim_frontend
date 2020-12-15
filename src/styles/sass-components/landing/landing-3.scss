@@ -14,7 +14,7 @@
     background: $color-white;
     &-btn{
       position: absolute;
-      bottom: -2rem;
+      bottom: 0rem;
       right:12%;
       transform: translateY(50%);
       // width: 15rem;
@@ -67,6 +67,9 @@
     &_box{
       flex-direction: column;
       text-align: center;
+      &-btn{
+        bottom: -2rem;
+      }
       & > * {
         margin-bottom: 2rem;
       }

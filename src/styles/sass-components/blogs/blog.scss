@@ -6,7 +6,12 @@
         width: 100vw;
         position: relative;
         left: -43rem;
+        // min-height: 65rem;
         // background: $color-purple;
+        @include respond(tab-land){
+          flex-direction: column;
+          left: -12rem;
+        }
         & .link{
           color: transparent;
         }
@@ -51,22 +56,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 15rem;
+      // height: 15rem;
        & a{
          color: $color-exim-dark-grey;
          margin: 1.5rem;
          font-size: 5rem;
-         & img{
-           height: 100%;
-           width: 100%;
-         }
+         text-shadow: 0 .5rem .5rem rgba($color-grey,.5);
+         // & img{
+         //   height: 100%;
+         //   width: 100%;
+         // }
        }
+
     }
   }
   @include respond(tab-land){
      margin: 2rem 2rem;
+
   }
 }
 #blog__img{
-  height: 25rem;
+  height: 20rem;
 }
