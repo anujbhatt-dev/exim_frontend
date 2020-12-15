@@ -56,7 +56,9 @@ import blogs from '../blogs/blogs';
                       </div>
                       <h1 className="blog__box_title">{this.state.blog.title.rendered}</h1>
                       <td dangerouslySetInnerHTML={{__html:this.state.blog.content.rendered}} />
-                      <Link to={"/blogs"}>Exim Blogs</Link>
+                      <div className="blog__box_flex">
+                         <Link to={"/blogs"}>Exim Blogs</Link>
+                      </div>
                       <div  className="blog__box_social">
                          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -73,9 +75,10 @@ import blogs from '../blogs/blogs';
 
 
                           {this.state.blogs1?this.state.blogs1.map(blog=> <div className="mainBlogs__2_flex-box">
-                                  <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
+
+                                    <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
                                   {blog["jetpack_featured_media_url"]===""?<img id="blog__img" className="blog__box_row-img" src={m} alt=""/>:<img  id="blog__img" className="blog__box_row-img" src={blog["jetpack_featured_media_url"]} alt=""/>}
-                                  <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
+                                  <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,60)}..</div>
                                   <div className="mainBlogs__2_flex-box--content">
                                   <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
                                   </div>

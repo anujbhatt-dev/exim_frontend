@@ -5,14 +5,16 @@ import greenCall from "../../../assets/images/greenCall.svg";
 import vBar from "../../../assets/images/vBar.svg";
 import aboutMain from "../../../assets/images/aboutMain.svg";
 import logs from "../../../assets/images/logs.svg";
+import emailjs from 'emailjs-com';
+
 
   class AboutUs extends Component{
 
     state={
       name:"",
       email:"",
-      mobile:"",
-      pref:""
+      phone:"",
+      preference:""
     }
 
     onChangeHandler=(e)=>{
@@ -24,13 +26,22 @@ import logs from "../../../assets/images/logs.svg";
 
     onSubmitHandler=(e)=>{
       e.preventDefault();
-       console.log(this.state);
+       //console.log(this.state);
       this.setState({
         name:"",
         email:"",
-        mobile:"",
-        pref:""
+        phone:"",
+        preference:""
       })
+
+    //  console.log(e.target)
+
+      emailjs.sendForm('default_service', 'template_jnpyiqx', e.target, 'user_oT3lPNtArYtDElxArBQ2V')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
 
      componentDidMount=()=>{
@@ -49,9 +60,9 @@ import logs from "../../../assets/images/logs.svg";
               <div className="about__1">
                   <form className="about__1_form" onSubmit={this.onSubmitHandler}>
                       <input name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
-                      <input name="mobile" value={this.state.mobile} onChange={this.onChangeHandler} placeholder="mobile" type="text"/>
+                      <input name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
                       <input name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
-                      <input name="pref" value={this.state.pref} onChange={this.onChangeHandler} placeholder="plan preference" type="text"/>
+                      <input name="pref" value={this.state.preference} onChange={this.onChangeHandler} placeholder="plan preference" type="text"/>
                       <input className="btn__buy" placeholder="SUBMIT" type="submit"/>
                   </form>
 
