@@ -294,7 +294,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <button data-aos="fade-right" className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
+                       <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
                   </div>
                   <img data-aos="flip-right" className="landing__2_image" src={mobile} alt=""/>
               </div>
@@ -418,8 +418,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
                         {[... this.state.numberValue+""].map(value=>
 
                             this.state.numbersVisible?
-                            <div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers={""+value} /></div>
-                            :<div className="landing__5_count-digit">0</div>
+                            <div className="digit__wrapper"><div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers={""+value} /></div><hr/></div>
+
+                            :<div><div className="landing__5_count-digit">0</div><hr/></div>
 
                           )}
                </div>

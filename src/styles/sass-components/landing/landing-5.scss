@@ -26,6 +26,20 @@
     margin-bottom: 2rem;
   }
 }
+
+.digit__wrapper{
+  position: relative;
+  & hr{
+    position: absolute;
+    top: 49.5%;
+    left: 12%;
+    width: 76%;
+    border: none;
+    border-top: 1px solid $color-exim-blue;
+
+  }
+}
+
 @include respond(tab-land){
    .landing__5{
      &_count-digit{
