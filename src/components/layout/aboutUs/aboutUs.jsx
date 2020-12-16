@@ -32,7 +32,7 @@ import emailjs from 'emailjs-com';
         submitted:4,
       });
 
-      
+
       let template="template_ep26v59";
 
 
@@ -57,6 +57,8 @@ import emailjs from 'emailjs-com';
      }
 
      componentDidMount=()=>{
+  
+       window.scrollTo({top:0,behavior:"smooth"});
        Aos.init({
           duration: 1500,
           delay: 100,
@@ -68,13 +70,13 @@ import emailjs from 'emailjs-com';
       return (
            <div data-aos="zoom-out" className="about">
               <h1 className="heading-primary landing__3_heading">Reach us</h1>
-              
+
               <div className="about__1">
                   <form className="about__1_form" onSubmit={this.onSubmitHandler}>
                       <input required name="name" value={this.state.name} onChange={this.onChangeHandler} placeholder="name" type="text"/>
                       <input required name="phone" value={this.state.phone} onChange={this.onChangeHandler} placeholder="phone" type="text"/>
                       <input required name="email" value={this.state.email} onChange={this.onChangeHandler} placeholder="email" type="text"/>
-                    
+
 
                     <select required value={this.state.preference} onChange={(e)=>this.onChangeHandler(e)} name="preference" id="">
                        <option disabled value="select"  selected>select your plan</option>
@@ -83,14 +85,14 @@ import emailjs from 'emailjs-com';
                        <option value="Enterprises & School Training">Enterprises & School Training</option>
 
                     </select>
-                                         
-                     
+
+
                       {this.state.submitted===1?
                       <input className="btn__buy" value="SUBMIT" type="submit"/>
                       :this.state.submitted===2?
-                      <input className="btn__buy" style={{backgroundColor:"green"}} type="submit" disabled value="We'll connect with you soon.." />
+                      <input className="btn__buy" style={{backgroundImage:"linear-gradient(90deg, rgba(75,204,51,1) 46%, rgba(22,217,54,1) 100%)"}} type="submit" disabled value="We'll connect with you soon.." />
                       :this.state.submitted===3?
-                      <input className="btn__buy" style={{backgroundColor:"red"}} type="submit" disabled value="OOPS! Something went wrong.a1" />
+                      <input className="btn__buy" style={{backgroundImage:"linear-gradient(90deg, rgba(204,51,51,1) 46%, rgba(168,13,13,1) 100%)"}} type="submit" disabled value="OOPS! Something went wrong.a1" />
                       :
                       <input className="btn__buy" type="submit" disabled value="..." />
                       }

@@ -45,23 +45,88 @@
 @include respond(tab-land){
   .nav{
     padding: 1rem 2rem;
-    flex-direction:column;
+    // flex-direction:column;
     position: relative;
     position:sticky;
     background: $color-white;
     top: 0;
+    height: 7rem;
     // left: -2rem;
     margin-left: -1rem;
     width: 100vw;
     z-index: 1000;
-    & ul{
+    & img{
+      height: 5rem;
     }
-    &__link{
-      padding: 0 1rem;
-    }
-    &__list{
-      font-size: 1.4rem;
-      margin-top: 2rem;
+    &__mob{
+      &_text{
+         font-size: 1.5rem;
+         font-weight:bold;
+         position: relative;
+         padding-right: 5rem;
+         & span{
+           top: 0;
+           // transform-origin: center;
+           transform: translateY(-10.5rem) translateX(.5rem);
+           position: absolute;
+            // color: transparent;
+            // border-radius: 50%;
+            // width:5rem;
+            height: 5rem;
+            font-size: 13rem;
+            // background: $color-exim-blue;
+         }
+      }
+
+      &_wrapper{
+          position:fixed;
+          top: 0;
+          left: 0;
+          background: $color-white;
+          height: 100vh;
+          width: 100vw;
+          z-index: 100;
+          display: flex;
+          align-items:center;
+          padding-top: 5rem;
+          opacity: 0;
+          visibility: hidden;
+          flex-direction: column;
+          &-link{
+               color: $color-exim-dark-grey;
+               font-size: 2.5rem;
+               margin: 1.5rem;
+               &:first-letter{
+                 font-size: 3rem;
+                 font-weight: bold;
+               }
+               &:active,&:focus{
+                 text-decoration: none;
+               }
+          }
+      }
+      &_wrapper2,&_wrapper3{
+        z-index: 101;
+        position:fixed;
+        background: $color-black;
+        top: 2.2rem;
+        right: 4.5rem;
+        height: 2.6rem;
+        width: 2.6rem;
+        border-radius: 50%;
+        opacity: 0;
+        visibility: hidden;
+        // animation: wrapper2 5s linear;
+        animation-fill-mode: forwards;
+        backface-visibility: hidden;
+      }
+      &_wrapper3{
+        height: 25rem;
+        width: 25rem;
+        transform: scale(6.5) translateY(18rem) translateX(-3.5rem);
+        // animation: wrapper3 10s linear infinite;
+        animation-fill-mode: both;
+      }
     }
   }
 };
