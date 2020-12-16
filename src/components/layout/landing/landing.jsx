@@ -67,24 +67,24 @@ import landing_main from "../../../assets/images/landing-main.svg"
         cos:[
           {
             title:"Exim management",
-            content:"being an exim manager one manages export/import process, foreseeing movement of goods and being in touch with freight forwarder, logistics, retailers and manufaturer. Exim manager also handles documents, primary responsibilities and many more."
+            content:"Being an exim manager one manages export/import process, foreseeing movement of goods and being in touch with freight forwarder, logistics, retailers and manufaturer. Exim manager also handles documents, primary responsibilities and many more."
           },{
             title:"Freight Forwarder",
-            content:":  freight forwarders are master of trade. Giving recommendation to the exporter, performing freight operation, looking over documentation. Any business that is in import-export does require freight forwarder for their unique versatility."
+            content:"Freight forwarders are master of trade. Giving recommendation to the exporter, performing freight operation, looking over documentation. Any business that is in import-export does require freight forwarder for their unique versatility."
           },{
             title:"Merchant export/importer",
-            content:"export-import is the most effective money-making career. Know the global market and earn foreign exchange, develop country’s economy, tax concession, improve in sales and profit, increase in foreign sale and many more benefits one can get if stepped in exim world"
+            content:"Export-import is the most effective money-making career. Know the global market and earn foreign exchange, develop country’s economy, tax concession, improve in sales and profit, increase in foreign sale and many more benefits one can get if stepped in exim world"
            }, {
             title:"Logistic manager",
-            content:" as logistics manager you can organize the storage and distribution of goods. Also, to ensure that orders are carried out correctly. A logistics manager must wear a variety of hats throughout the workday."
+            content:"As logistics manager you can organize the storage and distribution of goods. Also, to ensure that orders are carried out correctly. A logistics manager must wear a variety of hats throughout the workday."
              },
           {
             title:"In CHA",
-            content:": after getting certified by exim education one can work under Custom House Agent, and with a good experience can tuen as CHA. work in shipping line, NVOCC , export sales manager and step in real organized and easy money making world ."
+            content:"After getting certified by exim education one can work under Custom House Agent, and with a good experience can tuen as CHA. work in shipping line, NVOCC , export sales manager and step in real organized and easy money making world ."
           }],
         cosTitle:"Exim management",
-        cosContent:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo "
-    }
+        cosContent:"Being an exim manager one manages export/import process, foreseeing movement of goods and being in touch with freight forwarder, logistics, retailers and manufaturer. Exim manager also handles documents, primary responsibilities and many more."
+      }
 
     //"Export Import Education"
 
@@ -378,8 +378,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   <div className="blank blank__3">0</div>
                   <div className="landing__4_1">
                       <div data-aos="fade-down" data-aos-delay="1000" className="landing__4_1-text">
-                           <div className="landing__4_1-text--big heading-primary">SIGN UP</div>
-                           <div className="landing__4_1-text--small">Quick sign up with 2 steps</div>
+                           <div className="landing__4_1-text--big heading-primary">Sign up for growth and development</div>
+                           <div className="landing__4_1-text--small"></div>
                            <div className="landing__4_1-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
                       </div>
                       <img  className="landing__4_1-image" src={s1} alt=""/>
@@ -388,17 +388,22 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   <div className="landing__4_2">
                       <img className="landing__4_2-image" src={s2} alt=""/>
                       <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_2-text">
-                           <div className="landing__4_2-text--big heading-primary">SIGN UP</div>
-                           <div className="landing__4_2-text--small">Quick sign up with 2 steps</div>
-                           <div className="landing__4_2-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
+                           <div className="landing__4_2-text--big heading-primary">Your quality and standard of living is in your hand
+</div>
+                           <div className="landing__4_2-text--small">Not You & I but We be on the journey full of support and growth.</div>
+                           <div className="landing__4_2-text--smaller">Your keenness to learn more and get hands in the international market can be done right by
+smooth payment procedure. Quick pay and get the grip to course, live lectures, research and
+get ready for growing stability </div>
                       </div>
                   </div>
 
                   <div className="landing__4_3">
                       <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_3-text">
-                           <div className="landing__4_3-text--big heading-primary">SIGN UP</div>
-                           <div className="landing__4_3-text--small">Quick sign up with 2 steps</div>
-                           <div className="landing__4_3-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
+                           <div className="landing__4_3-text--big heading-primary">Path to success</div>
+                           <div className="landing__4_3-text--small">
+</div>
+                           <div className="landing__4_3-text--smaller">Learn and understand the course, get a job, be a brand and start your self-dependent journey
+crossing national borders.</div>
                       </div>
                       <img  className="landing__4_3-image" src={s3} alt=""/>
                   </div>
@@ -522,29 +527,30 @@ import landing_main from "../../../assets/images/landing-main.svg"
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
                                 <h1><img className="img__1" src={videoBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <div>You pick the schedule and learn accordingly.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__2" src={pause} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <h1><img className="img__2" src={pause} alt=""/><span>Pause course</span></h1>
+                                <div>Busy or tired? No worries, take a break; pause the lecture and play accordingly.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__3" src={gratuate} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <h1><img className="img__3" src={gratuate} alt=""/><span>Mentor support</span></h1>
+                                <div>: Not You & I but We be on the journey full of support and growth</div>
                             </div>
                         </div>
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__4" src={tv} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <h1><img className="img__4" src={tv} alt=""/><span>Exim consultancy</span></h1>
+                                <div></div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__5" src={crownBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <h1><img className="img__5" src={crownBig} alt=""/><span>Quality Service</span></h1>
+                                <div>We at EximEducation don’t compromise with our service. We provide the best of
+service to our gems.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1 ><img className="img__6" src={send} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
-                                <div>Learning with Exim Education is dynamic and<br/>responsive to unique learning needs of import and export.</div>
+                                <h1 ><img className="img__6" src={send} alt=""/><span>IndiaPort-booking platform</span></h1>
+                                <div>an organised platform to book transport, manage the shipment and provide trouble-free trading.</div>
                             </div>
                         </div>
                    </div>
@@ -583,9 +589,9 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                <div className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           Glad that I was a part of exim education. Tutors and staff are very helpful and
+                        knowledgeable.
+
                            </div>
                        </div>
                        <div className="landing__11_review">
@@ -607,9 +613,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           Good course- helpful tutors. Happy to be part of this institute.
+
                            </div>
                        </div>
                        <div className="landing__11_review">
@@ -619,9 +624,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                <div className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           I’m glad to shift from a local market to international with your guidance and support.
+Thank you for my progress.
                            </div>
                        </div>
                        <div className="landing__11_review">
@@ -631,9 +635,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                <div className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           Exim Education provided me with full support when I planned to step in export. Thank
+                           you Exim Education!
                            </div>
                        </div>
                        <div className="landing__11_review">
@@ -643,9 +646,19 @@ import landing_main from "../../../assets/images/landing-main.svg"
                                <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           Decent fees and great videos.
+
+                           </div>
+                       </div>
+                       <div className="landing__11_review">
+                           <div className="landing__11_review-top">
+                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
+                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
+                           </div>
+                           <div  className="landing__11_review-bottom">
+                           Live sessions are very very helpful. If anyone of you is planning to step in exim world you
+need to join EximEducation.
                            </div>
                        </div>
                    </div>
