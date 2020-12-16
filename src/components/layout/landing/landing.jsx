@@ -311,12 +311,12 @@ import landing_main from "../../../assets/images/landing-main.svg"
                       <div className="landing__3_box-text">
                           <div className="landing__3_box-text--big">ABOUT EXIM EDUCATION</div>
                           <div className="landing__3_box-text--small">
-                            Exim Educationn is training centre of Indiaport.<br/>
-                            We tempor invidunt ut labore et dolore magna aliquyam<br/>
-                            erat, sed diam voluptua. At vero eos et accusam et justo duo<br/>
-                            dolores et ea rebum. Stet clita kasd gubergren, no sea<br/>
-                            takimata sanctus est Lorem ipsum dolor sit amet. Lorem<br/>
-                            ipsum dolor sit amet, consetetur sadipscing<br/>
+                          Exim Education is training centre of Indiaport. We provide helping hand to India’s
+                           export business to ease its global trade.Exim Education has taken an initiative to
+                            make people aware of various opportunities in the International market with our unique 
+                            way of training, the participants. Exim Education with its exclusive mastery aims to hasten
+                             the globalization of India and build an International business by educating and brushing exim
+                              skills of the working class.
                           </div>
                       </div>
 
@@ -658,7 +658,7 @@ Thank you for my progress.
                            </div>
                            <div  className="landing__11_review-bottom">
                            Live sessions are very very helpful. If anyone of you is planning to step in exim world you
-need to join EximEducation.
+need to join EximEducation.  
                            </div>
                        </div>
                    </div>
