@@ -72,7 +72,7 @@ import { Link } from "react-router-dom";
                <div className="pricing__cards">
                   <div className="card">
                      <div className="card__name">Classroom Training</div>
-                     <div className="card__price">₹27999</div>
+                     <div className="card__price">₹ 27999</div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
@@ -90,7 +90,7 @@ import { Link } from "react-router-dom";
                   <div className="card black">
                      <div className="card__name">ONLINE TRAINING</div>
                      <h3>Most Popular</h3>
-                     <div className="card__price">₹9999</div>
+                     <div className="card__price">₹ 9999</div>
                      <hr/>
                      <ul>
                      <li><img src={tick} alt=""/>Weekend Live Classes</li>
@@ -117,8 +117,8 @@ import { Link } from "react-router-dom";
                        <li><img src={tick} alt=""/>Curated learning paths</li>
                        <li><img src={tick} alt=""/>Business consultency</li>
                        </ul>
- 
-                    <Link to="about"><button className="btn__buy">Contact Us <img src={send} alt=""/></button></Link> 
+
+                    <Link to="about"><button className="btn__buy">Contact Us <img src={send} alt=""/></button></Link>
                   </div>
                </div>
                <div className="customHr">...</div>

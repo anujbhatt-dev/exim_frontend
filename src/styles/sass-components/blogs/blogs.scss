@@ -6,12 +6,12 @@
     & img{
       position: relative;
       top: 0;
-      left: -8rem;
+      left: -12rem;
       width: 100vw;
       height: 60vh;
       object-fit: cover;
       object-position: center;
-      z-index: -1;
+      // z-index: -1;
       @include respond(tab-land){
          left: -2rem;
       }
