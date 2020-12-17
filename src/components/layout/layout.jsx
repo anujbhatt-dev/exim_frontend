@@ -25,10 +25,6 @@ class Layout extends Component{
                  <BlogsPage/>
               </Route>
 
-              <Route exact  path="/">
-                <Landing/>
-              </Route>
-
               <Route exact  path="/pricing">
                   <Pricing/>
               </Route>

@@ -6,6 +6,7 @@ import whatsapp from "../../../assets/images/whatsapp.svg";
 import insta from "../../../assets/images/insta.svg";
 import twitter from "../../../assets/images/twitter.svg";
 import call from "../../../assets/images/call.svg";
+import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
 
   class Footer extends Component{
 
@@ -36,7 +37,7 @@ import call from "../../../assets/images/call.svg";
                                <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                <a href="https://instagram.com/eximeducation.com_"><img src={insta} alt=""/></a>
                             </div>
-                            <button className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
+                            <button  data-aos="fade-right" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></button>
                         </div>
                         <div className="footer__top_social">
                             <div className="footer__top_social-heading">About Us</div>

@@ -3,6 +3,7 @@
   justify-content: space-between;
   // align-items: center;
   padding: 0 4rem;
+  margin-top: 4rem;
   &_text{
     width: 50%;
     transition: all 1s;
@@ -35,7 +36,7 @@
       line-height: 1.5;
       color: $color-exim-grey;
       font-weight: bold;
-      font-style: italic;
+      // font-style: italic;
     }
     &-btns{
       display: flex;
@@ -44,9 +45,10 @@
         // font-weight: bold;
         // width: 25rem;
         border: none;
-        padding:.5rem 4rem;
+        padding:1rem 4rem;
         margin: 2rem 0rem;
         margin-bottom: 3rem;
+        margin-top: 4rem;
         margin-right: 5rem;
         border-radius: 5px;
         box-shadow: 0rem 0rem 2rem rgba($color-exim-dark-grey,.5);
@@ -68,7 +70,7 @@
          display: flex;
          align-items: center;
          flex-wrap: nowrap;
-       width: 26rem;
+          width: 26rem;
        //   word-wrap: break-word;
          & span{
            position: relative;
@@ -127,9 +129,10 @@
        }
     }
     &_image{
-      height: 60vh;
+      height: 40vh;
       // object-fit: cover;
       object-position:center;
+
     }
   }
 };

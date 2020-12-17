@@ -88,14 +88,14 @@ import $ from "jquery"
 
     menuHandler=()=>{
 
-         $(".nav__mob_wrapper2").css({"animation":"wrapper2 5s linear","opacity":"1","visibility":"visible"});
+         $(".nav__mob_wrapper2").css({"animation":"wrapper2 3s linear","opacity":"1","visibility":"visible"});
          setTimeout(()=>{
            $(".nav__mob_wrapper").css({"opacity":"1","visibility":"visible"});
            $(".nav__mob_wrapper3").css({"animation":"wrapper3 10s linear infinite","opacity":"1","visibility":"visible"})
-         },3000)
+         },1500)
          setTimeout(()=>{
-           $(".nav__mob_wrapper2").css({"animation":"wrapper2 5s linear","opacity":"0","visibility":"hidden"});
-         },4900)
+           $(".nav__mob_wrapper2").css({"animation":"wrapper2 3s linear","opacity":"0","visibility":"hidden"});
+         },2900)
     }
 
     render(){

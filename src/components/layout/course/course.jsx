@@ -2,7 +2,9 @@ import React, {Component} from "react"
 import lock from "../../../assets/images/lock.svg";
 import full from "../../../assets/images/full.svg";
 import half from "../../../assets/images/half.svg";
-
+import file from "../../../assets/images/file.svg";
+import Aos from "aos"
+import "aos/dist/aos.css"
 
   class Course extends Component{
 
@@ -81,11 +83,24 @@ import half from "../../../assets/images/half.svg";
       ]
     }
 
+
+         componentDidMount=()=>{
+
+           window.scrollTo({top:0,behavior:"smooth"});
+           Aos.init({
+              duration: 1500,
+              delay: 100,
+            });
+         }
+
     render(){
 
       return (
-         <div className="course">
+         <div data-aos="zoom-out" className="course">
                  <h1 className="heading-primary landing__3_heading">Module 14</h1>
+                 <div  className="course__btnWrap">
+                     <button  className="course__btnWrap_btn"><span>download</span><img src={file} alt=""/></button>
+                 </div>
                  <div className="course__wrapper">
                      {
                        this.state.courses.map((course,i)=>{

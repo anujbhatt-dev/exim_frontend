@@ -247,11 +247,17 @@
       transform: scale(6.5) translateY(18rem) translateX(3.5rem);
       border-radius: 50%;
     }
-    50%{
+    35%{
       height: 25rem;
       width: 25rem;
       transform: scale(6.5) translateY(17rem) translateX(1.5rem);
       border-radius:10%;
+    }
+    65%{
+      height: 25rem;
+      width: 25rem;
+      transform: scale(6.5) translateY(18rem) translateX(-1.5rem);
+      border-top-right-radius:50%;
     }
     100%{
       border-radius: 50%;

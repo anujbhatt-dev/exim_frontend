@@ -2,10 +2,10 @@
   display: flex;
   justify-content:space-around;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   box-shadow: 0 0 4rem rgba($color-black,.3);
   border-radius: 18px;
-  margin-top: 3rem;
+  margin: 8rem 0;
   background: $color-white;
   &_item{
     display: flex;
@@ -26,6 +26,7 @@
 @include respond(tab-port){
   .landing__bar{
     padding: 2rem 1rem;
+    margin: 8rem 1rem;
     &_item{
 
       &-svg{

@@ -1,4 +1,5 @@
 .landing__7{
+  margin-bottom: 16rem;
   & img{
     width: 100vw;
     position: relative;
@@ -11,6 +12,9 @@
       width: 100vw;
       position: relative;
       left: -1rem;
+    }
+    &_img{
+      transform: scale(2);
     }
   }
 };

@@ -14,7 +14,7 @@
     animation-fill-mode: both;
   }
   &_review{
-    border-radius: 18px;
+    border-radius: 38px;
     padding: 1rem;
     margin: 1rem 2rem;
     width: 40rem;
@@ -25,7 +25,7 @@
       justify-content:space-between;
       align-items: center;
       &--img{
-
+         margin-right: 1rem;
       }
       &--name{
         color: $color-exim-dark-grey;

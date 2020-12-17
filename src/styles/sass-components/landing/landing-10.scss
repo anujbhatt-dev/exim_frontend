@@ -1,4 +1,5 @@
 .landing__10{
+  margin-bottom: 10rem;
   position:relative;
   width: 100vw;
   left: -12rem;
@@ -15,10 +16,10 @@
   }
   &_play{
     position:absolute;
-    right: 50%;
-    top: 23%;
+    right: 70%;
+    top: 30%;
     z-index: 0;
-    height: 25rem;
+    height: 10rem;
   }
   &_orbits{
     position:absolute;
@@ -27,17 +28,72 @@
     top: 0;
     z-index: 0;
     animation: scaleY 10s linear infinite;
+    opacity: .5;
   }
   &_text{
-    font-size: 6.5rem;
+    font-size: 4.5rem;
     position:absolute;
     left: 10%;
     top: 23%;
     z-index: 1;
     color: $color-white;
+    &_1{
+      font-size: 3rem;
+      position:absolute;
+      left: 35%;
+      top: 23%;
+      z-index: 1;
+      // width: 35rem;
+      color: $color-white;
+      font-weight: bold;
+      & h2{
+        font-weight: lighter;
+        font-size: 2rem;
+        margin: .5rem;
+      }
+      & h4{
+        font-weight: lighter;
+        font-size: 2rem;
+        margin: .5rem;
+      }
+      & div{
+
+      }
+    }
+    &_2,&_3,&_4{
+      text-align: center;
+      font-size: 3rem;
+      position:absolute;
+      z-index: 1;
+      // width: 35rem;
+      color: $color-white;
+      font-weight: bold;
+      bottom: 12%;
+      & h3{
+        font-weight: bold;
+        font-size: 2rem;
+        margin: .5rem;
+      }
+      & h5{
+        font-weight: lighter;
+        font-size: 1.2rem;
+        margin: .5rem;
+      }
+    }
+    &_2{
+      left: 10%;
+
+    }
+    &_3{
+       left: 30%;
+    }
+    &_4{
+       left: 50%;
+    }
     & button{
       bottom: -5rem;
       left: 0;
+      width: 26rem;
     }
   }
   @include respond(tab-land){
@@ -57,8 +113,38 @@
       height: 10rem;
       display: none;
     }
-  }
   &_text{
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+     &_1{
+       // display: none;
+       left:50%;
+       & h2{
+         font-size: 1rem;
+       }
+       & h4{
+         font-size: .6rem;
+       }
+       & div{
+          font-size: 1.2rem;
+       }
+     }
+     &_2,&_3,&_4{
+       & h3{
+         font-size: 1.2rem;
+       }
+       & h5{
+         font-size: .8rem;
+       }
+     }
+     &_2{
+       left:5%;
+     }
+     &_3{
+       left: 35%;
+     }
+     &_4{
+
+     }
   }
+ }
 }

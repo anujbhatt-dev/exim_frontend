@@ -79,9 +79,9 @@
       align-items: center;
     }
   }
-  &_1-text{
-     background: transparent;
-  }
+  // &_1-text{
+  //    background: transparent;
+  // }
 }
 @include respond(tab-port){
   .landing__4{
@@ -101,7 +101,7 @@
       flex-direction: column-reverse;
     }
     & > .blank{
-      opacity: 0;
+      opacity: 1;
     }
     &_1,&_3,&_2{
       & > div,& > img{

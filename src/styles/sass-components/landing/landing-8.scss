@@ -1,4 +1,5 @@
 .landing__8{
+  margin-bottom: 16rem;
   &_bar{
     display: flex;
     justify-content: space-around;
@@ -6,6 +7,7 @@
     flex-wrap: wrap;
     margin: 2rem;
     &-box{
+      background: $color-white;
       margin: 1rem;
       margin-bottom: 2.5rem;
       cursor: pointer;
@@ -22,6 +24,7 @@
         transform: translateY(-4px);
       }
       &:active{
+
         box-shadow: 0 1rem 3rem rgba($color-exim-blue,.5);
         transform: translateY(-1px);
       }
@@ -38,7 +41,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     &-images{
       position: relative;
 
@@ -79,7 +81,10 @@
     }
 
     &-text{
+      border: 1px solid rgba($color-grey,.2);
+      box-shadow: 0 0 2rem rgba($color-grey,.4);
       max-width: 50rem;
+      padding: 5rem;
       &--big{
         font-size: 1.8rem;
         color: $color-exim-dark-grey;
@@ -145,9 +150,13 @@
 }
 
 .bubble{
-  animation: bubble 50s linear infinite;
+  animation: faq 50s linear infinite;
   animation-fill-mode: forwards;
+}
 
+.selectedIcon{
+  transition: all .2s;
+  background-image: linear-gradient(to right,#1069DC,#1069DC);
 }
 
 @include respond(tab-port){

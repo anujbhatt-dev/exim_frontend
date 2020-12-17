@@ -1,9 +1,31 @@
 .course{
+  background: $color-white;
+  &__btnWrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 4rem 15rem;
+    &_btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26rem;
+      padding: 1rem 2rem;
+      border: none;
+      background: $color-exim-blue;
+      font-size: 2rem;
+      color: $color-white;
+      border-radius: 18px;
+      & span{
+        margin-right: 6rem;
+      }
+    }
+  }
   &__wrapper{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6rem;
-    margin: 15rem;
+    margin: 4rem 15rem;
     z-index: 0;
     &_box{
       &-lock{
@@ -63,6 +85,10 @@
     }
   }
   @include respond(tab-land){
+    &__btnWrap{
+      justify-content: center;
+      margin: 2rem;
+    }
     &__wrapper{
       margin: 2rem;
       grid-gap: 2rem;

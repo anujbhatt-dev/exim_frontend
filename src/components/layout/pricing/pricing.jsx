@@ -3,6 +3,8 @@ import tick from "../../../assets/images/tick.svg";
 import send from "../../../assets/images/send2.svg";
 import circleTimes from "../../../assets/images/circle-times.svg";
 import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
+import Aos from "aos"
+import "aos/dist/aos.css"
 
   class Pricing extends Component{
 
@@ -46,13 +48,17 @@ import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
 
     componentDidMount=()=>{
       window.scrollTo({top:0,behavior:"smooth"});
+      Aos.init({
+         duration: 1500,
+         delay: 100,
+       });
     }
 
 
     render(){
 
       return (
-           <div className="pricing">
+           <div data-aos="zoom-out" className="pricing">
                {
                  // head
                }

@@ -37,13 +37,19 @@ import eximManagement from "../../../assets/images/eximManagement.svg";
 import lapi from "../../../assets/images/lapi.svg";
 import humanChain from "../../../assets/images/humanChain.svg";
 
+import settingImg from "../../../assets/images/settingImg.svg";
+import globeImg from "../../../assets/images/globeImg.svg";
+import eximManagementImg from "../../../assets/images/eximManagementImg.svg";
+import lapiImg from "../../../assets/images/lapiImg.svg";
+import humanChainImg from "../../../assets/images/humanChainImg.svg";
+
 import videoBig from "../../../assets/images/videoBig.svg";
 import crownBig from "../../../assets/images/crownBig.svg";
 import tv from "../../../assets/images/tv.svg";
 import send from "../../../assets/images/send.svg";
 import pause from "../../../assets/images/pause.svg";
 import gratuate from "../../../assets/images/gratuate.svg";
-import play from "../../../assets/images/play.svg";
+import whitever from "../../../assets/images/whitever.svg";
 import orbits from "../../../assets/images/orbits.svg";
 import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
@@ -51,7 +57,7 @@ import orbitss from "../../../assets/images/orbits-s.svg";
 import FlipNumbers from 'react-flip-numbers';
 
 
-
+import googleplaybadge from "../../../assets/images/google-play-badge.jpeg";
 
 import ellipse1 from "../../../assets/images/ellipse1.png";
 import video2 from "../../../assets/images/video2.png";
@@ -164,8 +170,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
       }
      Aos.init({
         duration: 1500,
-        delay: 100,
-        disable: 'mobile'
+        delay: 100
       });
 
 
@@ -194,7 +199,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
      $(window).scroll(()=>{
        console.log($(window).scrollTop());
 
-       if($(window).scrollTop()>=1700 && !this.state.mob){
+       if($(window).scrollTop()>=1700 ){
          $(".blank__1").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
          setTimeout(()=>{
            $(".blank__1").css({"opacity":"0"})
@@ -295,7 +300,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <button  data-aos="fade-right" className="landing__2_text-btn">Download <img className="landing__2_text-btn--icon" src={download} alt=""/></button>
+                       <button  data-aos="fade-right" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></button>
                   </div>
                   <img className="landing__2_image" src={mobile} alt=""/>
               </div>
@@ -313,7 +318,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                           <div className="landing__3_box-text--small">
                           Exim Education is training centre of Indiaport. We provide helping hand to India’s
                            export business to ease its global trade.Exim Education has taken an initiative to
-                            make people aware of various opportunities in the International market with our unique 
+                            make people aware of various opportunities in the International market with our unique
                             way of training, the participants. Exim Education with its exclusive mastery aims to hasten
                              the globalization of India and build an International business by educating and brushing exim
                               skills of the working class.
@@ -363,7 +368,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </li>
                           </ul>
                       </div>
-                      <button style={{width:"15rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                      <button style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                   </div>
               </div>
 
@@ -457,7 +462,7 @@ crossing national borders.</div>
 
               <div className="landing__7">
                   {this.state.mob?<img src={colabMob} alt=""/>:<img src={colab} alt=""/>}
-                  <img src={videoAfterColab} alt=""/>
+                  <img className="landing__7_img" src={videoAfterColab} alt=""/>
               </div>
 
               {
@@ -467,35 +472,30 @@ crossing national borders.</div>
               <div className="landing__8">
                   <h1 className="heading-primary landing__3_heading">cousre to success</h1>
                   <div className="landing__8_bar">
-                      <div onClick={()=>this.coureseToSuccess(0)} className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(0)} className={(this.state.cosTitle==="Exim management")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           <img src={eximManagement} alt=""/>
                           <div>Exim<br/>management</div>
                       </div>
-                      <div  onClick={()=>this.coureseToSuccess(1)} className="landing__8_bar-box">
+                      <div  onClick={()=>this.coureseToSuccess(1)} className={(this.state.cosTitle==="Freight Forwarder")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           <img src={humanChain} alt=""/>
                           <div>Freight Forwarder</div>
                       </div>
-                      <div onClick={()=>this.coureseToSuccess(2)} className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(2)} className={(this.state.cosTitle==="Merchant export/importer")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           <img src={lapi} alt=""/>
                           <div>Merchant<br/>export/importer</div>
                       </div>
-                      <div onClick={()=>this.coureseToSuccess(3)} className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(3)} className={(this.state.cosTitle==="Logistic manager")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           <img src={setting} alt=""/>
                           <div>Logistic manager</div>
                       </div>
-                      <div onClick={()=>this.coureseToSuccess(4)} className="landing__8_bar-box">
+                      <div onClick={()=>this.coureseToSuccess(4)} className={(this.state.cosTitle==="In CHA")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           <img src={globe} alt=""/>
                           <div>in CHA</div>
                       </div>
                   </div>
                   <div className="landing__8_box">
                       <div className="landing__8_box-images">
-                              <img className="bubble" src={bubble} alt=""/>
-                              <div className="landing__8_box-icons">
-                                  <img className="landing__8_box-icons--1" src={blueDownload} alt=""/>
-                                  <img className="landing__8_box-icons--2" src={longDash} alt=""/>
-                                  <img className="landing__8_box-icons--3" src={appleDownload} alt=""/>
-                              </div>
+                              <img className="BUBBLE" src={this.state.cosTitle==="Exim management"?eximManagementImg:this.state.cosTitle==="Freight Forwarder"?humanChainImg:this.state.cosTitle==="Merchant export/importer"?lapiImg:this.state.cosTitle==="Logistic manager"?settingImg:globeImg} alt=""/>
                       </div>
                       <div className="landing__8_box-text">
                             <div className="landing__8_box-text--big">{this.state.cosTitle}</div>
@@ -513,8 +513,8 @@ crossing national borders.</div>
                             </div>
                       </div>
                   </div>
-                  <div className="customHr">...</div>
               </div>
+              <div className="customHr">...</div>
 
 
               {
@@ -568,10 +568,27 @@ service to our gems.</div>
                       <span>WEBINAR</span><br/>
                       sunday
                     </div>
-                    <button  style={{width:"15rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <button  style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                  </div>
+                  <div className="landing__10_text_1">
+                     <h2>Topic</h2>
+                     <div>Advance technology and<br/>government new laws applied in<br/>2020 module </div>
+                     <h4>Zehann Shah</h4>
+                  </div>
+                  <div className="landing__10_text_2">
+                      <h5>date</h5>
+                      <h3>12 November, 2020</h3>
+                  </div>
+                  <div className="landing__10_text_3">
+                      <h5>time</h5>
+                      <h3>12:30 PM</h3>
+                  </div>
+                  <div className="landing__10_text_4">
+                      <h5>mentor</h5>
+                      <h3>Zehan Shah</h3>
+                  </div>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
-                 {this.state.mob?<img className="landing__10_play" src={plays} alt=""/>:<img className="landing__10_play" src={play} alt=""/>}
+                 {this.state.mob?<img className="landing__10_play" src={whitever} alt=""/>:<img className="landing__10_play" src={whitever} alt=""/>}
               </div>
 
 
@@ -658,7 +675,7 @@ Thank you for my progress.
                            </div>
                            <div  className="landing__11_review-bottom">
                            Live sessions are very very helpful. If anyone of you is planning to step in exim world you
-need to join EximEducation.  
+need to join EximEducation.
                            </div>
                        </div>
                    </div>

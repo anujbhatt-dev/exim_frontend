@@ -47,6 +47,10 @@
       & button{
         margin: auto;
         margin-top: 2rem;
+        margin-left: 8rem;
+        @include respond(tab-land){
+          margin-left: 0rem;
+        }
       }
       &-icons{
         display: flex;
@@ -99,6 +103,9 @@
       margin: auto;
       flex-wrap: wrap;
       justify-content: center;
+      &_text-smaller{
+        padding-right: 1rem;
+      }
     }
     &__middle{
       flex-wrap: wrap;
