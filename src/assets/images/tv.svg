@@ -1,3 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="34.636" height="28.339" viewBox="0 0 34.636 28.339">
-  <path id="Icon_material-personal-video" data-name="Icon material-personal-video" d="M32.987,4.5H4.649A3.138,3.138,0,0,0,1.5,7.649V26.541A3.148,3.148,0,0,0,4.649,29.69h7.872v3.149H25.116V29.69h7.872a3.145,3.145,0,0,0,3.133-3.149l.016-18.892A3.148,3.148,0,0,0,32.987,4.5Zm0,22.041H4.649V7.649H32.987Z" transform="translate(-1.5 -4.5)" fill="#525252"/>
+<svg id="Group_1223" data-name="Group 1223" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.116" height="46.463" viewBox="0 0 36.116 46.463">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_519" data-name="Rectangle 519" width="36.116" height="46.462" fill="#525252"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1222" data-name="Group 1222">
+    <g id="Group_1221" data-name="Group 1221" clip-path="url(#clip-path)">
+      <path id="Path_4754" data-name="Path 4754" d="M343.461,433.382a12.951,12.951,0,1,0-18.316,0l1.767-1.767a10.453,10.453,0,1,1,14.781,0Zm0,0" transform="translate(-316.311 -406.03)" fill="#525252"/>
+      <path id="Path_4755" data-name="Path 4755" d="M325.549,437.393a15.5,15.5,0,1,1,21.921,0l1.767,1.769a18,18,0,1,0-25.455,0Zm0,0" transform="translate(-318.518 -408.239)" fill="#525252"/>
+    </g>
+  </g>
+  <path id="Path_4756" data-name="Path 4756" d="M336.856,425.328a5.225,5.225,0,0,0,1.161-.875,5.14,5.14,0,1,0-6.124.875L321.265,449.08H324l1.747-3.905H343l1.746,3.905h2.739Zm-2.51.635h.055l2.307,5.157h-4.67Zm-3.425,7.656h6.908l1.257,2.81h-9.421Zm-4.053,9.057,1.676-3.747H340.2l1.676,3.747Zm0,0" transform="translate(-316.383 -402.618)" fill="#525252"/>
 </svg>

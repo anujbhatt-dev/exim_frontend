@@ -38,6 +38,7 @@
   & hr{
     width: 80%;
     margin: .5rem auto;
+    margin-bottom: 5rem;
   }
   &__name{
     text-align:center;
@@ -51,6 +52,7 @@
     margin: 2rem 0;
   }
   & ul{
+    min-height: 40rem;
     & li{
       display: flex;
       align-items: center;

@@ -43,6 +43,12 @@ import eximManagementImg from "../../../assets/images/eximManagementImg.svg";
 import lapiImg from "../../../assets/images/lapiImg.svg";
 import humanChainImg from "../../../assets/images/humanChainImg.svg";
 
+import whiteEM from "../../../assets/images/whiteEM.svg";
+import whiteHC from "../../../assets/images/whiteHC.svg";
+import whiteL from "../../../assets/images/whiteL.svg";
+import whiteS from "../../../assets/images/whiteS.svg";
+import whiteG from "../../../assets/images/whiteG.svg";
+
 import videoBig from "../../../assets/images/videoBig.svg";
 import crownBig from "../../../assets/images/crownBig.svg";
 import tv from "../../../assets/images/tv.svg";
@@ -473,23 +479,23 @@ crossing national borders.</div>
                   <h1 className="heading-primary landing__3_heading">cousre to success</h1>
                   <div className="landing__8_bar">
                       <div onClick={()=>this.coureseToSuccess(0)} className={(this.state.cosTitle==="Exim management")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
-                          <img src={eximManagement} alt=""/>
+                          {this.state.cosTitle==="Exim management"?<img src={whiteEM} alt=""/>:<img src={eximManagement} alt=""/>}
                           <div>Exim<br/>management</div>
                       </div>
                       <div  onClick={()=>this.coureseToSuccess(1)} className={(this.state.cosTitle==="Freight Forwarder")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
-                          <img src={humanChain} alt=""/>
+                          {this.state.cosTitle==="Freight Forwarder"?<img src={whiteHC} alt=""/>:<img src={humanChain} alt=""/>}
                           <div>Freight Forwarder</div>
                       </div>
                       <div onClick={()=>this.coureseToSuccess(2)} className={(this.state.cosTitle==="Merchant export/importer")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
-                          <img src={lapi} alt=""/>
+                          {this.state.cosTitle==="Merchant export/importer"?<img src={whiteL} alt=""/>:<img src={lapi} alt=""/>}
                           <div>Merchant<br/>export/importer</div>
                       </div>
                       <div onClick={()=>this.coureseToSuccess(3)} className={(this.state.cosTitle==="Logistic manager")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
-                          <img src={setting} alt=""/>
+                          {this.state.cosTitle==="Logistic manager"?<img src={whiteS} alt=""/>:<img src={setting} alt=""/>}
                           <div>Logistic manager</div>
                       </div>
                       <div onClick={()=>this.coureseToSuccess(4)} className={(this.state.cosTitle==="In CHA")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
-                          <img src={globe} alt=""/>
+                          {this.state.cosTitle==="In CHA"?<img src={whiteG} alt=""/>:<img src={globe} alt=""/>}
                           <div>in CHA</div>
                       </div>
                   </div>

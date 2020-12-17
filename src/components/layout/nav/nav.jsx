@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {NavLink, withRouter} from "react-router-dom";
-import exim from "../../../assets/images/exim.svg"
+import exim from "../../../assets/images/exim.svg";
+import cancel from "../../../assets/images/cancel.png";
 import $ from "jquery"
 
   class Navigation extends Component{
@@ -109,11 +110,12 @@ import $ from "jquery"
                 <div className="nav__mob">
                     <div onClick={this.menuHandler} className="nav__mob_text">Menu <span>.</span></div>
                     <div className="nav__mob_wrapper">
-                        <NavLink activeStyle={{color:"#0062FF"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/"><div className="nav__list_item nav__list_item-1">Home</div></NavLink>
-                        <NavLink activeStyle={{color:"#0062FF"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/course"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
-                        <NavLink activeStyle={{color:"#0062FF"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/pricing"><div className="nav__list_item nav__list_item-2">Pricing</div></NavLink>
-                        <NavLink activeStyle={{color:"#0062FF"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">blogs</div></NavLink>
-                        <NavLink activeStyle={{color:"#0062FF"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/about"><div className="nav__list_item nav__list_item-5">About Us</div></NavLink>
+                         <img onClick={this.mobNavHndler} src={cancel} alt=""/>
+                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/"><div className="nav__list_item nav__list_item-1">Home</div></NavLink>
+                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/course"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
+                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/pricing"><div className="nav__list_item nav__list_item-2">Pricing</div></NavLink>
+                        <NavLink activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">blogs</div></NavLink>
+                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/about"><div className="nav__list_item nav__list_item-5">About Us</div></NavLink>
                     </div>
                     <div className="nav__mob_wrapper2">
 

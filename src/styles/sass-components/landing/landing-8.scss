@@ -34,6 +34,7 @@
       & div{
         font-size: 1rem;
         text-align: center;
+        margin-top: 1rem;
       }
     }
   }
@@ -103,6 +104,7 @@
     }
     &-flex{
       display: flex;
+      display: none;
       justify-content: space-around;
       align-items: center;
       margin-top: 10rem;
@@ -156,7 +158,9 @@
 
 .selectedIcon{
   transition: all .2s;
-  background-image: linear-gradient(to right,#1069DC,#1069DC);
+  // background-image: linear-gradient(to right,#1069DC,#1069DC);
+  background: #0062FF;
+  color: $color-white;
 }
 
 @include respond(tab-port){
