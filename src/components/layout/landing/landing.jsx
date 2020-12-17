@@ -6,7 +6,6 @@ import $ from "jquery"
 import book from "../../../assets/images/book.svg";
 import laptop from "../../../assets/images/laptop.svg";
 import reload from "../../../assets/images/reload.svg";
-import download from "../../../assets/images/download.svg";
 import mobile from "../../../assets/images/mobile.svg";
 import section from "../../../assets/images/section.svg";
 import clock from "../../../assets/images/clock.svg";
@@ -72,8 +71,14 @@ import landing_main from "../../../assets/images/landing-main.svg"
   class Landing extends Component{
 
     state={
+       
+        eportValue:6456744,
         numbersVisible:false,
-        numberValue:6456744,
+        webinarDay:"sunday",
+        webinarDate:"12 November, 2020",
+        webinarTime:"12:30 PM",
+        webinarMentor:"Zehan Shah",
+        webinarTopic:"Advance technology and government new laws applied in 2020 module ",
         value:"",
         mob:false,
         cos:[
@@ -103,7 +108,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' M'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'M'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'k'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
@@ -432,7 +437,7 @@ crossing national borders.</div>
                    //countdown
                    }
                  <div id="numbers" className="landing__5_count">
-                        {[... this.state.numberValue+""].map(value=>
+                        {[... this.state.eportValue+""].map(value=>
 
                             this.state.numbersVisible?
                             <div className="digit__wrapper"><div className="landing__5_count-digit"> <FlipNumbers height={40} width={40} color="" background="" duration="5" delay="0" play perspective={500} numbers={""+value} /></div><hr/></div>
@@ -442,7 +447,7 @@ crossing national borders.</div>
                           )}
                </div>
 
-                    <div className="landing__5_text">COUNTDOWN STARTS IN was my birthday day I was just thinking</div>
+                    <div className="landing__5_text">Last year Export of goods and services from india.</div>
               </div>
 
 
@@ -455,8 +460,10 @@ crossing national borders.</div>
                  <div className="landing__6_box">
                      <img className="landing__6_box-certificate" src={certificate} alt=""/>
                      <div className="landing__6_box-text">
-                         <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/>sed diam nonumy eirmod tempor invidunt ut labore<br/> et dolore magna aliquyam erat, sed diam </div>
-                         <div style={{color:"black"}} >Lorem ipsum dolor sit.</div>
+                         <div>We at EximEducation know the role the certificates.<br/> For every course that you complete
+                        you will be given a certificate <br/> which will benefit you career-wise.
+                           </div>
+                         <div style={{color:"black"}} ></div>
                      </div>
                  </div>
               </div>
@@ -572,26 +579,26 @@ service to our gems.</div>
                     <div>
                       next<br/>
                       <span>WEBINAR</span><br/>
-                      sunday
+                      {this.state.webinarDay}
                     </div>
                     <button  style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                  </div>
                   <div className="landing__10_text_1">
                      <h2>Topic</h2>
-                     <div>Advance technology and<br/>government new laws applied in<br/>2020 module </div>
-                     <h4>Zehann Shah</h4>
+                     <div>{this.state.webinarTopic}</div>
+            <h4>{this.state.webinarMentor}</h4>
                   </div>
                   <div className="landing__10_text_2">
                       <h5>date</h5>
-                      <h3>12 November, 2020</h3>
+            <h3>{this.state.webinarDate}</h3>
                   </div>
                   <div className="landing__10_text_3">
                       <h5>time</h5>
-                      <h3>12:30 PM</h3>
+                      <h3>{this.state.webinarTime}</h3>
                   </div>
                   <div className="landing__10_text_4">
                       <h5>mentor</h5>
-                      <h3>Zehan Shah</h3>
+                      <h3>{this.state.webinarMentor}</h3>
                   </div>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
                  {this.state.mob?<img className="landing__10_play" src={whitever} alt=""/>:<img className="landing__10_play" src={whitever} alt=""/>}

@@ -70,17 +70,17 @@ import "aos/dist/aos.css"
                <div className="pricing__cards">
                   <div className="card">
                      <div className="card__name">Classroom Training</div>
-                     <div className="card__price">$ 29999</div>
+                     <div className="card__price">₹29999</div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
                        <li><img src={tick} alt=""/><strong>Expert </strong>Guidance</li>
-                       <li><img src={tick} alt=""/>Informational study material</li>
+                       <li><img src={tick} alt=""/>Informational Study Material</li>
+                       <li><img src={tick} alt=""/>Discuss New Targeted and <br/> Marketing Opportunities</li>
                        <li><img src={tick} alt=""/>Group Activities</li>
-                       <li><img src={tick} alt=""/><strong>Practicle </strong>training</li>
+                       <li><img src={tick} alt=""/><strong>Practicle </strong>Training</li>
                        <li><img src={tick} alt=""/>Weekend Classes</li>
                        <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
-                       <li><img src={tick} alt=""/>Discuss new Targeted and<br/>Marketing oppotunities</li>
                      </ul>
                      <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
                   </div>
@@ -88,19 +88,18 @@ import "aos/dist/aos.css"
                   <div className="card black">
                      <div className="card__name">ONLINE TRAINING</div>
                      <h3>Most Popular</h3>
-                     <div className="card__price">$ 9999</div>
+                     <div className="card__price">₹9999</div>
                      <hr/>
                      <ul>
-                       <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
-                       <li><img src={tick} alt=""/><strong>Expert </strong>Guidance</li>
-                       <li><img src={tick} alt=""/>Informational study material</li>
-                       <li><img src={tick} alt=""/>Group Activities</li>
-                       <li><img src={tick} alt=""/><strong>Practicle </strong>training</li>
-                       <li><img src={tick} alt=""/>Weekend Classes</li>
-                       <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
-                       <li><img src={tick} alt=""/>Discuss new Targeted and<br/>Marketing oppotunities</li>
-                       <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
-                       <li><img src={tick} alt=""/>Discuss new Targeted and<br/>Marketing oppotunities</li>
+                     <li><img src={tick} alt=""/>Weekend Live Classes</li>
+                         <li><img src={tick} alt=""/><strong>Premium Support</strong></li>
+                         <li><img src={tick} alt=""/><strong>Interactive</strong> Sessions</li>
+                         <li><img src={tick} alt=""/><strong>Expert</strong> Guidance</li>
+                         <li><img src={tick} alt=""/>Informational Study Material</li>
+                         <li><img src={tick} alt=""/>Discuss New Targeted and <br/> Marketing Opportunities</li>
+                         <li><img src={tick} alt=""/><strong>Certificate</strong></li>
+                         <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
+                         <li><img src={tick} alt=""/><strong>Mobile App</strong> - Learn on the go</li>
                      </ul>
                      <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
                   </div>
@@ -110,14 +109,13 @@ import "aos/dist/aos.css"
                      <div className="card__price"></div>
                      <hr/>
                      <ul>
-                       <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
-                       <li><img src={tick} alt=""/><strong>Expert </strong>Guidance</li>
-                       <li><img src={tick} alt=""/>Informational study material</li>
-                       <li><img src={tick} alt=""/>Group Activities</li>
-                       <li><img src={tick} alt=""/><strong>Practicle </strong>training</li>
-                       <li><img src={tick} alt=""/>Weekend Classes</li>
-                       <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
-                     </ul>
+                     <li><img src={tick} alt=""/>Professional webinar,<br/> seminar and workshop </li>
+                       <li><img src={tick} alt=""/>Courses for students from <br/> class 9th to class 12th</li>
+                       <li><img src={tick} alt=""/>Dedicated customer service <br/> manager</li>
+                       <li><img src={tick} alt=""/>Curated learning paths</li>
+                       <li><img src={tick} alt=""/>Business consultency</li>
+                       </ul>
+ 
                      <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
                   </div>
                </div>

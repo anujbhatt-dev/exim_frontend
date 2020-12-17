@@ -208,37 +208,39 @@ import emailjs from 'emailjs-com';
               <div className="about__3">
                   <div className="about__3_row">
                      <div className="about__3_row-box">
-                        <h2 className="about__3_row-box--head">ADAPTIVE LEARNING</h2>
+                        <h2 className="about__3_row-box--head">Sanesh Sagvekar</h2>
                         <ul>
-                           <li>Online freight marketplace</li>
+                           <li>Front & Back-end developer 
+& photographer</li>
                         </ul>
                      </div>
 
                      <div className="about__3_row-box">
-                        <h2 className="about__3_row-box--head">updates</h2>
+                        <h2 className="about__3_row-box--head">Vedant Kothari</h2>
                         <ul>
-                           <li>education</li>
+                           <li>founder and chief</li>
                         </ul>
                      </div>
 
 
                      <div className="about__3_row-box">
-                        <h2 className="about__3_row-box--head">TOOLS</h2>
+                        <h2 className="about__3_row-box--head">Karan Randhir</h2>
                         <ul>
-                           <li>Custom docs generate</li>
+                           <li>Frontend developer 
+& guitarist</li>
                         </ul>
                      </div>
 
                      <div className="about__3_row-box">
-                        <h2 className="about__3_row-box--head">DATA</h2>
+                        <h2 className="about__3_row-box--head">Promod Kodag</h2>
                         <ul>
-                           <li>HS code finder</li>
+                           <li>project manager and singer</li>
                         </ul>
                      </div>
                   </div>
                   <div className="about__3_row">
                     <div className="about__3_row-box">
-                       <h2 className="about__3_row-box--head">FREIGHT SEARCH</h2>
+                       <h2 className="about__3_row-box--head">Kyati Kothari</h2>
                        <ul>
                           <li>Online freight marketplace</li>
                        </ul>
@@ -247,14 +249,21 @@ import emailjs from 'emailjs-com';
                     <div className="about__3_row-box">
                        <h2 className="about__3_row-box--head">EXTRA</h2>
                        <ul>
-                          <li>POWERED WITH SPECIAL TEAM AND SUPPORT SYSTEM</li>
+                          <li>RND Business model,finance and snowboarding</li>
                        </ul>
                     </div>
 
                     <div className="about__3_row-box">
-                       <h2 className="about__3_row-box--head">EXTRA</h2>
+                       <h2 className="about__3_row-box--head">Zeba Barudgar</h2>
                        <ul>
-                          <li>POWERED WITH SPECIAL TEAM AND SUPPORT SYSTEM</li>
+                          <li>edu tech head and poet</li>
+                       </ul>
+                    </div>
+
+                    <div className="about__3_row-box">
+                       <h2 className="about__3_row-box--head">Ca Abhishek Shah</h2>
+                       <ul>
+                          <li>financial services and traveler</li>
                        </ul>
                     </div>
                   </div>
