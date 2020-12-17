@@ -13,28 +13,28 @@ import { Link } from "react-router-dom";
     state={
       faq:[
         {
-          ques:"Why quick, brown fox jumps over a lazy dog?",
-          answer:"Answer to  sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+          ques:"What are the advantages of taking classes online?",
+          answer:"Convenience and flexibility are the most common advantages of online classes. Taking classes online is ideal for someone who wants to continue working and keen to learn new skills",
           toggle:true
         },
         {
-          ques:"Why quick, brown fox jumps over a lazy dog?",
-          answer:"Answer to  sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+          ques:"How much time should I spend on one class every week?",
+          answer:" The time you spend on a class can vary. No two instructors will format their classes exactly the same. Plan to spend 1 hours daily and 3 hours on Sunday.",
           toggle:false
         },
         {
-          ques:"Why quick, brown fox jumps over a lazy dog?",
-          answer:"Answer to  sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+          ques:"How do I interact with the professor?",
+          answer:"Students and instructors communicate primarily through course sites and emails in online courses.",
           toggle:false
         },
         {
-          ques:"Why quick, brown fox jumps over a lazy dog?",
-          answer:"Answer to  sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+          ques:"Is there interaction with other online students?",
+          answer:"Yes, students will be grouped with different different batches where they will be able to interact with there classmates.",
           toggle:false
         },
         {
-          ques:"Why quick, brown fox jumps over a lazy dog?",
-          answer:"Answer to  sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+          ques:"Do Students need to attend classes at specific time",
+          answer:"Students complete coursework on their own time but still need to attend weekend classes on time.",
           toggle:false
         },
       ]
