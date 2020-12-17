@@ -70,7 +70,7 @@ import "aos/dist/aos.css"
                <div className="pricing__cards">
                   <div className="card">
                      <div className="card__name">Classroom Training</div>
-                     <div className="card__price">$ 299999</div>
+                     <div className="card__price">$ 29999</div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
@@ -88,7 +88,7 @@ import "aos/dist/aos.css"
                   <div className="card black">
                      <div className="card__name">ONLINE TRAINING</div>
                      <h3>Most Popular</h3>
-                     <div className="card__price">$ 132456</div>
+                     <div className="card__price">$ 9999</div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
@@ -107,7 +107,7 @@ import "aos/dist/aos.css"
 
                   <div className="card">
                      <div className="card__name">Enterprises & School<br/>TRAINING</div>
-                     <div className="card__price">$ 132456</div>
+                     <div className="card__price"></div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>

@@ -127,8 +127,12 @@ ul{
   display:flex;
   border-radius: 18px;
   align-items: center;
+  width: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & img{
-    margin-left: 1rem;
+    margin-left: 4rem;
   }
   transition: all .3s ;
   &:hover{

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom"
 import ReactWhatsapp from 'react-whatsapp';
 import download from "../../../assets/images/download.svg";
 import facebook from "../../../assets/images/facebook.svg";
@@ -42,9 +43,9 @@ import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
                         <div className="footer__top_social">
                             <div className="footer__top_social-heading">About Us</div>
                             <div  className="footer__top_social-icons">
-                               <a href=""><div>Terms</div></a>
-                               <a href=""><div>Blogs</div></a>
-                               <a href=""><div>Privacy</div></a>
+                               <Link to="/"><div>Terms</div></Link>
+                               <Link to="/blogs/main"><div>Blogs</div></Link>
+                               <Link to="/"><div>Privacy</div></Link>
                             </div>
                         </div>
                 </div>

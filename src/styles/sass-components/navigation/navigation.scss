@@ -92,14 +92,17 @@
           opacity: 0;
           visibility: hidden;
           flex-direction: column;
+          & img{
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            height: 3rem;
+          }
           &-link{
                color: $color-exim-dark-grey;
                font-size: 2.5rem;
                margin: 1.5rem;
-               &:first-letter{
-                 font-size: 3rem;
-                 font-weight: bold;
-               }
+               min-width: 26rem;
                &:active,&:focus{
                  text-decoration: none;
                }

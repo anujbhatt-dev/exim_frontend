@@ -49,11 +49,11 @@
      }
      &:hover{
        transform: translateY(-1rem);
-       box-shadow: 0rem 3rem 3rem -1rem rgba($color-exim-blue,.7);
+       box-shadow: 0rem 3rem 3rem -1rem rgba($color-black,.7);
      }
      &:active{
        transform: translateY(0);
-       box-shadow: 0rem 1rem 3rem -1rem rgba($color-exim-blue,.7);
+       box-shadow: 0rem 1rem 3rem -1rem rgba($color-black,.7);
      }
      &--icon{
 
