@@ -10,6 +10,7 @@ import $ from "jquery"
       mob:false
     }
 
+
     componentDidMount=()=>{
 
 
@@ -17,12 +18,31 @@ import $ from "jquery"
          this.setState({
            mob:true
          })
+
       }
 
       let path=window.location.pathname+"";
+      if(path.indexOf("course")!==-1)
+      this.selectedNav(3);
 
-      console.log(path)
+     else if(path.indexOf("pricing")!==-1)
+      this.selectedNav(2);
 
+      else  if(path.indexOf("blog")!==-1)
+      this.selectedNav(4);
+
+      else if(path.indexOf("about")!==-1)
+      this.selectedNav(5);
+
+      else
+      this.selectedNav(1);
+
+
+      this.props.history.listen((location, action) => {
+        // console.log("on route change");
+    
+
+      let path=window.location.pathname+"";
          if(path.indexOf("course")!==-1)
          this.selectedNav(3);
 
@@ -37,6 +57,7 @@ import $ from "jquery"
 
          else
          this.selectedNav(1);
+        });
 
     }
 
@@ -127,7 +148,7 @@ import $ from "jquery"
                 <NavLink onClick={()=>this.selectedNav(1)} className="nav__link" to="/"><li className="nav__list_item nav__list_item-1">Home</li><hr className="nav__list_Hr nav__list_Hr-1"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(3)} className="nav__link" to="/course"><li className="nav__list_item nav__list_item-3">Courses</li><hr className="nav__list_Hr nav__list_Hr-3"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(2)} className="nav__link" to="/pricing"><li className="nav__list_item nav__list_item-2">Pricing</li><hr className="nav__list_Hr nav__list_Hr-2"/></NavLink>
-                <NavLink onClick={()=>this.selectedNav(4)} className="nav__link" to="/blogs/main"><li className="nav__list_item nav__list_item-4">blogs</li><hr className="nav__list_Hr nav__list_Hr-4"/></NavLink>
+                <NavLink onClick={()=>this.selectedNav(4)} className="nav__link" to="/blogs/main"><li className="nav__list_item nav__list_item-4">Blogs</li><hr className="nav__list_Hr nav__list_Hr-4"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(5)} className="nav__link" to="/about"><li className="nav__list_item nav__list_item-5">About Us</li><hr className="nav__list_Hr nav__list_Hr-5"/></NavLink>
               </ul>}
           </div>

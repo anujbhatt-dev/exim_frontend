@@ -286,15 +286,15 @@ import landing_main from "../../../assets/images/landing-main.svg"
               <div className="landing__bar">
                    <div className="landing__bar_item">
                        <img className="landing__bar_item-svg" src={book} alt=""/>
-                       <div className="landing__bar_item-text">simple video courses to ease global trade</div>
+                       <div className="landing__bar_item-text">Simple video courses to ease global trade.</div>
                    </div>
                    <div className="landing__bar_item">
                        <img className="landing__bar_item-svg" src={laptop} alt=""/>
-                       <div className="landing__bar_item-text">Live student-teacher interactive session</div>
+                       <div className="landing__bar_item-text">Live student-teacher interactive session.</div>
                    </div>
                    <div className="landing__bar_item">
                       <div className="spin"><img className="landing__bar_item-svg" src={reload} alt=""/></div>
-                      <div className="landing__bar_item-text">Get ready for career</div>
+                      <div className="landing__bar_item-text">Get ready for career.</div>
                    </div>
               </div>
 
@@ -306,7 +306,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
               <div className="landing__2">
                   <div className="landing__2_text">
-                       <div className="heading-primary">exim education app</div>
+                       <div className="heading-primary">Exim education app</div>
                        <div className="landing__2_text-small">
                              Click on the “Download” button and be part of exim world. Enjoy 2 export-import videos for free,
                               and get a peek on new terms and ways to export and import. Congratulations in advance for

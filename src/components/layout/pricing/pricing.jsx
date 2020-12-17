@@ -5,6 +5,8 @@ import circleTimes from "../../../assets/images/circle-times.svg";
 import circleDownArrow from "../../../assets/images/circle-downArrow.svg";
 import Aos from "aos"
 import "aos/dist/aos.css"
+import { Link } from "react-router-dom";
+
 
   class Pricing extends Component{
 
@@ -82,7 +84,7 @@ import "aos/dist/aos.css"
                        <li><img src={tick} alt=""/>Weekend Classes</li>
                        <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
                      </ul>
-                     <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
+                    <a href=""  rel="noreferrer" target="_blank"> <button  className="btn__buy">Buy Now <img src={send} alt=""/></button></a>
                   </div>
 
                   <div className="card black">
@@ -101,7 +103,7 @@ import "aos/dist/aos.css"
                          <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
                          <li><img src={tick} alt=""/><strong>Mobile App</strong> - Learn on the go</li>
                      </ul>
-                     <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
+                     <a  rel="noreferrer" href="https://rzp.io/l/zmgRkFiRcE" target="_blank"> <button className="btn__buy">Buy Now <img src={send} alt=""/></button></a>
                   </div>
 
                   <div className="card">
@@ -116,7 +118,7 @@ import "aos/dist/aos.css"
                        <li><img src={tick} alt=""/>Business consultency</li>
                        </ul>
  
-                     <button className="btn__buy">Buy Now <img src={send} alt=""/></button>
+                    <Link to="about"><button className="btn__buy">Contact Us <img src={send} alt=""/></button></Link> 
                   </div>
                </div>
                <div className="customHr">...</div>
