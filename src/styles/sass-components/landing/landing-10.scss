@@ -57,6 +57,7 @@
         margin: .5rem;
       }
       & div{
+        max-width:50rem;
 
       }
     }
@@ -90,7 +91,7 @@
     &_4{
        left: 50%;
     }
-    & button{
+    & a{
       bottom: -5rem;
       left: 0;
       width: 26rem;

@@ -1,5 +1,6 @@
 
 import React, {Component} from "react"
+import {Link} from "react-router-dom"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import $ from "jquery"
@@ -71,7 +72,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
   class Landing extends Component{
 
     state={
-       
+
         eportValue:6456744,
         numbersVisible:false,
         webinarDay:"sunday",
@@ -269,7 +270,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                     </div>
 
                     <div className="landing__1_text-btns">
-                        <button className="landing__1_text-btns--join">Join Free <span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                        <Link  to="/pricing" className="landing__1_text-btns--join">Join Free <span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
                         {
                           // <button className="landing__1_text-btns--trial">Trail</button>
                         }
@@ -379,7 +380,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </li>
                           </ul>
                       </div>
-                      <button style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                      <Link to="/course" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
                   </div>
               </div>
 
@@ -581,7 +582,7 @@ service to our gems.</div>
                       <span>WEBINAR</span><br/>
                       {this.state.webinarDay}
                     </div>
-                    <button  style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <a href={this.state.webinarLink} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                  </div>
                   <div className="landing__10_text_1">
                      <h2>Topic</h2>
