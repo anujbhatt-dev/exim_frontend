@@ -20,7 +20,8 @@ import blogs from '../blogs/blogs';
 
     state={
         blog:null,
-        blogs1:undefined
+        blogs1:undefined,
+        blogId:null,
     }
 
     componentDidMount=()=>{
@@ -28,7 +29,7 @@ import blogs from '../blogs/blogs';
 
         axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
         then(res=>{
-           this.setState({blog:res.data});
+           this.setState({blog:res.data, blogId:this.props.match.params["id"]});
 
           if(res.data.categories.length)
            axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
@@ -40,8 +41,33 @@ import blogs from '../blogs/blogs';
         );
     }
 
+    componentDidUpdate=()=>{
+
+
+ 
+      if(this.state.blogId!==this.props.match.params["id"])
+     { axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
+      then(res=>{
+         this.setState({blog:res.data,blogId:this.props.match.params["id"]});
+         window.scrollTo({top:0,behavior:"smooth"});
+
+        if(res.data.categories.length)
+         axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
+         then(res1=>this.setState({blogs1:res1.data}))
+        else
+        this.setState({blogs1:[]})
+        }
+
+      );
+
+    }
+    }
+
 
     render() {
+
+      console.log(this.props);
+
         if(this.state.blog===null){
           return <Spinner/>
         }

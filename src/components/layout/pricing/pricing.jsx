@@ -72,7 +72,7 @@ import { Link } from "react-router-dom";
                <div className="pricing__cards">
                   <div className="card">
                      <div className="card__name">Classroom Training</div>
-                     <div className="card__price">₹29999</div>
+                     <div className="card__price">₹27999</div>
                      <hr/>
                      <ul>
                        <li><img src={tick} alt=""/><strong>Interactive </strong>Sessions</li>
@@ -84,7 +84,7 @@ import { Link } from "react-router-dom";
                        <li><img src={tick} alt=""/>Weekend Classes</li>
                        <li><img src={tick} alt=""/><strong>Guest Lecture</strong></li>
                      </ul>
-                    <a href=""  rel="noreferrer" target="_blank"> <button  className="btn__buy">Buy Now <img src={send} alt=""/></button></a>
+                    <a href="https://rzp.io/l/0CL6lTmO"  rel="noreferrer" target="_blank"> <button  className="btn__buy">Buy Now <img src={send} alt=""/></button></a>
                   </div>
 
                   <div className="card black">

@@ -209,8 +209,6 @@ import landing_main from "../../../assets/images/landing-main.svg"
     });
 
      $(window).scroll(()=>{
-       console.log($(window).scrollTop());
-
        if($(window).scrollTop()>=1700 ){
          $(".blank__1").css({"animation":"slides 1s linear","animation-fill-mode":"forward"});
          setTimeout(()=>{
