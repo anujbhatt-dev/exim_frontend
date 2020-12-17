@@ -242,13 +242,6 @@ import emailjs from 'emailjs-com';
                     <div className="about__3_row-box">
                        <h2 className="about__3_row-box--head">Kyati Kothari</h2>
                        <ul>
-                          <li>Online freight marketplace</li>
-                       </ul>
-                    </div>
-
-                    <div className="about__3_row-box">
-                       <h2 className="about__3_row-box--head">EXTRA</h2>
-                       <ul>
                           <li>RND Business model,finance and snowboarding</li>
                        </ul>
                     </div>

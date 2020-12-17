@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
           toggle:false
         },
         {
-          ques:"Do Students need to attend classes at specific time",
+          ques:"Do Students need to attend classes at specific time?",
           answer:"Students complete coursework on their own time but still need to attend weekend classes on time.",
           toggle:false
         },
