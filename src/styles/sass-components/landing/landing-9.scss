@@ -55,6 +55,21 @@
       // flex-wrap: wrap;
       // flex-direction: column;
       overflow-x: scroll;
+      &::-webkit-scrollbar {
+            height: 5px;
+          }
+            &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            // width: 1px;
+          }
+            &::-webkit-scrollbar-thumb {
+            background: $color-exim-blue;
+              border-radius:10px;
+          }
+          &::-webkit-scrollbar-thumb:hover {
+
+            background: #555;
+          }
       &--top > div{
         font-size: 1.2rem;
         display: none;
@@ -64,7 +79,7 @@
         &  .img__1,.img__2,.img__3,.img__4,.img__5,.img__6{
           height: 8rem;
           width: 8rem;
-          padding: 2.5rem;
+          padding: 2rem;
           box-sizing: content-box;
         }
       }

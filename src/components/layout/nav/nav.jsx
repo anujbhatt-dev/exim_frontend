@@ -40,7 +40,7 @@ import $ from "jquery"
 
       this.props.history.listen((location, action) => {
         // console.log("on route change");
-    
+
 
       let path=window.location.pathname+"";
          if(path.indexOf("course")!==-1)
@@ -135,7 +135,7 @@ import $ from "jquery"
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/"><div className="nav__list_item nav__list_item-1">Home</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/course"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/pricing"><div className="nav__list_item nav__list_item-2">Pricing</div></NavLink>
-                        <NavLink activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">blogs</div></NavLink>
+                        <NavLink activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">Blogs</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/about"><div className="nav__list_item nav__list_item-5">About Us</div></NavLink>
                     </div>
                     <div className="nav__mob_wrapper2">
