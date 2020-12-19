@@ -1,5 +1,5 @@
 .landing__8{
-  margin-bottom: 16rem;
+  margin-bottom: 10rem;
   &_bar{
     display: flex;
     justify-content: space-around;
@@ -20,12 +20,12 @@
       padding: 1.5rem;
       border-radius: 10px;
       &:hover{
-        box-shadow: 0 2rem 3rem rgba($color-exim-blue,.5);
+        box-shadow: 0 2rem 3rem rgba($color-black,.5);
         transform: translateY(-4px);
       }
       &:active{
 
-        box-shadow: 0 1rem 3rem rgba($color-exim-blue,.5);
+        box-shadow: 0 1rem 3rem rgba($color-black,.5);
         transform: translateY(-1px);
       }
       & img{
@@ -157,6 +157,7 @@
 }
 
 .selectedIcon{
+  box-shadow: 0 2rem 3rem rgba($color-exim-blue,.5);
   transition: all .2s;
   // background-image: linear-gradient(to right,#1069DC,#1069DC);
   background: #0062FF;

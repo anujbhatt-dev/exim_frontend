@@ -74,14 +74,15 @@
        //   word-wrap: break-word;
          & span{
            position: relative;
-           left: 3rem;
+           left: 3.9rem;
            z-index: 5;
            width: 3.5rem;
            background: $color-exim-blue;
            color: transparent;
+           clip-path: polygon(0 0, 79% 30%, 100% 50%, 82% 72%, 0 100%);
          }
 
-         & i{
+         & img{
            font-weight: lighter;
            font-size: 3.5rem;
            margin-left: 0.5rem;
@@ -89,7 +90,7 @@
 
            // line-height: 3;
          }
-         &:hover > i{
+         &:hover > img{
             margin-left: 3.5rem;
          }
          // display: flex;

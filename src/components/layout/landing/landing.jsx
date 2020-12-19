@@ -59,6 +59,7 @@ import whitever from "../../../assets/images/whitever.svg";
 import orbits from "../../../assets/images/orbits.svg";
 import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
+import arrow from "../../../assets/images/arrow.svg"
 
 import FlipNumbers from 'react-flip-numbers';
 
@@ -268,7 +269,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                     </div>
 
                     <div className="landing__1_text-btns">
-                        <Link  to="/pricing" className="landing__1_text-btns--join">Join Free <span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
+                        <Link  to="/pricing" className="landing__1_text-btns--join">Join Free <span> 0</span> <img src={arrow} alt=""/></Link>
                         {
                           // <button className="landing__1_text-btns--trial">Trail</button>
                         }
@@ -378,7 +379,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                             </li>
                           </ul>
                       </div>
-                      <Link to="/course" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
+                      <Link to="/course" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></Link>
                   </div>
               </div>
 
@@ -580,7 +581,7 @@ service to our gems.</div>
                       <span>WEBINAR</span><br/>
                       {this.state.webinarDay}
                     </div>
-                    <a href={this.state.webinarLink} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <a href={this.state.webinarLink} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></a>
                  </div>
                   <div className="landing__10_text_1">
                      <h2>Topic</h2>

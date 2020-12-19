@@ -16,6 +16,7 @@
   }
 }
 .card{
+  min-height: 63rem;
   margin: 0 1rem;
   background:$color-white;
   color: $color-black;
@@ -52,7 +53,6 @@
     margin: 2rem 0;
   }
   & ul{
-    min-height: 40rem;
     & li{
       display: flex;
       align-items: center;
