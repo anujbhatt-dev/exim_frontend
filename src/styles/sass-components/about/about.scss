@@ -16,7 +16,7 @@
       margin-left: 8rem;
       & input[type="text"],input[type="email"],select{
          border: 1px solid rgba($color-exim-grey,.6);
-         text-align: center;
+         // text-align: center;
          font-size: 2.2rem;
          padding: 2rem;
          margin:1.5rem 0;
@@ -31,7 +31,6 @@
       }
       & select{
         color: $color-exim-grey;
-        padding: 1rem;
       }
       & input[type="submit"]{
           display:flex;

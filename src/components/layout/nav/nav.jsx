@@ -110,14 +110,14 @@ import $ from "jquery"
 
     menuHandler=()=>{
 
-         $(".nav__mob_wrapper2").css({"animation":"wrapper2 3s linear","opacity":"1","visibility":"visible"});
+         $(".nav__mob_wrapper2").css({"animation":"wrapper2 1.5s linear","opacity":"1","visibility":"visible"});
          setTimeout(()=>{
            $(".nav__mob_wrapper").css({"opacity":"1","visibility":"visible"});
            $(".nav__mob_wrapper3").css({"animation":"wrapper3 10s linear infinite","opacity":"1","visibility":"visible"})
-         },1500)
+         },800)
          setTimeout(()=>{
            $(".nav__mob_wrapper2").css({"animation":"wrapper2 3s linear","opacity":"0","visibility":"hidden"});
-         },2900)
+         },1400)
     }
 
     render(){
@@ -126,7 +126,7 @@ import $ from "jquery"
 
       return (
           <div className="nav">
-              <img className="nav__compName" src={exim} alt="EXIM"/>
+              <NavLink to ="/"><img className="nav__compName" src={exim} alt="EXIM"/></NavLink>
               {this.state.mob?
                 <div className="nav__mob">
                     <div onClick={this.menuHandler} className="nav__mob_text">Menu <span>.</span></div>

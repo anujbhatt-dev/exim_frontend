@@ -28,7 +28,7 @@
     &-smaller{
       font-size: 2.8rem;
       color: $color-exim-dark-grey;
-      font-style: italic;
+      // font-style: italic;
       margin-bottom: 1rem;
     }
     &-smallest{
@@ -70,7 +70,7 @@
          display: flex;
          align-items: center;
          flex-wrap: nowrap;
-          width: 28rem;
+          width: 30rem;
        //   word-wrap: break-word;
          & span{
            position: relative;
