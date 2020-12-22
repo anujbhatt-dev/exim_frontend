@@ -99,7 +99,7 @@ import "aos/dist/aos.css"
          <div data-aos="zoom-out" className="course">
                  <h1 className="heading-primary landing__3_heading">Module 14</h1>
                  <div  className="course__btnWrap">
-                     <a rel="noreferrer" href="http://eximeducation.com/course/pdf/Cousre_01.pdf" target="_blank" className="course__btnWrap_btn"><span>download</span><img src={file} alt=""/></a>
+                     <a rel="noreferrer" href="http://eximeducation.com/course/pdf/Cousre_01.pdf" target="_blank" className="course__btnWrap_btn"><span>Detailed</span><img src={file} alt=""/></a>
                  </div>
                  <div className="course__wrapper">
                      {

@@ -18,12 +18,16 @@
 .card{
   min-height: 63rem;
   margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
   background:$color-white;
   color: $color-black;
   padding: 2rem;
   box-shadow: 0 1rem 2rem rgba($color-black,.3);
   border-radius: 12px;
   transition: all .3s ;
+  text-transform: uppercase;
   &:hover{
     transform: translateY(-3px);
     box-shadow: 0rem 3rem 3rem  rgba($color-exim-dark-grey,.7);
@@ -53,6 +57,7 @@
     margin: 2rem 0;
   }
   & ul{
+    flex-grow: 1;
     & li{
       display: flex;
       align-items: center;

@@ -57,7 +57,7 @@ import emailjs from 'emailjs-com';
      }
 
      componentDidMount=()=>{
-  
+
        window.scrollTo({top:0,behavior:"smooth"});
        Aos.init({
           duration: 1500,
@@ -99,7 +99,7 @@ import emailjs from 'emailjs-com';
                   </form>
 
                   <div className="about__1_text">
-                      <div className="about__1_text-big">Talk to our <span>Experts</span></div>
+                      <div className="about__1_text-big"><span>Talk to our Experts</span></div>
                       <div className="about__1_text-small">We need a few details to reach you.<br/><span>or</span><br/>Simply call us</div>
                       <a href="tel://+918517885555" className="about__1_text-call"><img className="about__1_text-call--img1" src={greenCall} alt=""/><img src={vBar} alt=""/>+91  8517885555</a>
                   </div>
@@ -210,7 +210,7 @@ import emailjs from 'emailjs-com';
                      <div className="about__3_row-box">
                         <h2 className="about__3_row-box--head">Sanesh Sagvekar</h2>
                         <ul>
-                           <li>Front & Back-end developer 
+                           <li>Front & Back-end developer
 & photographer</li>
                         </ul>
                      </div>
@@ -226,7 +226,7 @@ import emailjs from 'emailjs-com';
                      <div className="about__3_row-box">
                         <h2 className="about__3_row-box--head">Karan Randhir</h2>
                         <ul>
-                           <li>Frontend developer 
+                           <li>Frontend developer
 & guitarist</li>
                         </ul>
                      </div>

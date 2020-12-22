@@ -131,9 +131,12 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   & img{
+    position: absolute;
     margin-left: 4rem;
-    height: 3rem;
+    height: 2rem;
+    right: 5rem;
   }
   transition: all .3s ;
   &:hover{

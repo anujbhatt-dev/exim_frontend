@@ -24,7 +24,7 @@
       // text-transform: uppercase;
     }
     &-btn{
-     min-width: 26rem;
+     width: 22rem;
      // height: 12rem;
      // background-image: linear-gradient(to right,#1069DC,#1CA2F9);
      // padding: 2rem 2rem;
@@ -43,9 +43,10 @@
      overflow: hidden;
 
      & img{
-       height: 100%;
+       height: 5.5em;
+       // height: 90%;
        width: 100%;
-       min-width: 26rem;
+       width: 20rem;
      }
      &:hover{
        transform: translateY(-1rem);

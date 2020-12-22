@@ -38,7 +38,7 @@ import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
                                <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                <a href="https://instagram.com/eximeducation.com_"><img src={insta} alt=""/></a>
                             </div>
-                            <button  data-aos="fade-right" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></button>
+                            <div data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
                         </div>
                         <div className="footer__top_social">
                             <div className="footer__top_social-heading">About Us</div>
@@ -55,7 +55,7 @@ import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
                     <div>406B,Glitz Mall,Marine Line ,Mumbai 400002</div>
                 </div>
                 <div className="footer__bottom">
-                    Copyright  C   2020 Vedship Innovations, pvt.Ltd.
+                    Copyright  &copy   2020 Vedship Innovations, pvt.Ltd.
                 </div>
            </div>
       )

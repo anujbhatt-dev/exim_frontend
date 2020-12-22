@@ -269,7 +269,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                     </div>
 
                     <div className="landing__1_text-btns">
-                        <Link  to="/pricing" className="landing__1_text-btns--join">Join Free <span> 0</span> <img src={arrow} alt=""/></Link>
+                        <Link  to="/pricing" className="landing__1_text-btns--join">Start Today <span> 0</span> <img src={arrow} alt=""/></Link>
                         {
                           // <button className="landing__1_text-btns--trial">Trail</button>
                         }
@@ -311,7 +311,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <button  data-aos="fade-right" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></button>
+                       <div data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"  className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
                   </div>
                   <img className="landing__2_image" src={mobile} alt=""/>
               </div>
