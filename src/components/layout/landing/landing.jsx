@@ -311,7 +311,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <div data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"  className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
+                       <div style={{marginBottom:"3rem"}} data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"  className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
                   </div>
                   <img className="landing__2_image" src={mobile} alt=""/>
               </div>
