@@ -116,7 +116,7 @@ ul{
   list-style: none;
 }
 .btn__buy{
-  padding: 1rem 3rem;
+  padding:  2rem 0;
   font-weight: bold;
   font-size: 1.8rem;
   background: $color-exim-blue;
@@ -124,18 +124,18 @@ ul{
   border: none;
   color: $color-white;
   display:flex;
-  border-radius: 18px;
+  border-radius: 15px;
   align-items: center;
-  width: 26rem;
+  width: 22rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   & img{
     position: absolute;
-    margin-left: 4rem;
+    margin-left: 2rem;
     height: 2rem;
-    right: 5rem;
+    right: 3rem;
   }
   transition: all .3s ;
   &:hover{

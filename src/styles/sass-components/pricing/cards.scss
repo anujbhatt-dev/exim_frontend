@@ -16,7 +16,8 @@
   }
 }
 .card{
-  min-height: 63rem;
+  min-height: 72rem;
+  width: 35rem;
   margin: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -61,7 +62,7 @@
     & li{
       display: flex;
       align-items: center;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       margin: 2rem 0;
       & strong{
         margin-right: .5rem;

@@ -620,7 +620,7 @@ crossing national borders.</div>
                       <span>WEBINAR</span><br/>
                       {this.state.webinarDay}
                     </div>
-                    <a href={this.state.webinarLink}  onClick={this.detailHandler} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></a>
+                    <a style={{zindex:"3"}} href={this.state.webinarLink}  onClick={this.detailHandler} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></a>
                  </div>
                   <div className="landing__10_text_1">
                      <h2>Topic</h2>
