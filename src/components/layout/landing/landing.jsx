@@ -61,6 +61,8 @@ import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
 import arrow from "../../../assets/images/arrow.svg"
 import cancel from "../../../assets/images/cancel.png";
+import emailjs from 'emailjs-com';
+
 
 import FlipNumbers from 'react-flip-numbers';
 
@@ -109,37 +111,46 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     //"Export Import Education"
 
+    //EXPORT IMPORT INSTITUTE
+
+  
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'M'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'k'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'n'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'g'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'E'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'X'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'P'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'O'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'R'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'T'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' I'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'n'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'i'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' T'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'h'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'e'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' W'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'l'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'d'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+"'s"}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' F'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'a'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'c'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
-        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'y'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'M'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'P'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'O'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'R'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'T'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+' I'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'N'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'S'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'T'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'I'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'T'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'U'}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+"T"}});
+        setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'E'}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'"'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'c'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'t'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'o'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'r'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'y'}});
+        // setTimeout(()=>{this.setState((prevState)=>{return{value:prevState.value+'"'}});
+// },50);
+// },50);
+// },50);
+// },50);
+// },50);
+// },50);
 },50);
 },50);
 },50);
@@ -163,13 +174,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 },50);
 },50);
 },50);
-},50);
-},50);
-},50);
-},50);
-},50);
-},50);
-},150);
+},550);
 }
 
     componentDidMount=()=>{
@@ -250,10 +255,33 @@ import landing_main from "../../../assets/images/landing-main.svg"
      })
    }
 
+   onChangeHandler=(e)=>{
+    this.setState({[e.target.name]:e.target.value});
+   }
+
+   webinarDetailSubmit=(e)=>{
+     e.preventDefault();
+     this.setState({
+      submitted:4,
+    });
+
+    this.setState({detail:false});
+
+    let template="template_jxzqedp";
+
+    let data={... e.target};
+    data["topic"]=this.state.webinarTopic;
+    data["date"]=this.state.webinarDate;
+    data["day"]=this.state.webinarDay;
+    data["mentor"]=this.state.webinarMentor;
+    data["time"]=this.state.webinarTime
+
+    emailjs.sendForm('service_9wrddem', template, data, 'user_3C6n5XsLh20WgqpTa3412')
+    
+   }
+
 
     render(){
-
-        console.log()
 
       return (
           <div className="landing">
@@ -491,7 +519,7 @@ crossing national borders.</div>
               }
 
               <div className="landing__8">
-                  <h1 className="heading-primary landing__3_heading">cousre to success</h1>
+                  <h1 className="heading-primary landing__3_heading">course to success</h1>
                   <div className="landing__8_bar">
                       <div onClick={()=>this.coureseToSuccess(0)} className={(this.state.cosTitle==="Exim management")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           {this.state.cosTitle==="Exim management"?<img src={whiteEM} alt=""/>:<img src={eximManagement} alt=""/>}
@@ -556,7 +584,7 @@ crossing national borders.</div>
                             </div>
                             <div className="landing__9_box-1--top">
                                 <h1><img className="img__3" src={gratuate} alt=""/><span>Mentor support</span></h1>
-                                <div>: Not You & I but We be on the journey full of support and growth</div>
+                                <div>Not You & I but We be on the journey full of support and growth</div>
                             </div>
                         </div>
                         <div className="landing__9_box-1">
@@ -567,7 +595,7 @@ crossing national borders.</div>
                             <div className="landing__9_box-1--top">
                                 <h1><img className="img__5" src={crownBig} alt=""/><span>Quality Service</span></h1>
                                 <div>We at EximEducation don’t compromise with our service. We provide the best of
-service to our gems.</div>
+                                  service to our gems.</div>
                             </div>
                             <div className="landing__9_box-1--top">
                                 <h1 ><img className="img__6" src={send} alt=""/><span>IndiaPort-booking platform</span></h1>
@@ -608,11 +636,11 @@ service to our gems.</div>
                       <h5>mentor</h5>
                       <h3>{this.state.webinarMentor}</h3>
                   </div>
-                  <form style={this.state.detail?{display:"flex"}:{display:"none"}} className="landing__10_webinar">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ut.</p>
+                  <form onSubmit={this.webinarDetailSubmit} style={this.state.detail?{display:"flex"}:{display:"none"}} className="landing__10_webinar">
+                     <p>Register Yourself.</p>
                      <img onClick={this.detailHandler} src={cancel} alt=""/>
-                     <input placeholder="name" className="landing__10_webinar-name" type="text"/>
-                     <input placeholder="email" className="landing__10_webinar-email"  type="email"/>
+                     <input required placeholder="name" className="landing__10_webinar-name"  name="name"  onChange={(e)=>this.onChangeHandler(e)} type="text"/>
+                     <input required placeholder="email" className="landing__10_webinar-email" name="email" onChange={(e)=>this.onChangeHandler(e)}  type="email"/>
                      <input  className="landing__10_webinar-submit" type="submit" value="submit"/>
                   </form>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}

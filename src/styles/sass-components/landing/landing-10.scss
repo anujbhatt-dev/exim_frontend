@@ -42,8 +42,7 @@
       color: $color-black;
     }
     &-submit{
-      width: 15rem;
-      margin: auto;
+      // margin: auto;
       padding: 2rem;
       border: none;
       border-radius: 10px;
@@ -93,6 +92,7 @@
     top: 23%;
     z-index: 1;
     color: $color-white;
+    z-index: 3;
     &_1{
       font-size: 3rem;
       position:absolute;

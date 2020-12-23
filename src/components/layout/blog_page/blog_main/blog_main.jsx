@@ -20,7 +20,7 @@ import Spinner from "../../../../UI/spinner/spinner"
      blogs1:[],
      blogs2:[],
      mainBlog:undefined,
-     category1:[ ],
+     category1:[],
      category2:[],
 
    }
