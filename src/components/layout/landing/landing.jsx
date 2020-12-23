@@ -260,23 +260,27 @@ import landing_main from "../../../assets/images/landing-main.svg"
    }
 
    webinarDetailSubmit=(e)=>{
+
      e.preventDefault();
      this.setState({
       submitted:4,
     });
 
-    this.setState({detail:false});
-
-    let template="template_jxzqedp";
 
     let data={... e.target};
     data["topic"]=this.state.webinarTopic;
     data["date"]=this.state.webinarDate;
     data["day"]=this.state.webinarDay;
     data["mentor"]=this.state.webinarMentor;
-    data["time"]=this.state.webinarTime
+    data["time"]=this.state.webinarTime;
 
-    emailjs.sendForm('service_9wrddem', template, data, 'user_3C6n5XsLh20WgqpTa3412')
+    let template="template_jxzqedp";
+    this.setState({detail:false,name:"",email:""});
+
+    emailjs.sendForm('service_9wrddem', template,e.target, 'user_3C6n5XsLh20WgqpTa3412').
+      then(res=>{
+    // this.setState({detail:false,name:"",email:""});
+  })
     
    }
 
@@ -639,8 +643,13 @@ crossing national borders.</div>
                   <form onSubmit={this.webinarDetailSubmit} style={this.state.detail?{display:"flex"}:{display:"none"}} className="landing__10_webinar">
                      <p>Register Yourself.</p>
                      <img onClick={this.detailHandler} src={cancel} alt=""/>
-                     <input required placeholder="name" className="landing__10_webinar-name"  name="name"  onChange={(e)=>this.onChangeHandler(e)} type="text"/>
-                     <input required placeholder="email" className="landing__10_webinar-email" name="email" onChange={(e)=>this.onChangeHandler(e)}  type="email"/>
+                     <input type="text" hidden name="mentor" value={this.state.webinarMentor}/>
+                     <input type="text" hidden name="date" value={this.state.webinarDate}/>
+                     <input type="text" hidden name="day" value={this.state.webinarDay}/>
+                     <input type="text" hidden name="time" value={this.state.webinarTime}/>
+                     <input type="text" hidden name="topic" value={this.state.webinarTopic}/>
+                     <input required placeholder="name" className="landing__10_webinar-name"  name="name"  value={this.state.name} onChange={(e)=>this.onChangeHandler(e)} type="text"/>
+                     <input required placeholder="email" className="landing__10_webinar-email" name="email" value={this.state.email} onChange={(e)=>this.onChangeHandler(e)}  type="email"/>
                      <input  className="landing__10_webinar-submit" type="submit" value="submit"/>
                   </form>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
