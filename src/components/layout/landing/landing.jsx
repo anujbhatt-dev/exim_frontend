@@ -60,6 +60,7 @@ import orbits from "../../../assets/images/orbits.svg";
 import plays from "../../../assets/images/play-s.svg";
 import orbitss from "../../../assets/images/orbits-s.svg";
 import arrow from "../../../assets/images/arrow.svg"
+import cancel from "../../../assets/images/cancel.png";
 
 import FlipNumbers from 'react-flip-numbers';
 
@@ -83,6 +84,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
         webinarTopic:"Advance technology and government new laws applied in 2020 module ",
         value:"",
         mob:false,
+        detail:false,
         cos:[
           {
             title:"Exim management",
@@ -240,6 +242,12 @@ import landing_main from "../../../assets/images/landing-main.svg"
       this.setState({
         ...newState
       })
+   }
+
+   detailHandler=()=>{
+     this.setState({
+       detail:!this.state.detail
+     })
    }
 
 
@@ -581,7 +589,7 @@ service to our gems.</div>
                       <span>WEBINAR</span><br/>
                       {this.state.webinarDay}
                     </div>
-                    <a href={this.state.webinarLink} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></a>
+                    <a href={this.state.webinarLink}  onClick={this.detailHandler} target="_blank" rel="noreferrer" style={{width:"26rem"}} className="landing__1_text-btns--join landing__3_box-btn"><span> 0</span> <img src={arrow} alt=""/></a>
                  </div>
                   <div className="landing__10_text_1">
                      <h2>Topic</h2>
@@ -600,6 +608,13 @@ service to our gems.</div>
                       <h5>mentor</h5>
                       <h3>{this.state.webinarMentor}</h3>
                   </div>
+                  <form style={this.state.detail?{display:"flex"}:{display:"none"}} className="landing__10_webinar">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ut.</p>
+                     <img onClick={this.detailHandler} src={cancel} alt=""/>
+                     <input placeholder="name" className="landing__10_webinar-name" type="text"/>
+                     <input placeholder="email" className="landing__10_webinar-email"  type="email"/>
+                     <input  className="landing__10_webinar-submit" type="submit" value="submit"/>
+                  </form>
                  {this.state.mob?<img  className="landing__10_orbits" src={orbitss} alt=""/>:<img className="landing__10_orbits" src={orbits} alt=""/>}
                  {this.state.mob?<img className="landing__10_play" src={whitever} alt=""/>:<img className="landing__10_play" src={whitever} alt=""/>}
               </div>

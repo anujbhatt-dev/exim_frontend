@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {NavLink, withRouter} from "react-router-dom";
 import exim from "../../../assets/images/exim.svg";
 import cancel from "../../../assets/images/cancel.png";
+import play from "../../../assets/images/blackPlay.svg";
 import $ from "jquery"
 
   class Navigation extends Component{
@@ -131,12 +132,13 @@ import $ from "jquery"
                 <div className="nav__mob">
                     <div onClick={this.menuHandler} className="nav__mob_text">Menu <span>.</span></div>
                     <div className="nav__mob_wrapper">
-                         <img onClick={this.mobNavHndler} src={cancel} alt=""/>
+                         <img className="nav__mob_wrapper-cancel" onClick={this.mobNavHndler} src={cancel} alt=""/>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/"><div className="nav__list_item nav__list_item-1">Home</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/course"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/pricing"><div className="nav__list_item nav__list_item-2">Pricing</div></NavLink>
                         <NavLink activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">Blogs</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/about"><div className="nav__list_item nav__list_item-5">About Us</div></NavLink>
+                        <a className="nav__mob_wrapper-play" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"><img src={play} alt=""/></a>
                     </div>
                     <div className="nav__mob_wrapper2">
 

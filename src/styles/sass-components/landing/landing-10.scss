@@ -1,24 +1,80 @@
 .landing__10{
+
   margin-bottom: 10rem;
   position:relative;
   width: 100vw;
   left: -12rem;
   overflow: visible;
   height: 80vh;
+  &_webinar{
+    animation: detail .3s linear ;
+    position:fixed;
+    transform: translate(-50%,-50%);
+    z-index: 500;
+    display:flex;
+    flex-direction: column;
+    top: 50%;
+    left:50%;
+    padding: 5rem 2rem;
+    background: $color-white;
+    box-shadow: 0rem 0rem 2rem rgba($color-black,.5);
+    border-radius: 8px;
+    &-name,&-email{
+      border: 1px solid rgba($color-black,.4);
+      padding: 2rem 4rem;
+      text-align:center;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
 
+    }
+    & img{
+      height: 2rem;
+      position:absolute;
+      top: 2rem;
+      right:2rem;
+      cursor: pointer;
+    }
+    & p{
+      width: 20rem;
+      margin: auto;
+      margin-bottom: 2rem;
+      text-align:center;
+      color: $color-black;
+    }
+    &-submit{
+      width: 15rem;
+      margin: auto;
+      padding: 2rem;
+      border: none;
+      border-radius: 10px;
+      background: $color-exim-blue;
+      color: $color-white;
+      transition: all .3s ;
+      cursor: pointer;
+      &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0rem 3rem 3rem -1rem rgba($color-exim-blue,.7);
+      }
+      &:active{
+        transform: translateY(0px);
+        box-shadow: 0rem 1rem 3rem -1rem rgba($color-exim-blue,.7);
+        outline: none;
+      }
+    }
+  }
   &_img{
     position:absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
   }
   &_play{
     position:absolute;
     right: 70%;
     top: 30%;
-    z-index: 0;
+    z-index: 2;
     height: 10rem;
   }
   &_orbits{
@@ -26,7 +82,7 @@
     height: 100%;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 2;
     animation: scaleY 10s linear infinite;
     opacity: .5;
   }

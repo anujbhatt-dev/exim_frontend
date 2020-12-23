@@ -50,12 +50,12 @@ import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
                         </div>
                 </div>
                 <div className="footer__middle">
-                    <div>Contact  :   8517885555</div>
-                    <div>Mail :  hello@eximeducation.com</div>
+                    <div>8517885555</div>
+                    <div>hello@eximeducation.com</div>
                     <div>406B,Glitz Mall,Marine Line ,Mumbai 400002</div>
                 </div>
                 <div className="footer__bottom">
-                    Copyright  &copy   2020 Vedship Innovations, pvt.Ltd.
+                    Copyright  &copy;   2020 Vedship Innovations, pvt.Ltd.
                 </div>
            </div>
       )
