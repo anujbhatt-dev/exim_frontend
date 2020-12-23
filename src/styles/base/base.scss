@@ -40,7 +40,6 @@ body{
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 12rem;
-  background-image: url(../../assets/images/eximBack.svg);
   width: 100vw;
   @include respond(tab-land){
     padding: 0 1rem;
@@ -150,8 +149,10 @@ ul{
 }
 .landing{
   // overflow-x: hidden;
+  background-image: url(../../assets/images/eximBack.svg);
   @include respond(tab-land){
     overflow-x: hidden;
+    background-image: none;
   }
 }
 a {

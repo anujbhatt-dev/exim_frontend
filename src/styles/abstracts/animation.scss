@@ -10,6 +10,17 @@
     }
 }
 
+@keyframes detail {
+   0%{
+     opacity: 0;
+     transform:  translate(-50%,-50%) scale(1.5);
+   }
+   100%{
+     opacity: 1;
+     transform: translate(-50%,-50%) scale(1);
+   }
+}
+
 
 @keyframes faq {
   0%{
@@ -153,31 +164,31 @@
 @keyframes color {
    0% {
       border: .5rem solid $color-exim-blue;
-      border-radius: 50%;
+      // border-radius: 50%;
    }
    12%, 24% {
       border: .5rem solid $color-white;
-      border-radius: 50%;
+      // border-radius: 50%;
    }
    30% {
      border: .5rem solid $color-exim-green;
-     border-radius: 50%;
+     // border-radius: 50%;
    }
    48% {
       border: .5rem solid $color-lightblue;
-      border-radius: 50%;
+      // border-radius: 50%;
    }
    60% {
       border: .5rem solid $color-secondary-blue;
-      border-radius: 50%;
+      // border-radius: 50%;
    }
    61%{
      border: .5rem solid $color-cyan;
-     border-radius: 50%;
+     // border-radius: 50%;
    }
    100%{
      border: .5rem solid tomato;
-     border-radius: 50%;
+     // border-radius: 50%;
    }
 }
 

@@ -92,11 +92,15 @@
           opacity: 0;
           visibility: hidden;
           flex-direction: column;
-          & img{
+          &-cancel{
             position: absolute;
             top: 3rem;
             right: 3rem;
             height: 3rem;
+          }
+          &-play{
+            min-width: 26rem;
+            
           }
           &-link{
                color: $color-exim-dark-grey;
