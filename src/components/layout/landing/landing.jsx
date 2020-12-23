@@ -276,7 +276,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     let template="template_jxzqedp";
 
-    emailjs.sendForm('service_9wrddem', template, e.target, 'user_3C6n5XsLh20WgqpTa3412').
+    emailjs.sendForm('service_9wrddem', template, data, 'user_3C6n5XsLh20WgqpTa3412').
       then(res=>{
     this.setState({detail:false,name:"",email:""});
   })
