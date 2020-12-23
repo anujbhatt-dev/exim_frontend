@@ -17,27 +17,10 @@ import Spinner from "../../../../UI/spinner/spinner"
      exportCount:1,
      importCount:1,
      slide:"down",
-     blogs1:[ 
-      {
-        title:"",
-        date:"",
-        content:"",
-         },
-       {
-          title:"",
-          date:"",
-          content:"",
-      },
-
-
-     ],
+     blogs1:[],
      blogs2:[],
-     mainBlog:[{
-      content:"",
-      date:"",
-      title:"",
-    }],
-     category1:[ ],
+     mainBlog:undefined,
+     category1:[],
      category2:[],
 
    }
