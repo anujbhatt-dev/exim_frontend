@@ -1,18 +1,39 @@
 .landing__7{
   margin-bottom: 16rem;
-  & img{
+  & > img{
     width: 100vw;
     position: relative;
     left: -12rem;
   }
+  &_colab{
+    // width: 100vw;
+    // position: relative;
+    // left: -12rem;
+    &-head{
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 4rem auto;
+      & span{
+        color: $color-exim-blue;
+
+      }
+    }
+    &-logos{
+      display:flex;
+      justify-content:space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: auto;
+      & img{
+        margin: 4rem 3rem;
+        width: 15rem;
+      }
+    }
+  }
 }
 @include respond(tab-land){
   .landing__7{
-    & img{
-      width: 100vw;
-      position: relative;
-      left: -1rem;
-    }
     &_img{
       transform: scale(2);
     }

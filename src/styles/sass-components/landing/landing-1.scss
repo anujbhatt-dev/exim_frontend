@@ -4,6 +4,9 @@
   // align-items: center;
   padding: 0 4rem;
   margin-top: 4rem;
+  background-image: url(../../../assets/images/eximBack.svg);
+  background-position: bottom;
+  background-size: cover;
   &_text{
     width: 50%;
     transition: all 1s;

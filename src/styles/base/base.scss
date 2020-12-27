@@ -149,7 +149,7 @@ ul{
 }
 .landing{
   // overflow-x: hidden;
-  background-image: url(../../assets/images/eximBack.svg);
+
   @include respond(tab-land){
     overflow-x: hidden;
     background-image: none;

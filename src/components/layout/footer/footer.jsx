@@ -7,7 +7,7 @@ import whatsapp from "../../../assets/images/whatsapp.svg";
 import insta from "../../../assets/images/insta.svg";
 import twitter from "../../../assets/images/twitter.svg";
 import call from "../../../assets/images/call.svg";
-import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
+import googleplaybadge from "../../../assets/images/google-play-badge.png"
 
   class Footer extends Component{
 
@@ -38,7 +38,7 @@ import googleplaybadge from "../../../assets/images/google-play-badge.jpeg"
                                <a href="https://www.linkedin.com/company/eduports"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                <a href="https://instagram.com/eximeducation.com_"><img src={insta} alt=""/></a>
                             </div>
-                            <div data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
+                            <div data-aos-once="true" data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa" className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
                         </div>
                         <div className="footer__top_social">
                             <div className="footer__top_social-heading">About Us</div>

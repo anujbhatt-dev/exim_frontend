@@ -21,7 +21,7 @@ import sMob from "../../../assets/images/sMob.svg";
 import s1 from "../../../assets/images/s-1.svg";
 import s2 from "../../../assets/images/s-2.svg";
 import s3 from "../../../assets/images/s-3.svg";
-import certificate from "../../../assets/images/certificate.svg";
+import certificate from "../../../assets/images/certificate.png";
 import colab from "../../../assets/images/colab.svg";
 import colabMob from "../../../assets/images/colabMob.svg";
 import videoAfterColab from "../../../assets/images/videoAfterColab.svg";
@@ -67,11 +67,17 @@ import emailjs from 'emailjs-com';
 import FlipNumbers from 'react-flip-numbers';
 
 
-import googleplaybadge from "../../../assets/images/google-play-badge.jpeg";
+import googleplaybadge from "../../../assets/images/google-play-badge.png";
 
 import ellipse1 from "../../../assets/images/ellipse1.png";
 import video2 from "../../../assets/images/video2.png";
 import landing_main from "../../../assets/images/landing-main.svg"
+
+import msme from "../../../assets/images/msme.png"
+import dgft from "../../../assets/images/dgft.jpg"
+import mik from "../../../assets/images/mik.png"
+import fieo from "../../../assets/images/fieo.png"
+// import indiaPort from "../../../assets/images/indiaPort.png"
 
   class Landing extends Component{
 
@@ -113,7 +119,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
     //EXPORT IMPORT INSTITUTE
 
-  
+
     repeat =()=>{
         setTimeout(()=>{this.setState((prevState)=>{return{value:''}});
         setTimeout(()=>{this.setState((prevState)=>{return{value:'"'}});
@@ -281,7 +287,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
       then(res=>{
     // this.setState({detail:false,name:"",email:""});
   })
-    
+
    }
 
 
@@ -351,7 +357,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                               and get a peek on new terms and ways to export and import. Congratulations in advance for
                               taking the first step towards your dream :)
                         </div>
-                       <div style={{marginBottom:"3rem"}} data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"  className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
+                       <div data-aos-once="true" data-aos="fade-right"><a rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=co.kevin.pbhaa"  className="landing__2_text-btn"><img className="landing__2_text-btn--icon" src={googleplaybadge} alt=""/></a></div>
                   </div>
                   <img className="landing__2_image" src={mobile} alt=""/>
               </div>
@@ -433,7 +439,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
                   <div className="blank blank__2">0</div>
                   <div className="blank blank__3">0</div>
                   <div className="landing__4_1">
-                      <div data-aos="fade-down" data-aos-delay="1000" className="landing__4_1-text">
+                      <div className="landing__4_1-text">
                            <div className="landing__4_1-text--big heading-primary">Sign up for growth and development</div>
                            <div className="landing__4_1-text--small"></div>
                            <div className="landing__4_1-text--smaller">Download our <span>mobile application</span> and watch the first<br/>two videos for free, and get a peek on new terms<br/>and ways to export and import.</div>
@@ -443,7 +449,7 @@ import landing_main from "../../../assets/images/landing-main.svg"
 
                   <div className="landing__4_2">
                       <img className="landing__4_2-image" src={s2} alt=""/>
-                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_2-text">
+                      <div  className="landing__4_2-text">
                            <div className="landing__4_2-text--big heading-primary">Your quality and standard of living is in your hand
 </div>
                            <div className="landing__4_2-text--small">Not You & I but We be on the journey full of support and growth.</div>
@@ -454,7 +460,7 @@ get ready for growing stability </div>
                   </div>
 
                   <div className="landing__4_3">
-                      <div  data-aos="fade-down" data-aos-delay="1000" className="landing__4_3-text">
+                      <div  className="landing__4_3-text">
                            <div className="landing__4_3-text--big heading-primary">Path to success</div>
                            <div className="landing__4_3-text--small">
 </div>
@@ -514,7 +520,16 @@ crossing national borders.</div>
               }
 
               <div className="landing__7">
-                  {this.state.mob?<img src={colabMob} alt=""/>:<img src={colab} alt=""/>}
+                  <div className="landing__7_colab">
+                      <div className="landing__7_colab-head">We collaborate with <span>200+ universities and companies</span></div>
+                      <div className="landing__7_colab-logos">
+                          <img src={fieo} alt=""/>
+                          <img src={dgft} alt=""/>
+                          <img src={msme} alt=""/>
+                          <img src={mik} alt=""/>
+                          <img src={fieo} alt=""/>
+                      </div>
+                  </div>
                   <img className="landing__7_img" src={videoAfterColab} alt=""/>
               </div>
 
