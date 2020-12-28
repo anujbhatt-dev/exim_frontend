@@ -50,9 +50,9 @@ import googleplaybadge from "../../../assets/images/google-play-badge.png"
                         </div>
                 </div>
                 <div className="footer__middle">
-                    <div>8517885555</div>
-                    <div>hello@eximeducation.com</div>
-                    <div>406B,Glitz Mall,Marine Line ,Mumbai 400002</div>
+                    <div><a href="tel://+918517885555"><i class="fa fa-phone" aria-hidden="true"></i> +91 8517885555</a></div>
+                    <div><i class="fa fa-envelope" aria-hidden="true"></i> hello@eximeducation.com</div>
+                    <div><i class="fa fa-map-marker" aria-hidden="true"></i> 406B,Glitz Mall,Marine Line ,Mumbai 400002</div>
                 </div>
                 <div className="footer__bottom">
                     Copyright  &copy;   2020 Vedship Innovations, pvt.Ltd.

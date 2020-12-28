@@ -12,7 +12,7 @@
       margin-bottom: 2.5rem;
       cursor: pointer;
       min-width: 10rem;
-      box-shadow: 0rem 0rem .2rem rgba($color-black,.2);
+      box-shadow: 0rem 0rem 2rem rgba($color-exim-grey,.2);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -21,12 +21,12 @@
       border-radius: 10px;
       transition: all .5s;
       &:hover{
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+        box-shadow: 0 .5rem 1rem rgba($color-exim-grey,.2);
         transform: translateY(-4px);
       }
       &:active{
 
-        box-shadow: 0 .4rem 1rem rgba($color-black,.2);
+        box-shadow: 0 .4rem 1rem rgba($color-exim-grey,.2);
         transform: translateY(-1px);
       }
       & img{

@@ -1,6 +1,6 @@
 .landing__7{
   margin-bottom: 16rem;
-  & > img{
+  & > a >  img{
     width: 100vw;
     position: relative;
     left: -12rem;
@@ -34,8 +34,8 @@
 }
 @include respond(tab-land){
   .landing__7{
-    &_img{
-      transform: scale(2);
+    & > a > img{
+      left: -2rem;
     }
   }
 };

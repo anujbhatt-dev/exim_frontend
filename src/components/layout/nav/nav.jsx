@@ -3,6 +3,8 @@ import {NavLink, withRouter} from "react-router-dom";
 import exim from "../../../assets/images/exim.svg";
 import cancel from "../../../assets/images/cancel.png";
 import play from "../../../assets/images/blackPlay.svg";
+import greenCall from "../../../assets/images/greenCall.svg";
+import vBar from "../../../assets/images/vBar.svg";
 import $ from "jquery"
 
   class Navigation extends Component{
@@ -152,6 +154,7 @@ import $ from "jquery"
                 <NavLink onClick={()=>this.selectedNav(2)} className="nav__link" to="/pricing"><li className="nav__list_item nav__list_item-2">Pricing</li><hr className="nav__list_Hr nav__list_Hr-2"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(4)} className="nav__link" to="/blogs/main"><li className="nav__list_item nav__list_item-4">Blogs</li><hr className="nav__list_Hr nav__list_Hr-4"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(5)} className="nav__link" to="/about"><li className="nav__list_item nav__list_item-5">About Us</li><hr className="nav__list_Hr nav__list_Hr-5"/></NavLink>
+                <a href="tel://+918517885555" className="about__1_text-call nav__list_a" id="nav__list_a"><img className="about__1_text-call--img1" src={greenCall} alt=""/> +91  8517885555</a>
               </ul>}
           </div>
       )

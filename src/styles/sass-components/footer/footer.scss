@@ -89,6 +89,9 @@
     & div{
       width: 55rem;
       text-align: center;
+      & a{
+        color: $color-exim-green;
+      }
     }
   }
   &__bottom{

@@ -24,7 +24,7 @@ import s3 from "../../../assets/images/s-3.svg";
 import certificate from "../../../assets/images/certificate.png";
 import colab from "../../../assets/images/colab.svg";
 import colabMob from "../../../assets/images/colabMob.svg";
-import videoAfterColab from "../../../assets/images/videoAfterColab.svg";
+import videoAfterColab from "../../../assets/images/videoAfterColab.png";
 import bubble from "../../../assets/images/bubble.svg";
 import upArrow from "../../../assets/images/upArrow.svg";
 import downArrow from "../../../assets/images/downArrow.svg";
@@ -76,8 +76,8 @@ import landing_main from "../../../assets/images/landing-main.svg"
 import msme from "../../../assets/images/msme.png"
 import dgft from "../../../assets/images/dgft.jpg"
 import mik from "../../../assets/images/mik.png"
-import fieo from "../../../assets/images/fieo.png"
-// import indiaPort from "../../../assets/images/indiaPort.png"
+import fieo from "../../../assets/images/fieo.svg"
+import indiaPort from "../../../assets/images/indiaPort.png"
 
   class Landing extends Component{
 
@@ -527,10 +527,10 @@ crossing national borders.</div>
                           <img src={dgft} alt=""/>
                           <img src={msme} alt=""/>
                           <img src={mik} alt=""/>
-                          <img src={fieo} alt=""/>
+                          <img src={indiaPort} alt=""/>
                       </div>
                   </div>
-                  <img className="landing__7_img" src={videoAfterColab} alt=""/>
+                  <a href="" target="_blank" rel="noreferrer"><img className="landing__7_img" src={videoAfterColab} alt=""/></a>
               </div>
 
               {
