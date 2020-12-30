@@ -21,6 +21,7 @@
       border-radius: 10px;
       transition: all .5s;
       min-height: 13rem;
+      min-width: 13rem;
       &:hover{
         box-shadow: 0 .5rem 1rem rgba($color-exim-grey,.2);
         transform: translateY(-4px);
