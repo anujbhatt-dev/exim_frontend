@@ -33,37 +33,46 @@ window.scrollTo({top:0,behavior:"smooth"});
        });
 
 
-       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+1).
-        then(res=>{
-          this.setState({mainBlog:res.data});
-          // alert(this.state.mainBlog);
-        })
-
-
-       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+4).
-       then(res=>{
-
-         this.setState({blogs1:res.data});
+       axios.get("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@eximeducation")
+       .then(res=>{
+         console.log(res.data.items.length)
+         let mainBlog=res.data.items.splice(0,1)[0];
+         let blogs=res.data.items.splice(0,3);
+         this.setState({mainBlog:mainBlog,blogs1:blogs,blogs2:blogs, category1:blogs, category2:blogs});
        })
 
 
-       axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+2+"&per_page="+4).
-        then(res=>{
-
-          this.setState({blogs2:res.data});
-        })
-
-
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"&per_page=3&page=1").
-        then(res=>{
-          this.setState({category1:res.data});
-        })
+      //  axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+1).
+      //   then(res=>{
+      //     this.setState({mainBlog:res.data});
+      //     // alert(this.state.mainBlog);
+      //   })
 
 
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+40+"&per_page=3&page=1").
-        then(res=>{
-          this.setState({category2:res.data});
-        })
+      //  axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+4).
+      //  then(res=>{
+
+      //    this.setState({blogs1:res.data});
+      //  })
+
+
+      //  axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+2+"&per_page="+4).
+      //   then(res=>{
+
+      //     this.setState({blogs2:res.data});
+      //   })
+
+
+      //   axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+38+"&per_page=3&page=1").
+      //   then(res=>{
+      //     this.setState({category1:res.data});
+      //   })
+
+
+      //   axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+40+"&per_page=3&page=1").
+      //   then(res=>{
+      //     this.setState({category2:res.data});
+      //   })
 
 
       }
@@ -96,9 +105,13 @@ window.scrollTo({top:0,behavior:"smooth"});
    //
     render() {
 
+
+
         if(!this.state.mainBlog && this.state.category1.length===0 && this.state.category2.length===0 && this.state.blogs2.length===0 && this.state.blogs1.length===0){
           return <Spinner/>
         }
+        // console.log(this.state.blogs1.length)
+
 
         return (
           <div className="mainBlogs">
@@ -108,15 +121,16 @@ window.scrollTo({top:0,behavior:"smooth"});
 
            {this.state.mainBlog?
            <div  className="mainBlogs__1">
-               <Link className="link" to={"/blogs/"+this.state.mainBlog[0].id}>go...</Link>
-               {this.state.mainBlog[0]["jetpack_featured_media_url"]===""?<img src={l} alt=""/>:<img src={this.state.mainBlog[0]["jetpack_featured_media_url"]} alt=""/>}
+               <Link className="link"  to={{pathname:"/blogs/"+this.state.mainBlog["title"],state:{blog:{...this.state.mainBlog}}}}>go...</Link>
+               {this.state.mainBlog["thumbnail"]===""?<img src={l} alt=""/>:<img src={this.state.mainBlog["thumbnail"]} alt=""/>}
                <div  className="mainBlogs__1_text">
           <div>
-                <div className="mainBlogs__1_text-title">{this.state.mainBlog[0].title.rendered}</div>
-                <td className="mainBlogs__1_text-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog[0].excerpt.rendered)}} />
+                <div className="mainBlogs__1_text-title">{this.state.mainBlog["title"]}</div>
+                <td className="mainBlogs__1_text-content" dangerouslySetInnerHTML={{__html:(this.state.mainBlog["content"].substring(170,400))}} />...
+
             </div>
                    <div  className="mainBlogs__1_text-detail">
-                       <div  className="mainBlogs__1_text-detail--date">{this.state.mainBlog[0].date.substring(0,this.state.mainBlog[0].date.indexOf("T"))}</div>
+                       <div  className="mainBlogs__1_text-detail--date">{this.state.mainBlog["pubDate"].substring(0,this.state.mainBlog["pubDate"].indexOf(" "))}</div>
                        {/* <div className="mainBlogs__1_text-detail--by">written by: <strong>zush</strong></div> */}
                    </div>
                </div>
@@ -134,18 +148,14 @@ window.scrollTo({top:0,behavior:"smooth"});
 
 
                   {
-                    
-                    if(i===0)
-                    return ;
-                    else
                     return( <div className="mainBlogs__2_flex-box">
-                        <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
-                        {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
-                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
+               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
+                        {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
+                        <div className="mainBlogs__2_flex-box--title">{blog["title"]}</div>
                         <div className="mainBlogs__2_flex-box--content">
-                        <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
+                        <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
                         </div>
-                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
+                        <div className="mainBlogs__2_flex-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
                     </div>)}
                     
                     
@@ -178,15 +188,15 @@ window.scrollTo({top:0,behavior:"smooth"});
 
                   {this.state.category2.map((blog,i)=>{
                       return <div className="mainBlogs__3_slide-box" >
-                                <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
+               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
                                 <div>
-                                     <div className="mainBlogs__3_slide-box--title">{blog.title.rendered.substring(0,50)}..</div>
+                                     <div className="mainBlogs__3_slide-box--title">{blog["title"]}</div>
                                      <div className="mainBlogs__3_slide-box--content">
-                                     <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
+                                     <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
                                      </div>
-                                     <div className="mainBlogs__3_slide-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
+                                     <div className="mainBlogs__3_slide-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
                                  </div>
-                                 {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
+                                 {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
                              </div>
 
                 })}
@@ -202,15 +212,15 @@ window.scrollTo({top:0,behavior:"smooth"});
 
                   {this.state.category1.map((blog,i)=>{
                      return <div className="mainBlogs__3_slide-box">
-                                <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
+               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
                                 <div>
-                                    <div className="mainBlogs__3_slide-box--title">{blog.title.rendered.substring(0,50)}..</div>
+                                <div className="mainBlogs__3_slide-box--title">{blog["title"]}</div>
                                     <div className="mainBlogs__3_slide-box--content">
-                                        <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
+                                    <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
                                     </div>
-                                    <div className="mainBlogs__3_slide-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
+                                    <div className="mainBlogs__3_slide-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
                                 </div>
-                                {blog["jetpack_featured_media_url"]===""?<img src={s} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
+                                {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
                             </div>
 
                   })}
@@ -235,16 +245,44 @@ window.scrollTo({top:0,behavior:"smooth"});
                   
                   
                 { 
-                  if(i===this.state.blogs2.length-1)
-                  return;
                   return( <div className="mainBlogs__2_flex-box">
-                        <Link className="link" to={"/blogs/"+blog.id}>go...</Link>
-                        {blog["jetpack_featured_media_url"]===""?<img src={m} alt=""/>:<img src={blog["jetpack_featured_media_url"]} alt=""/>}
-                        <div className="mainBlogs__2_flex-box--title">{blog.title.rendered.substring(0,70)}..</div>
+               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
+                        {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
+                        <div className="mainBlogs__2_flex-box--title">{blog["title"]}</div>
                         <div className="mainBlogs__2_flex-box--content">
-                        <td dangerouslySetInnerHTML={{__html:(blog.excerpt.rendered.substring(0,100))}} />...
+                        <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
                         </div>
-                        <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
+                        <div className="mainBlogs__2_flex-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
+                    </div>)
+                    
+                  }
+                    
+                    )}
+                    
+                </div>
+            </div>
+            
+            
+            }
+              {this.state.blogs2.length===0?
+            
+            <Spinner/>:
+            
+            <div className="mainBlogs__2">
+                <div className="mainBlogs__2_flex">
+                 { this.state.blogs2.map((blog,i)=> 
+                  
+                  
+                  
+                { 
+                  return( <div className="mainBlogs__2_flex-box">
+               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
+                        {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
+                        <div className="mainBlogs__2_flex-box--title">{blog["title"]}</div>
+                        <div className="mainBlogs__2_flex-box--content">
+                        <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
+                        </div>
+                        <div className="mainBlogs__2_flex-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
                     </div>)
                     
                   }
@@ -257,7 +295,7 @@ window.scrollTo({top:0,behavior:"smooth"});
             
             }
 
-            <Link className="more" to="/blogs">more</Link>
+            {/* <Link className="more" to="/blogs">more</Link> */}
         </div>
         )
     }

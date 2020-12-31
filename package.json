@@ -1,6 +1,6 @@
 {
   "name": "exim_frontend",
-  "homepage":".",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "axios": "^0.21.0",
     "emailjs-com": "^2.6.4",
+    "html-react-parser": "^1.1.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",

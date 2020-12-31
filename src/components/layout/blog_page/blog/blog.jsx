@@ -8,7 +8,6 @@ import insta from "../../../../assets/images/insta.svg";
 import twitter from "../../../../assets/images/twitter.svg";
 import call from "../../../../assets/images/call.svg";
 import m from "../../../../assets/images/blog-m.svg";
-
 import Spinner from "../../../../UI/spinner/spinner"
 import l from "../../../../assets/images/blog-l.svg";
 import axios from 'axios';
@@ -24,49 +23,57 @@ import blogs from '../blogs/blogs';
         blogId:null,
     }
 
+
     componentDidMount=()=>{
       window.scrollTo({top:0,behavior:"smooth"});
+      
+      this.setState({blog:this.props.location.state.blog});
 
-        axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
-        then(res=>{
-           this.setState({blog:res.data, blogId:this.props.match.params["id"]});
-
-          if(res.data.categories.length)
-           axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
-           then(res1=>this.setState({blogs1:res1.data}))
-          else
-          this.setState({blogs1:[]})
-          }
-
-        );
     }
 
-    componentDidUpdate=()=>{
+    // componentDidMount=()=>{
+    //   window.scrollTo({top:0,behavior:"smooth"});
+
+    //     axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
+    //     then(res=>{
+    //        this.setState({blog:res.data, blogId:this.props.match.params["id"]});
+
+    //       if(res.data.categories.length)
+    //        axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
+    //        then(res1=>this.setState({blogs1:res1.data}))
+    //       else
+    //       this.setState({blogs1:[]})
+    //       }
+
+    //     );
+    // }
+
+    // componentDidUpdate=()=>{
 
 
  
-      if(this.state.blogId!==this.props.match.params["id"])
-     { axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
-      then(res=>{
-         this.setState({blog:res.data,blogId:this.props.match.params["id"]});
-         window.scrollTo({top:0,behavior:"smooth"});
+    //   if(this.state.blogId!==this.props.match.params["id"])
+    //  { axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
+    //   then(res=>{
+    //      this.setState({blog:res.data,blogId:this.props.match.params["id"]});
+    //      window.scrollTo({top:0,behavior:"smooth"});
 
-        if(res.data.categories.length)
-         axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
-         then(res1=>this.setState({blogs1:res1.data}))
-        else
-        this.setState({blogs1:[]})
-        }
+    //     if(res.data.categories.length)
+    //      axios.get("https://newsrvices.com/wp-json/wp/v2/posts?categories="+res.data.categories[0]+"&per_page=3&page=1").
+    //      then(res1=>this.setState({blogs1:res1.data}))
+    //     else
+    //     this.setState({blogs1:[]})
+    //     }
 
-      );
+    //   );
 
-    }
-    }
+    // }
+    // }
 
 
     render() {
 
-      console.log(this.props);
+      // console.log(this.props.location.state.blog.content);
 
         if(this.state.blog===null){
           return <Spinner/>
@@ -75,15 +82,16 @@ import blogs from '../blogs/blogs';
             <div className="blog">
                 {this.state.blog!==null?
                   <div className="blog__box">
-                      {this.state.blog["jetpack_featured_media_url"]===""?<img src={l} alt=""/>:<img src={this.state.blog["jetpack_featured_media_url"]} alt=""/>}
+                      {/* {this.state.blog["thumbnail"]===""?<img src={l} alt=""/>:<img src={this.state.blog["thumbnail"]} alt=""/>} */}
                       <div className="blog__box_flex">
-                      <Link to={"/blogs"}>Exim Blogs</Link>
-                      {this.state.blog.date.substring(0,this.state.blog.date.indexOf("T"))}
+                      <Link to={"/blogs/main"}>Exim Blogs</Link>
+                      {this.state.blog["pubDate"].substring(0,this.state.blog["pubDate"].indexOf(" "))}
                       </div>
-                      <h1 className="blog__box_title">{this.state.blog.title.rendered}</h1>
-                      <td dangerouslySetInnerHTML={{__html:this.state.blog.content.rendered}} />
+                      <h1 className="blog__box_title">{this.state.blog["title"]}</h1>
+                      <td dangerouslySetInnerHTML={{__html:this.state.blog["content"]}} />
+                      {this.state.blog["content"]}
                       <div className="blog__box_flex">
-                         <Link to={"/blogs"}>Exim Blogs</Link>
+                         <Link to={"/blogs/main"}>Exim Blogs</Link>
                       </div>
                       <div  className="blog__box_social">
                          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -96,7 +104,7 @@ import blogs from '../blogs/blogs';
                          <a href="https://instagram.com/eximeducation.com_"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                       </div>
 
-                     {!this.state.blogs1?<Spinner/>:<div className="mainBlogs__2">
+                     {/* {!this.state.blogs1?<Spinner/>:<div className="mainBlogs__2">
                               <div className="mainBlogs__2_flex blog__box_row">
 
 
@@ -111,7 +119,7 @@ import blogs from '../blogs/blogs';
                                   <div className="mainBlogs__2_flex-box--date">{blog.date.substring(0,blog.date.indexOf("T"))}</div>
                               </div>):null}
                           </div>
-                      </div>}
+                      </div>} */}
                   </div>
                     :null}
             </div>
