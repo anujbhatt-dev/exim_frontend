@@ -46,6 +46,13 @@
     }
     & li{
       margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    & ul{
+      list-style-type: circle;
+      margin-left: 2rem;
+      &:first-child{
+      }
     }
     & img{
       width: 100%;

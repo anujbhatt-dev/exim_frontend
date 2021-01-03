@@ -26,7 +26,7 @@ import blogs from '../blogs/blogs';
 
     componentDidMount=()=>{
       window.scrollTo({top:0,behavior:"smooth"});
-      
+
       this.setState({blog:this.props.location.state.blog});
 
     }
@@ -51,7 +51,7 @@ import blogs from '../blogs/blogs';
     // componentDidUpdate=()=>{
 
 
- 
+
     //   if(this.state.blogId!==this.props.match.params["id"])
     //  { axios.get("https://newsrvices.com/wp-json/wp/v2/posts/"+this.props.match.params["id"]).
     //   then(res=>{
@@ -72,7 +72,7 @@ import blogs from '../blogs/blogs';
 
 
     render() {
-
+// {this.state.blog["content"]}
       // console.log(this.props.location.state.blog.content);
 
         if(this.state.blog===null){
@@ -89,7 +89,7 @@ import blogs from '../blogs/blogs';
                       </div>
                       <h1 className="blog__box_title">{this.state.blog["title"]}</h1>
                       <td dangerouslySetInnerHTML={{__html:this.state.blog["content"]}} />
-                      {this.state.blog["content"]}
+
                       <div className="blog__box_flex">
                          <Link to={"/blogs/main"}>Exim Blogs</Link>
                       </div>
