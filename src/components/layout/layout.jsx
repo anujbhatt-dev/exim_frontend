@@ -33,7 +33,7 @@ class Layout extends Component{
                   <AboutUs/>
               </Route>
 
-              <Route exact  path="/course">
+              <Route exact  path="/courses">
                   <Course/>
               </Route>
                </Switch>

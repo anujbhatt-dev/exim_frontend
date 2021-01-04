@@ -25,7 +25,7 @@ import $ from "jquery"
       }
 
       let path=window.location.pathname+"";
-      if(path.indexOf("course")!==-1)
+      if(path.indexOf("courses")!==-1)
       this.selectedNav(3);
 
      else if(path.indexOf("pricing")!==-1)
@@ -46,7 +46,7 @@ import $ from "jquery"
 
 
       let path=window.location.pathname+"";
-         if(path.indexOf("course")!==-1)
+         if(path.indexOf("courses")!==-1)
          this.selectedNav(3);
 
         else if(path.indexOf("pricing")!==-1)
@@ -136,7 +136,7 @@ import $ from "jquery"
                     <div className="nav__mob_wrapper">
                          <img className="nav__mob_wrapper-cancel" onClick={this.mobNavHndler} src={cancel} alt=""/>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/"><div className="nav__list_item nav__list_item-1">Home</div></NavLink>
-                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/course"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
+                        <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/courses"><div className="nav__list_item nav__list_item-3">Courses</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/pricing"><div className="nav__list_item nav__list_item-2">Pricing</div></NavLink>
                         <NavLink activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/blogs/main"><div className="nav__list_item nav__list_item-4">Blogs</div></NavLink>
                         <NavLink exact activeStyle={{color:"#0062FF",fontWeight:"bold"}} onClick={()=>this.mobNavHndler()} className="nav__mob_wrapper-link" to="/about"><div className="nav__list_item nav__list_item-5">About Us</div></NavLink>
@@ -150,7 +150,7 @@ import $ from "jquery"
                 </div>
                 :<ul className="nav__list">
                 <NavLink onClick={()=>this.selectedNav(1)} className="nav__link" to="/"><li className="nav__list_item nav__list_item-1">Home</li><hr className="nav__list_Hr nav__list_Hr-1"/></NavLink>
-                <NavLink onClick={()=>this.selectedNav(3)} className="nav__link" to="/course"><li className="nav__list_item nav__list_item-3">Courses</li><hr className="nav__list_Hr nav__list_Hr-3"/></NavLink>
+                <NavLink onClick={()=>this.selectedNav(3)} className="nav__link" to="/courses"><li className="nav__list_item nav__list_item-3">Courses</li><hr className="nav__list_Hr nav__list_Hr-3"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(2)} className="nav__link" to="/pricing"><li className="nav__list_item nav__list_item-2">Pricing</li><hr className="nav__list_Hr nav__list_Hr-2"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(4)} className="nav__link" to="/blogs/main"><li className="nav__list_item nav__list_item-4">Blogs</li><hr className="nav__list_Hr nav__list_Hr-4"/></NavLink>
                 <NavLink onClick={()=>this.selectedNav(5)} className="nav__link" to="/about"><li className="nav__list_item nav__list_item-5">About Us</li><hr className="nav__list_Hr nav__list_Hr-5"/></NavLink>

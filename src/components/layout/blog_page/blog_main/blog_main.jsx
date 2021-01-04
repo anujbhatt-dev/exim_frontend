@@ -264,36 +264,7 @@ window.scrollTo({top:0,behavior:"smooth"});
             
             
             }
-              {this.state.blogs2.length===0?
             
-            <Spinner/>:
-            
-            <div className="mainBlogs__2">
-                <div className="mainBlogs__2_flex">
-                 { this.state.blogs2.map((blog,i)=> 
-                  
-                  
-                  
-                { 
-                  return( <div className="mainBlogs__2_flex-box">
-               <Link className="link"  to={{pathname:"/blogs/"+blog["title"],state:{blog:{...blog}}}}>go...</Link>
-                        {blog["thumbnail"]===""?<img src={m} alt=""/>:<img src={blog["thumbnail"]} alt=""/>}
-                        <div className="mainBlogs__2_flex-box--title">{blog["title"]}</div>
-                        <div className="mainBlogs__2_flex-box--content">
-                        <td dangerouslySetInnerHTML={{__html:(blog["content"].substring(170,400))}}  />...
-                        </div>
-                        <div className="mainBlogs__2_flex-box--date">{blog["pubDate"].substring(0,blog["pubDate"].indexOf(" "))}</div>
-                    </div>)
-                    
-                  }
-                    
-                    )}
-                    
-                </div>
-            </div>
-            
-            
-            }
 
             {/* <Link className="more" to="/blogs">more</Link> */}
         </div>
