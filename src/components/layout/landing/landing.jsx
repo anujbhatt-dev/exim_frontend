@@ -368,10 +368,10 @@ import indiaPort from "../../../assets/images/indiaPort.png"
               }
 
               <div className="landing__3">
-                  <h1 className="heading-primary landing__3_heading">course details</h1>
+                  <h1 className="heading-primary landing__3_heading">Export & Import course details</h1>
                   <div className="landing__3_box">
                       <div className="landing__3_box-text">
-                          <div className="landing__3_box-text--big">ABOUT EXIM EDUCATION</div>
+                          <div className="landing__3_box-text--big">ABOUT EXIM EDUCATION - Import Export Training Centre in Mumbai</div>
                           <div className="landing__3_box-text--small">
                           Exim Education is training centre of Indiaport. We provide helping hand to India’s
                            export business to ease its global trade.Exim Education has taken an initiative to
@@ -464,7 +464,7 @@ get ready for growing stability </div>
                            <div className="landing__4_3-text--big heading-primary">Path to success</div>
                            <div className="landing__4_3-text--small">
 </div>
-                           <div className="landing__4_3-text--smaller">Learn and understand the course, get a job, be a brand and start your self-dependent journey
+                           <div className="landing__4_3-text--smaller">Learn and understand the export import management course, get a job, be a brand and start your self-dependent journey
 crossing national borders.</div>
                       </div>
                       <img  className="landing__4_3-image" src={s3} alt=""/>
@@ -506,7 +506,7 @@ crossing national borders.</div>
                  <div className="landing__6_box">
                      <img className="landing__6_box-certificate" src={certificate} alt=""/>
                      <div className="landing__6_box-text">
-                         <div>We at EximEducation know the role the certificates.<br/> For every course that you complete
+                         <div>We at EximEducation know the role the certificates.<br/> For every export import course that you complete
                         you will be given a certificate <br/> which will benefit you career-wise.
                            </div>
                          <div style={{color:"black"}} ></div>
@@ -538,7 +538,7 @@ crossing national borders.</div>
               }
 
               <div className="landing__8">
-                  <h1 className="heading-primary landing__3_heading">course to success</h1>
+                  <h1 className="heading-primary landing__3_heading">export & import course to success</h1>
                   <div className="landing__8_bar">
                       <div onClick={()=>this.coureseToSuccess(0)} className={(this.state.cosTitle==="Exim management")?"selectedIcon landing__8_bar-box":"landing__8_bar-box" }>
                           {this.state.cosTitle==="Exim management"?<img src={whiteEM} alt=""/>:<img src={eximManagement} alt=""/>}
@@ -594,11 +594,11 @@ crossing national borders.</div>
                    <div className="landing__9_box">
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__1" src={videoBig} alt=""/><span>FLEXIBLE ONLINE CLASS</span></h1>
+                                <h1><img className="img__1" src={videoBig} alt=""/><span>FLEXIBLE Import Export ONLINE CLASS</span></h1>
                                 <div>You pick the schedule and learn accordingly.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__2" src={pause} alt=""/><span>Pause course</span></h1>
+                                <h1><img className="img__2" src={pause} alt=""/><span>Pause Course</span></h1>
                                 <div>Busy or tired? No worries, take a break; pause the lecture and play accordingly.</div>
                             </div>
                             <div className="landing__9_box-1--top">
@@ -608,7 +608,7 @@ crossing national borders.</div>
                         </div>
                         <div className="landing__9_box-1">
                             <div className="landing__9_box-1--top">
-                                <h1><img className="img__4" src={tv} alt=""/><span>Exim consultancy</span></h1>
+                                <h1><img className="img__4" src={tv} alt=""/><span>Exim Consultancy</span></h1>
                                 <div></div>
                             </div>
                             <div className="landing__9_box-1--top">
@@ -617,7 +617,7 @@ crossing national borders.</div>
                                   service to our gems.</div>
                             </div>
                             <div className="landing__9_box-1--top">
-                                <h1 ><img className="img__6" src={send} alt=""/><span>IndiaPort-booking platform</span></h1>
+                                <h1 ><img className="img__6" src={send} alt=""/><span>IndiaPort-Booking platform</span></h1>
                                 <div>an organised platform to book transport, manage the shipment and provide trouble-free trading.</div>
                             </div>
                         </div>
