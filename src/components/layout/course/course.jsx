@@ -12,72 +12,72 @@ import "aos/dist/aos.css"
       courses:[
         {
           title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          // lessons:"14 Lesson /50 mins",
           locked:false
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Types of Transportation, Container and packaging",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Basic Registration for Exim",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Basic Terms",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Incoterms",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Export Incentives",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Risk management and insurance",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Documents",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:" Export Procedure",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Modes of Payment",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:" Special shipments",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Exporting Terms",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:"Sterilization",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
         {
-          title:"Parties and places involved in import/ export",
-          lessons:"14 Lesson /50 mins",
+          title:". Other Documents",
+          // lessons:"14 Lesson /50 mins",
           locked:true
         },
       ]
@@ -97,9 +97,9 @@ import "aos/dist/aos.css"
 
       return (
          <div data-aos="zoom-out" className="course">
-                 <h1 className="heading-primary landing__3_heading">Module 14</h1>
+                 <h1 className="heading-primary landing__3_heading">Import & Export Course Details/Exim Course Details</h1>
                  <div  className="course__btnWrap">
-                     <a rel="noreferrer" href="http://eximeducation.com/course/pdf/Cousre_01.pdf" target="_blank" className="course__btnWrap_btn"><span>Detailed</span><img src={file} alt=""/></a>
+                     <a rel="noreferrer" href="http://eximeducation.com/course/pdf/Course_01.pdf" target="_blank" className="course__btnWrap_btn"><span>Detailed</span><img src={file} alt=""/></a>
                  </div>
                  <div className="course__wrapper">
                      {

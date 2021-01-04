@@ -42,9 +42,18 @@ window.scrollTo({top:0,behavior:"smooth"});
        })
 
 
-      //  axios.get("https://newsrvices.com/wp-json/wp/v2/posts?page="+1+"&per_page="+1).
+
+      //  axios.get("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/invironment/tagged/eximeducation1"
+      //  ).
       //   then(res=>{
-      //     this.setState({mainBlog:res.data});
+      //     this.setState({ category1:res.data});
+      //     // alert(this.state.mainBlog);
+      //   })
+        
+      //   axios.get("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/invironment/tagged/eximeducation2"
+      //  ).
+      //   then(res=>{
+      //     this.setState({ category2:res.data});
       //     // alert(this.state.mainBlog);
       //   })
 

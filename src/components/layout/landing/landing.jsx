@@ -295,7 +295,6 @@ import indiaPort from "../../../assets/images/indiaPort.png"
 
       return (
           <div className="landing">
-
                {
                  // screen 1
                }
@@ -306,6 +305,7 @@ import indiaPort from "../../../assets/images/indiaPort.png"
                     </div>
                     <div className="landing__1_text-bigger">
                        EDUCATION
+
                     </div>
                     <div className="landing__1_text-smaller">
                       {this.state.value}
@@ -570,7 +570,7 @@ crossing national borders.</div>
                             <div className="landing__8_box-text--small">{this.state.cosContent}</div>
                             <div className="landing__8_box-flex">
                                  <div className="landing__8_box-flex--text">Stock</div>
-                                 <button className="landing__8_box-flex--btn  landing__8_box-flex--btn-1">
+                                 <button  className="landing__8_box-flex--btn  landing__8_box-flex--btn-1">
                                      <img src={upArrow} alt=""/>
                                      <div>Lorem ipsum</div>
                                  </button>
@@ -682,82 +682,40 @@ crossing national borders.</div>
                        <div className="landing__11_review">
                            <div className="landing__11_review-top">
                                <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--name"><strong>Charvi Jain </strong><br/></div>
                                <div className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                           Glad that I was a part of exim education. Tutors and staff are very helpful and
-                        knowledgeable.
+                           Career oriented Export & Import (Exim) course- helpful tutors. Happy to be part of this institute.
 
                            </div>
                        </div>
                        <div className="landing__11_review">
                            <div className="landing__11_review-top">
                                <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--name"><strong>Dheeraj Shrishrimal </strong><br/></div>
                                <div className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                              One thing is for sure that I can step in the<br/>
-                              International market without fear. Thank you<br/>
-                              Exim Education!
+                           I’m glad to shift from a local market to<br/>
+                            international with your guidance and support.<br/>
+                             Thank you for my progress.                            
                            </div>
                        </div>
                        <div className="landing__11_review">
                            <div className="landing__11_review-top">
                                <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
+                               <div className="landing__11_review-top--name"><strong>Mithilesh Kumar</strong><br/></div>
                                <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
                            </div>
                            <div  className="landing__11_review-bottom">
-                           Good course- helpful tutors. Happy to be part of this institute.
-
+                           Completed import export certification course,<br/>
+                            great learning experience. One thing is for sure<br/>
+                             that I can step in the International market without fear.<br/>
+                              Thank you Exim Education. 
                            </div>
                        </div>
-                       <div className="landing__11_review">
-                           <div className="landing__11_review-top">
-                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
-                               <div className="landing__11_review-top--rating">4.5</div>
-                           </div>
-                           <div  className="landing__11_review-bottom">
-                           I’m glad to shift from a local market to international with your guidance and support.
-Thank you for my progress.
-                           </div>
-                       </div>
-                       <div className="landing__11_review">
-                           <div className="landing__11_review-top">
-                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
-                               <div className="landing__11_review-top--rating">4.5</div>
-                           </div>
-                           <div  className="landing__11_review-bottom">
-                           Exim Education provided me with full support when I planned to step in export. Thank
-                           you Exim Education!
-                           </div>
-                       </div>
-                       <div className="landing__11_review">
-                           <div className="landing__11_review-top">
-                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
-                               <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
-                           </div>
-                           <div  className="landing__11_review-bottom">
-                           Decent fees and great videos.
-
-                           </div>
-                       </div>
-                       <div className="landing__11_review">
-                           <div className="landing__11_review-top">
-                               <img className="landing__11_review-top--img" src={ellipse1} alt=""/>
-                               <div className="landing__11_review-top--name"><strong>Jennifer Lopezx</strong><br/>Cofounder at audiable</div>
-                               <div style={{background:"yellow"}} className="landing__11_review-top--rating">4.5</div>
-                           </div>
-                           <div  className="landing__11_review-bottom">
-                           Live sessions are very very helpful. If anyone of you is planning to step in exim world you
-need to join EximEducation.
-                           </div>
-                       </div>
+                     
                    </div>
               </div>
           </div>

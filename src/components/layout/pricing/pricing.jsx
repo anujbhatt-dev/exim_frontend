@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
     state={
       faq:[
         {
-          ques:"What are the advantages of taking classes online?",
+          ques:"What are the advantages of taking Export Import classes online?",
           answer:"Convenience and flexibility are the most common advantages of online classes. Taking classes online is ideal for someone who wants to continue working and keen to learn new skills",
           toggle:true
         },
